@@ -1,0 +1,25 @@
+.userState {
+    margin: auto; margin-top: .2%;
+    /*border: 1px solid rgb(125, 0, 100);*/
+    /*background-color: rgba(25, 25, 25, .75);*/
+    display: inline-flex;
+    height: 91%;
+    width: 100.2%;
+}
+
+.navBar {
+    /*border: 1px solid rgb(0, 100, 100);*/
+    background-color: rgb(65, 65, 65);
+    height: 95%;
+    width: 22.5%;
+    margin: auto;    
+}
+
+.userView { text-align: center; 
+    /*border: 1px solid rgb(100, 0, 100);*/
+    background-color: rgb( 65, 65, 65);
+    margin-bottom: 15%; 
+    height: 95%;
+    width: 72.5%;
+    margin: auto; margin-left: .2%;
+}

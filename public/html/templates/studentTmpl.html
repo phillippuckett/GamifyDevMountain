@@ -1,0 +1,42 @@
+<div class="student">
+    
+    <!--Student Header-->
+    <p>Your Curricudeck</p>
+    <div class="studentSpace">
+
+        <!--Card-->
+        <div class="card" ng-repeat="card in cards">
+            <div class="cardSpace">
+
+                <!--Category-->
+                <div class="cardSpace">
+                    <div class="trophyTitle">
+                        <p>{{category.categoryTitle}}</p>
+                    </div>
+                </div>
+
+                <!--Trophy-->
+                <img class="cardTrophyImage" ng-src="{{card.trophyImage}}">
+            </div>
+
+            <!--Badge Field-->
+            <div class="cardFace">
+
+                <!--Badge-->
+                <div class="badge" ng-repeat="badge in card.badges">
+                    <img class="badgeImage" ng-src="{{badge.badgeImage}}">
+                    <div class="milestone"><p>{{badge.mileStone}}</p></div>
+                    <div class="difficultyLevel">{{badge.pointValue.difficulty}}</div>
+                    
+                </div>
+            </div>
+
+            <!--Point Tally-->
+            <div class="cardSpace">
+                <p>{{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}</p>
+            </div>
+        </div>
+    </div>
+    <!--Student Point Counter-->
+        <p>Points {{number}}/{{number}}</p>
+</div>

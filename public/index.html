@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GamifyDevMountain">
+
+<head>
+    <meta charset="utf-8">
+    <title>GamifyDevMountain</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--States-->
+    <link rel="stylesheet" href="css/states/loginState.css">
+    <link rel="stylesheet" href="css/states/userState.css">
+    <link rel="stylesheet" href="css/states/regState.css">
+
+    <!--Templates-->
+    <link rel="stylesheet" href="css/templates/userHeaderTmpl.css">
+    <link rel="stylesheet" href="css/templates/navBarTmpl.css">
+    <link rel="stylesheet" href="css/templates/userViewTmpl.css">
+
+    <!--Templates: Views-->
+    <link rel="stylesheet" href="css/templates/views/studentTmpl.css">
+    <!--<link rel="stylesheet" href="css/templates/views/courseTmpl.css">-->
+    <!--<link rel="stylesheet" href="css/templates/views/cohortTmpl.css">-->
+    <!--<link rel="stylesheet" href="css/templates/views/menteeTmpl.css">-->
+    <link rel="stylesheet" href="css/templates/views/cardTmpl.css">
+</head>
+
+<body>
+
+    <!--Ui-Router-->
+    <ui-view></ui-view>
+
+    <!--Content Delivery Network's-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+    <!--Scripts-->
+    <script src="js/app.js"></script>
+
+    <!--Controllers-->
+    <script src="js/controllers/userCtrl.js"></script>
+    <script src="js/controllers/authCtrl.js"></script>
+
+    <!--Custom Directives-->
+    <script src="js/directives/navBarDir.js"></script>
+    <script src="js/directives/userHeaderDir.js"></script>
+    <script src="js/directives/userViewDir.js"></script>
+
+    <!--Custome Directives: Views-->
+    <script src="js/directives/views/studentDir.js"></script>
+    <!--<script src="js/directives/views/courseDir.js"></script>-->
+    <!--<script src="js/directives/views/cohortDir.js"></script>-->
+    <!--<script src="js/directives/views/menteeDir.js"></script>-->
+    <!--<script src="js/directives/views/cardDir.js"></script>-->
+
+    <!--Services-->
+    <script src="js/services/authSvc.js"></script>
+    <script src="js/services/userViewSvc.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!--Vis Header-->
+<div class="visHeader">
+    <!--1st Quarter-->
+    <div class="headerSpace">
+        <div class="headerSpace">
+            <a class="visLogo" href="/#/login"></a>
+        </div>
+        <div class="headerSpace"></div>
+    </div>
+    <!--2nd Quarter-->
+    <div class="headerSpace"></div>
+    <!--3rd Quarter-->
+    <div class="headerSpace"></div>
+    <!--4th Quarter-->
+    <div class="headerSpace"></div>
+</div>
+
+<!--Reg Body-->
+<div class="regState">
+    <div class="regSpace"></div>
+
+    <div class="regSpace">
+        <div class="regSpace"></div>
+
+        <div class="regSpace">
+            <div class="registration">
+                <div class="regImage"></div>
+                <form ng-submit="register()">
+                    <h2>REGISTRATION</h2>
+                    <p>
+                        <input id="regInput" type="text" placeholder="Enter First Name" ng-model="user.firstName">
+                    </p>
+                    <p>
+                        <input id="regInput" type="text" placeholder="Enter Last Name" ng-model="user.lastName">
+                    </p>
+                    <p>
+                        <input id="regInput" type="text" placeholder="emailAddress@email.com" ng-model="user.email">
+                    </p>
+                    <p>
+                        <input id="regInput" type="text" placeholder="Create Username" ng-model="user.username" required>
+                    </p>
+                    <p>
+                        <input id="regInput" type="text" placeholder="Enter Cohort" ng-model="user.cohort">
+                    </p>
+                    <p>
+                        <input id="regInput" type="text" placeholder="Student, Mentor, Brack?" ng-model="user.role">
+                    </p>
+                    <p>
+                        <input id="regInput" type="text" placeholder="Add Photo URL" ng-model="user.userImage">
+                    </p>
+                    <p>
+                        <input id="regInput" type="password" placeholder="Create Password" ng-model="user.password" required>
+                    </p>
+                    <p>
+                        <button class="regSubmit" type="submit">Create Account</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="regSpace"></div>
+    </div>
+    <div class="regSpace"></div>
+</div>

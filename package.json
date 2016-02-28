@@ -1,0 +1,29 @@
+{
+  "name": "gamify-dev-mountain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillippuckett88/GamifyDevMountain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phillippuckett88/GamifyDevMountain/issues"
+  },
+  "homepage": "https://github.com/phillippuckett88/GamifyDevMountain#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.5",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
