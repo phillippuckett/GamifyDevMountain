@@ -53,5 +53,16 @@ module.exports = {
             if(err){res.send(err)}
             else{res.send(result)}
         })
+    },
+    
+    requestBadge: function(req, res){
+        //change to req.user._id
+        users.findById("56d093376629e38018ec0901", function(err, result){
+            if(err){res.send(err)}
+            else{
+                console.log(result);
+                res.send(result)
+            }
+        })
     }
 }
