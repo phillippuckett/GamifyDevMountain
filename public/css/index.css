@@ -20,8 +20,6 @@ border: 1px solid rgba(75, 75, 75, 1);
    
    
 .state { text-align: center;
-    /*border: 1px solid rgb(100, 100, 100);*/
-    /*background-color: rgba(1000, 1000, 1000, .85);*/
     background-image: url('/media/graystone.png');
     background-size: cover;
     background-repeat: no-repeat;
