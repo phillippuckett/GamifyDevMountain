@@ -12,7 +12,7 @@ module.exports = {
     
     /** R */
     getCohort: function (req, res) {
-        cohorts.find(req.query).populate('cards').exec(function (err, readCohort) {
+        cohorts.find(req.query).populate({path: 'cohortCurriculum', populate: {path: 'deck', model: 'cards', populate: {path: 'badges', model: 'badges', populate: {path: 'category', model: 'categories'}}}}).exec(function (err, readCohort) {
             if (err) { res.status(500).send(err); }
             else { res.status(200).send('Cohort Data Retrieved!', readCohort); }
         })
