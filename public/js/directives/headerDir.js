@@ -1,13 +1,13 @@
 angular.module('GamifyDevMountain')
-    .directive('userHeaderDir', function () {
+    .directive('headerDir', function () {
         return {
             restrict: 'E',
-            templateUrl: 'html/templates/userHeaderTmpl.html',
+            templateUrl: 'html/templates/headerTmpl.html',
             controller: function ($scope, authSvc) {
-                $scope.headerDir = 'userHeaderDir';
+                $scope.headerDir = 'headerDir';
                 // console.log('Header Controller: Running');
                 
-                /** Connects UserData with the orderView */
+                /** Connects UserData with the userView */
                 authSvc.getCurrentUserObject().then(function (currentUserResult) {
                     $scope.user = currentUserResult.data;
                     $scope.image = true;

@@ -2,12 +2,12 @@
 
 <div class="visHeader">
     <!--1st Quarter-->
+    <div class="headerSpace">
         <div class="headerSpace">
-            <div class="headerSpace">
-                <a class="visLogo" href="/#/login"></a>
-            </div>
-            <div class="headerSpace"></div>
+            <a class="visLogo" href="/#/login"></a>
         </div>
+        <div class="headerSpace"></div>
+    </div>
     <!--2nd Quarter-->
     <div class="headerSpace"></div>
     <!--3rd Quarter-->
@@ -16,38 +16,67 @@
     <div class="headerSpace"></div>
 </div>
 
-<!--Login Body-->
-<div class="loginState">
-    <div class="loginSpace"></div>
+<div class="state">
 
-    <div class="loginSpace">
-        <div class="loginSpace"></div>
+    <!--Top-->
+    <div class="stateSpace">Top</div>
 
+    <!--Login Body-->
+    <div class="stateSpace">
 
-        <div class="loginSpace">
-            <div class="login">
-                <div class="loginImage"></div>
-                <h2>Login</h2>
-                <p><a href="/#/registration">Need an account?</a></p>
+    <!--left-->
+    <div class="stateSpace">Left</div>
+    
+        <div class="login">
+            <div class="stateSpace">
+
+                <div class="stateSpace">Image</div>
+
+            </div>
+            <div class="stateSpace">
+
+                <div class="stateSpace">Login</div>
+
+                </div>
+
+            <div class="stateSpace">
+                <a class="loginText" href="/#/registration">Need an account?</a>
+            </div>
+
+            <div class="stateSpace">
                 <form ng-submit="login(user)">
-                    <p></p>
-                    <input type="text" class="loginInput" placeholder="What is your username ?" ng-model="user.username">
-                    <p></p>
-                    <input type="password" class="loginInput" placeholder="What is your password ?" ng-model="user.password">
-                    <p></p>
-                    <button class="loginSubmit" type="submit">Submit</button>
+                    <div class="stateSpace">
+                        <input type="text" class="loginInput" placeholder="What is your username ?" ng-model="user.username">
+                    </div>
+                    <div class="stateSpace">
+                        <input type="password" class="loginInput" placeholder="What is your password ?" ng-model="user.password">
+                    </div>
+                    <div class="stateSpace">
+                        <button class="loginSubmit" type="submit">Submit</button>
+                    </div>
                 </form>
-                <p>Forgot password?</p>
-                <p></p>
-                <button class="loginSubmit" type="submit">O| Login with GitHub</button>
-                <p></p>
-                <button class="loginSubmit" type="submit">In| Login with LinkedIn</button>
+            </div>
+
+            <div class="stateSpace">
+                <div class="loginText">Forgot password?</div>
+            </div>
+
+            <div class="stateSpace">
+                <button class="gitHubSubmit" type="submit">O| Login with GitHub</button>
+            </div>
+
+            <div class="stateSpace">
+                <button class="linkedInSubmit" type="submit">
+                    In| Login with LinkedIn</button>
             </div>
         </div>
+        
+            <!--Right-->
+    <div class="stateSpace">Right</div>
 
-
-        <div class="loginSpace"></div>
     </div>
+    
+        <!--Bottom-->
+    <div class="stateSpace">Bottom</div>
 
-    <div class="loginSpace"></div>
 </div>

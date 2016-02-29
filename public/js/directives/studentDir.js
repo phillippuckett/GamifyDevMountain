@@ -2,7 +2,7 @@ angular.module('GamifyDevMountain')
     .directive('studentDir', function () {
         return {
             restrict: 'E',
-            templateUrl: 'html/templates/views/studentTmpl.html',
+            templateUrl: 'html/templates/studentTmpl.html',
             controller: function ($scope, userViewSvc, $http) {
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');

@@ -1,37 +1,63 @@
-.loginState {
-    /*border: 1px solid rgb(0, 50, 0);*/
-    background-color: rgba(1000, 1000, 1000, .9);
-    background-image: url('/media/graystone.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 91%;
-    width: 100.2%;
-}
-
-.loginSpace { text-align: center;
-    /*border: 1px solid rgb(0, 100, 0);*/
-    width: 100%;
-        margin: auto;
-    display: inline-flex;
-}
-
-
 .login { text-align: center; 
-    /*border: 1px solid rgb(200, 100, 0);*/
+    border: 1px solid rgb(200, 100, 0);
     background-color: rgb(1000, 1000, 1000);    
-    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);     
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);    
+    height: 75vh;
+    width: 30vw;
     margin: auto;
-    width: 87.5%;
-    height: 450px;
 }
 
-.loginInput { width: 75%; margin: auto; }
-.loginSubmit { width: 75%; margin: auto; }
+.loginInput { font-size: 4.5mm;
+    border: 1px solid rgba(150, 150, 150, 1);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
+    height: 7.5mm;
+    width: 20vw;
+    margin: 2.5% 0; 
+    }
+.loginSubmit { color: white;
+    border: 1px solid rgba(0,150,250,1);   
+    border-radius: 5px;
+    background-color: rgba(0,150,250,1);
+    height: 6.5vh;
+    width: 20.5vw; 
+    margin: auto; 
+    }
 
 .loginImage { 
     border: 1px solid rgba(0, 0, 100, 1); 
     background-color: rgb(0, 0, 25);
     height: 15%; 
     }
+.loginLeadText { color: rgba(0,0,0,.75); font-size: 4.5vh;
+    border: 1px solid rgba(0, 0, 100, 1);
+    margin: auto;
+}
+.loginText { color: rgba(0,150,250,1); font-size: 2.5vh; }
+
+.loginLinks {
+    border: 1px solid rgba(150,0,250,1);
+    margin: auto;
+}
+
+.gitHubSubmit { color: white; font-size: 2.5vh;
+    border: 1px solid rgba(0,150,250,1);   
+    border-radius: 5px;
+    background-color: rgba(0,150,250,1);
+    height: 6.5vh;
+    width: 20.5vw; 
+    margin: 1vh 1vw;
+}
+
+.linkedInSubmit { color: white; font-size: 2.5vh;
+    border: 1px solid rgba(0,150,250,1);   
+    border-radius: 5px;
+    background-color: rgba(0,150,250,1);
+    height: 6.5vh;
+    width: 20.5vw; 
+    margin: auto;
+}

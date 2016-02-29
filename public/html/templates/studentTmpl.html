@@ -1,42 +1,44 @@
-<div class="student">
-    
-    <!--Student Header-->
-    <p>Your Curricudeck</p>
-    <div class="studentSpace">
+<div class="view">
+    <div class="student">
 
-        <!--Card-->
-        <div class="card" ng-repeat="card in cards">
-            <div class="cardSpace">
+        <!--Student Header-->
+        Your Curricudeck
+        <div class="stateSpace">
 
-                <!--Category-->
-                <div class="cardSpace">
-                    <div class="trophyTitle">
-                        <p>{{category.categoryTitle}}</p>
+            <!--Card-->
+            <div class="card" ng-repeat="card in cards">
+                <div class="stateSpace">
+
+                    <!--Category-->
+                    <div class="stateSpace">
+                        <div class="trophyTitle">
+                            Category {{category.categoryTitle}}
+                        </div>
+                    </div>
+
+                    <!--Trophy-->
+                    <img class="cardTrophyImage" ng-src="{{card.trophyImage}}">
+                </div>
+
+                <!--Badge Field-->
+                <div class="cardFace">
+
+                    <!--Badge-->
+                    <div class="badge" ng-repeat="badge in card.badges">
+                        <img class="badgeImage" ng-src="{{badge.badgeImage}}">
+                        <div class="milestone">{{badge.mileStone}}</div>
+                        <div class="difficultyLevel">{{badge.pointValue.difficulty}}</div>
+
                     </div>
                 </div>
 
-                <!--Trophy-->
-                <img class="cardTrophyImage" ng-src="{{card.trophyImage}}">
-            </div>
-
-            <!--Badge Field-->
-            <div class="cardFace">
-
-                <!--Badge-->
-                <div class="badge" ng-repeat="badge in card.badges">
-                    <img class="badgeImage" ng-src="{{badge.badgeImage}}">
-                    <div class="milestone"><p>{{badge.mileStone}}</p></div>
-                    <div class="difficultyLevel">{{badge.pointValue.difficulty}}</div>
-                    
+                <!--Point Tally-->
+                <div class="stateSpace">
+                    {{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}
                 </div>
             </div>
-
-            <!--Point Tally-->
-            <div class="cardSpace">
-                <p>{{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}</p>
-            </div>
         </div>
+        <!--Student Point Counter-->
+        Points {{number}}/{{number}}
     </div>
-    <!--Student Point Counter-->
-        <p>Points {{number}}/{{number}}</p>
 </div>

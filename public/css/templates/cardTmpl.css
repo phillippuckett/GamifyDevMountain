@@ -6,15 +6,7 @@
     padding: .75%;
     margin: auto;
 }
-
-.cardSpace { text-align: center;
-    /*border: 1px solid rgb(150, 150, 0);*/
-    background-color: rgb(75, 75, 0);
-    width: 100%;
-    margin: auto;
-    display: inline-flex;
-}
-    
+   
 .trophyTitle { color: rgb(1000, 1000, 1000); text-align: center;
     /*border: 1px solid rgb(250, 250, 0);*/
     height: 50px;
