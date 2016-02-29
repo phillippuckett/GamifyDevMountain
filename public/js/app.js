@@ -29,8 +29,14 @@ angular.module( "GamifyDevMountain", [ 'ui.router' ] )
       url: '/admin',
       templateUrl: './html/states/adminView.html',
       controller: 'adminCtrl'
-    });
+    })
 
+    .state('studentState', {
+      name: 'student',
+      url: '/student',
+      templateUrl: './html/states/studentView.html',
+      controller: 'studentCtrl'
+    });
 
     $urlRouterProvider.otherwise( '/login' );
   } );
