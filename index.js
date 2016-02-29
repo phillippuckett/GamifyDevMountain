@@ -26,7 +26,7 @@ var isAuthed = function (req, res, next) {
     };
     
 /** Front End Connection */    
-var __dirname;
+// var __dirname;
 
 /** Express */
 var app = express();
@@ -47,7 +47,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 /** Connect to Front-End */
-app.use(express.static(__dirname + './../public'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(cors());
 
