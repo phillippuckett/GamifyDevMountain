@@ -61,9 +61,7 @@ module.exports = {
         users.findById("56d093376629e38018ec0901", function(err, result){
             if(err){res.send(err)}
             else{
-                console.log(result);
-                
-                if(true){
+                if(result.badgesRequested.indexOf(req.params.badge) === -1){
                     var badges = result.badgesRequested;
                     badges.push(req.params.badge);
                     users.findByIdAndUpdate("56d093376629e38018ec0901", {badgesRequested: badges}, function(err1, result1){
