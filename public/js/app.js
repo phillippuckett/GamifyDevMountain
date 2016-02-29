@@ -1,33 +1,42 @@
-angular.module("GamifyDevMountain", ['ui.router'])
-    .config(function ($stateProvider, $urlRouterProvider) {
-        $stateProvider
+angular.module( "GamifyDevMountain", [ 'ui.router' ] )
+  .config( function ( $stateProvider, $urlRouterProvider ) {
+    $stateProvider
 
-        /** Login State */
-            .state('login', {
-                url: '/login',
-                templateUrl: 'html/states/loginState.html',
-                controller: 'authCtrl',
-            })
+    /** Login State */
+      .state( 'login', {
+      url: '/login',
+      templateUrl: 'html/states/loginState.html',
+      controller: 'authCtrl',
+    } )
 
-        /** Registration State */
-            .state('registration', {
-                url: '/registration',
-                templateUrl: 'html/states/regState.html',
-                controller: 'authCtrl'
-            })
+    /** Registration State */
+    .state( 'registration', {
+      url: '/registration',
+      templateUrl: 'html/states/regState.html',
+      controller: 'authCtrl'
+    } )
 
-        /** User State */
-            .state('user', {
-                url: '/user',
-                templateUrl: 'html/states/userState.html',
-                controller: 'userCtrl'
-            })
+    /** User State */
+    .state( 'user', {
+      url: '/user',
+      templateUrl: 'html/states/userState.html',
+      controller: 'userCtrl'
+    } )
 
-        $urlRouterProvider.otherwise('/login');
+    /** Admin State */
+    .state( 'adminState', {
+      name: 'admin',
+      url: '/admin',
+      templateUrl: './html/states/adminView.html',
+      controller: 'adminCtrl'
     });
-    
-    
-       
+
+
+    $urlRouterProvider.otherwise( '/login' );
+  } );
+
+
+
 // resolve: {
 //     user: function (authSvc, $state) {
 //         return authSvc.getCurrentUserObject().then(function (response) {
