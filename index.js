@@ -76,6 +76,8 @@ app.get('/api/currentUser', usersCtrl.getCurrentUser);
 app.put('/api/users/:id', usersCtrl.updateUser);
 app.delete('/api/users/:id', usersCtrl.deleteUser);
 
+app.get('/api/getUserInfo', usersCtrl.getInformation);
+
 /* Curriculums End Points */
 app.post('/api/curriculums', currsCtrl.createCurriculum);
 app.get('/api/curriculums', currsCtrl.getCurriculum);

@@ -16,7 +16,7 @@ module.exports = {
     
     /** R */
     getUser: function (req, res) {
-        users.find.exec().then(function (err, readUser) {
+        users.find( {} , function (err, readUser) {
             if (err) {
                 res.status(500).send(err);
             }
@@ -45,6 +45,13 @@ module.exports = {
         users.findByIdAndRemove(req.query.id, function (err, deleteUser) {
             if (err) { res.status(500).send(err); }
             else { res.send('User Deleted!', deleteUser); }
+        })
+    },
+    
+    getInformation: function(req, res) {
+        users.findById("56d093376629e38018ec0901").populate({path: 'cohort', populate: {path: 'cohortCurriculum', model: 'curriculums', populate: {path: 'deck', model: 'cards', populate: {path: 'badges', model: 'badges', populate: {path: 'category', model: 'categories'}}}}}).exec(function(err, result){
+            if(err){res.send(err)}
+            else{res.send(result)}
         })
     }
 }
