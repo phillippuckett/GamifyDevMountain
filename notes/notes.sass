@@ -1,0 +1,110 @@
+          //###### Scss Notes ######\\
+
+// _________________________________________________\\
+              // ######## Setup ######## \\
+// ____________________________________________________ \\
+
+// super short gulp setup with a live-server analogue, live-server doesn't have a sass compiler
+// https://gist.github.com/feliperoberto/9793674
+// often, you'll find sass and scss terms being used ambiguously, because scss is the newer upgraded form of sass, it's really more about preference than anything, but we'll be using scss, for its similarity to css.
+
+
+// Readable sass / scss reasources
+// http://www.sitepoint.com/sass-basics-the-mixin-directive/
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+// http://alistapart.com/article/dry-ing-out-your-sass-mixins
+
+
+// ____________________________________________________ \\
+    // ######## What is it? and Why use it? ######## \\
+// ____________________________________________________ \\
+
+
+
+// why use Sass?:
+//    employers like it.
+//    Dry maintainable code
+//    smaller file sizes, more modular, easier to browse
+//    performance increases, converts to very efficient css, especially important to mobile, with a much smaller website cache limit
+
+
+// Difference between Sass and ScSS:
+// They're often ambiguous, however in Sass, you don thave to use: curly brackets, quotes, semicolons etc.
+
+// sass looks like a shorthand version of scss. Scss is actually more recent and up to date.
+
+// scss is an improved form of css, with access to variables, and function and object analogues.
+
+// They allow for easier maintaining of code, simpler updating, and a very DRY approach, less repeating of oneself within the css.
+
+// a preprocessor takes the sass/scss file, and transmutes it into clean, dry CSS for the browser to use.
+
+
+
+
+// ____________________________________________________ \\
+              // ######## Usage ######## \\
+// ____________________________________________________ \\
+
+
+
+
+// @import -injects a seperate stylesheet, giving us a scope in which to call variables and mixins etc.
+  // import can not be given arguments.
+
+// @mixin -defines a mixin as an object, with js object notation. They can be passed arguments, or taken as is.
+  // mixins should only contain shared properties that will be used wherever we call that mixin.
+  // dynamic properties that could be controlled from an outside source are supplied as arguments
+  // static properties do not recieve an argument.
+
+// @include -injects a @mixin
+  // include can be given arguments, similar to a js function call
+
+// % defines a class within sass/scss that you can @ extend upon, without it getting printed to the generated CSS stylesheet.
+
+// @extend -inherits properties from a pre-existing tag
+  // extends keep us from re-writing code, keeping the file sizes small, and easily searchable, responsible for outputting clean dry CSS.
+
+//Maps: are just like javascript objects with key/value pairs which can be comprised of any sass data type.
+
+
+$mapNamehere: {
+  background: red,
+  color: blue,
+  font-size: 1em,
+}
+
+
+// $insertVariableNameHere - either creates or envokes a variable by name.
+
+// @at-root -directive which places contained definitions at the root of the stylesheet, regarless of current nesting.
+
+// unique-id() -directive returns a guaranteed unique CSS identifier to the current run of Sass.
+
+
+// Drying out mixins
+// 1. Determine which properties will be static and which will be dynamic.
+// 2.
+
+
+@mixin button($color) {
+		@include button-static;
+
+	background-color: $color;
+	border-color: mix(black, $color, 25%);
+
+	&:hover {
+		background-color: mix(black, $color, 15%);
+		border-color: mix(black, $color, 40%);
+	}
+}
+
+@mixin button-static {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: .25em .5em;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
