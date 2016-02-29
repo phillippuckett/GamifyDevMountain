@@ -43,7 +43,7 @@
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);    
-    height: 70px;
+    min-height: 70px; max-height: 10%;
     width: 100.2%;
     display: inline-flex;
 }

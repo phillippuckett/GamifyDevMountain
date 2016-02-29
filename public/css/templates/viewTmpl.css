@@ -1,0 +1,8 @@
+.view {
+    /*border: 1px solid green;*/
+    background-color: rgba(0,0,0,.5);
+    min-height: 92.5%; max-height: 600px;
+    min-width: 95%; max-width: 1000px;
+    margin: 2.5%;
+    overflow-x: auto;
+}
