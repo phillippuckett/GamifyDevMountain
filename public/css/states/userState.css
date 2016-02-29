@@ -1,7 +1,7 @@
 .userState { text-align: center;
     /*border: 1px solid rgb(100, 100, 100);*/
     background-color: rgba(0, 0, 0, .05); 
-    background-image: url('/media/graystone.png');
+    background-image: url('//media/charcoalstone.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 92.5%;

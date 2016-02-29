@@ -1,39 +1,45 @@
-angular.module( "GamifyDevMountain", [ 'ui.router' ] )
-  .config( function ( $stateProvider, $urlRouterProvider ) {
-    $stateProvider
+angular.module("GamifyDevMountain", ['ui.router'])
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
 
-    /** Login State */
-      .state( 'login', {
-      url: '/login',
-      templateUrl: 'html/states/loginState.html',
-      controller: 'authCtrl',
-    } )
+        /** Login State */
+            .state('login', {
+                url: '/login',
+                templateUrl: 'html/states/loginState.html',
+                controller: 'authCtrl',
+            })
 
-    /** Registration State */
-    .state( 'registration', {
-      url: '/registration',
-      templateUrl: 'html/states/regState.html',
-      controller: 'authCtrl'
-    } )
+        /** Registration State */
+            .state('registration', {
+                url: '/registration',
+                templateUrl: 'html/states/regState.html',
+                controller: 'authCtrl'
+            })
 
-    /** User State */
-    .state( 'user', {
-      url: '/user',
-      templateUrl: 'html/states/userState.html',
-      controller: 'userCtrl'
-    } )
+        /** User State */
+            .state('user', {
+                url: '/user',
+                templateUrl: 'html/states/userState.html',
+                controller: 'userCtrl'
+            })
 
-    /** Admin State */
-    .state( 'adminState', {
-      name: 'admin',
-      url: '/admin',
-      templateUrl: './html/states/adminView.html',
-      controller: 'adminCtrl'
+        /** Admin State */
+            .state('adminState', {
+                name: 'admin',
+                url: '/admin',
+                templateUrl: './html/states/adminView.html',
+                controller: 'adminCtrl'
+            })
+
+            .state('studentState', {
+                name: 'student',
+                url: '/student',
+                templateUrl: './html/states/studentView.html',
+                controller: 'studentCtrl'
+            })
+
+        $urlRouterProvider.otherwise('/login');
     });
-
-
-    $urlRouterProvider.otherwise( '/login' );
-  } );
 
 
 
