@@ -3,7 +3,7 @@ angular.module('GamifyDevMountain')
         return {
             restrict: 'E',
             templateUrl: 'html/templates/navTmpl.html',
-            controller: function ($scope, navSvc) {
+            controller: function ($scope) {
                 $scope.navDir = 'navDir';
                 // console.log('Nav Controller: Running');
             }

@@ -1,108 +1,82 @@
 <div class="nav">
-    <div class="navTitle">Cohort {{title}}</div>
+    <div class="navTitle">Score Card</div>
 
     <!--Admin-->
-    <div class="adminNav" ng-hide="true">
+    <div class="adminNav" ng-hide="false">
         <div class="stateSpace">
-            <button class="navButton">
-                <p class="navButton">Cohorts</p>
-            </button>
+            <p class="navButton">Courses</p>
         </div>
         <div class="stateSpace">
-            <button class="navButton">
-                <p>Mentors</p>
-            </button>
+            <p class="navButton">Cohorts</p>
         </div>
         <div class="stateSpace">
-           <button class="navButton">
-               <p>Students</p>
-            </button>
+            <p class="navButton">Curriculum</p>
         </div>
         <div class="stateSpace">
-            <button class="navButton">
-                <p>Curriculum</p>
-            </button>
-        </div>
-        <div class="stateSpace">
-            <button class="navButton">
-                <p>Trophies</p>
-            </button>
-        </div>
-        <div class="stateSpace">
-            <button class="navButton">
-                <p>Cards</p>
-            </button>
-        </div>
-        <div class="stateSpace">
-            <button class="navButton">
-                <p>Badges</p>
-            </button>
-        </div>
-        <div class="stateSpace">
-            <button class="navButton">
-                <p>Achievements</p>
-            </button>
+            <p class="navButton">Cards</p>
         </div>
     </div>
 
 
     <!--Student-->
-    <div class="studentNav" ng-hide="false">
+    <div class="studentNav" ng-hide="true">
 
+        <!--Badges-->
         <div class="stateSpace">
             <div class="stateSpace">
-                <p>Level{{lvlName}}</p>
+                <p class="studentCats">Badges</p>
             </div>
             <div class="stateSpace">
-                <p>stat{{lvlNumber}}</p>
-            </div>
-            <div class="stateSpace">
-                <p>Progress Bar{{progressBar}}</p>
+                <p class="studentStats">stat{{number}}</p>
             </div>
         </div>
 
+        <!--Bronze Medals-->
         <div class="stateSpace">
             <div class="stateSpace">
-                <p>Badges</p>
+                <p class="studentCats">Bronze</p>
             </div>
             <div class="stateSpace">
-                <p>stat{{number}}</p>
+                <p class="studentStats">stat{{number}}</p>
             </div>
         </div>
 
+        <!--Silver Medals-->
         <div class="stateSpace">
             <div class="stateSpace">
-                <p>Bronze</p>
+                <p class="studentCats">Silver</p>
             </div>
             <div class="stateSpace">
-                <p>stat{{number}}</p>
+                <p class="studentStats">stat{{number}}</p>
             </div>
         </div>
 
+        <!--Gold Medals-->
         <div class="stateSpace">
             <div class="stateSpace">
-                <p>Silver</p>
+                <p class="studentCats">Gold</p>
             </div>
             <div class="stateSpace">
-                <p>stat{{number}}</p>
+                <p class="studentStats">stat{{number}}</p>
             </div>
         </div>
 
-        <div class="stateSpace">
+        <!--Student Level-->
+        <div class="studentLvl">
             <div class="stateSpace">
-                <p>Gold</p>
+                <p class="studentLvl">Level{{lvlName}}</p>
+                <p class="studentLvl">stat{{lvlNumber}}</p>
             </div>
-            <div class="stateSpace">
-                <p>stat{{number}}</p>
-            </div>
+            <p class="studentLvl">Progress Bar{{progressBar}}</p>
         </div>
 
+        <!--Mentor-->
         <div class="stateSpace">
             <div class="stateSpace">
-                <p>Mentor</p>
+                <p class="studentCats">Mentor</p>
             </div>
             <div class="stateSpace">
-                <p>{{name}}Brack</p>
+                <p class="studentStats">{{name}}Brack</p>
             </div>
         </div>
     </div>

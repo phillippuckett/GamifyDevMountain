@@ -36,13 +36,13 @@ border: 1px solid rgba(75, 75, 75, 1);
     }
 
 p { text-align: center;
-    border: 1px solid rgb(150, 0, 0);
+    /*border: 1px solid rgb(150, 0, 0);*/
     width: 100%; 
     margin: auto;
     }
 
 a { text-align: center;
-    border: 1px solid rgb(0, 0, 250);
+    /*border: 1px solid rgb(0, 0, 250);*/
     width: 100%; 
     margin: auto;
     }
