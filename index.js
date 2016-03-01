@@ -76,8 +76,10 @@ app.get('/api/currentUser', usersCtrl.getCurrentUser);
 app.put('/api/users/:id', usersCtrl.updateUser);
 app.delete('/api/users/:id', usersCtrl.deleteUser);
 app.put('/api/users/badgerequest/:badge', usersCtrl.requestBadge);
-
 app.get('/api/getUserInfo', usersCtrl.getInformation);
+app.get('/api/getStudentsByCohort/:cohort', usersCtrl.getStudentsByCohort);
+
+
 
 /* Curriculums End Points */
 app.post('/api/curriculums', currsCtrl.createCurriculum);
