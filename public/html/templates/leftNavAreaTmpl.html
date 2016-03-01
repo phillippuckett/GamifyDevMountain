@@ -1,5 +1,19 @@
-<div class="nav">
-    <!--Admin-->
+<div class="leftNavAreaDirWrap">
+  <div class="leftNavArea">
+    <p ng-click="toggleDirs('cohorts'); activeData('Cohorts')" >Cohorts</p>
+    <p ng-click="toggleDirs('student'); activeData('Students')" >Students</p>
+    <p ng-click="toggleDirs('cardAdmin'); activeData('Cards')">Cards</p>
+    <p ng-click="toggleDirs('badgeAdmin'); activeData('badgeAdmin')">Badges</p>
+  </div>
+</div>
+
+
+<!-- stop breaking my stuff -->
+
+
+
+<!-- <div class="nav">
+    Admin
     <div class="adminNav" ng-hide="false">
         <div class="navTitle">Navigation</div>
         <div class="stateSpace">
@@ -15,6 +29,7 @@
             <p class="navButton">Cards</p>
         </div>
     </div>
-</div>
+</div> -->
 
-<!-- using leftNavAreaCtrl -->
+
+<!-- using adminCtrl -->

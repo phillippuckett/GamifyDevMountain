@@ -1,11 +1,11 @@
 angular.module( 'GamifyDevMountain' )
-  .service( 'adminViewSvc', function ( $state, $http ) {
+  .service( 'adminStateSvc', function ( $state, $http ) {
 
-    /** Badges */
+    /**######## Badges ########*/
     this.getBadges = function () {
       return $http( {
           method: 'GET',
-          url: '/api/cards'
+          url: '/api/badges'
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
@@ -15,7 +15,7 @@ angular.module( 'GamifyDevMountain' )
     this.putBadges = function () {
       return $http( {
           method: 'GET',
-          url: '/api/cards'
+          url: '/api/badges'
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
@@ -26,7 +26,7 @@ angular.module( 'GamifyDevMountain' )
     this.postBadges = function () {
       return $http( {
           method: 'GET',
-          url: '/api/cards'
+          url: '/api/badges'
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
@@ -37,7 +37,7 @@ angular.module( 'GamifyDevMountain' )
     this.deleteBadges = function () {
       return $http( {
           method: 'GET',
-          url: '/api/cards'
+          url: '/api/badges'
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
@@ -45,7 +45,7 @@ angular.module( 'GamifyDevMountain' )
     };
 
 
-    /** Cards */
+    /** ###### Cards ###### */
     this.getCards = function () {
       return $http( {
           method: "GET",
@@ -56,7 +56,38 @@ angular.module( 'GamifyDevMountain' )
         } )
     };
 
-    /** Categories */
+    this.putCards = function () {
+      return $http( {
+          method: "GET",
+          url: '/api/cards'
+        } )
+        .then( function ( cardData ) {
+          return cardData.data;
+        } )
+    };
+
+    this.postCards = function () {
+      return $http( {
+          method: "GET",
+          url: '/api/cards'
+        } )
+        .then( function ( cardData ) {
+          return cardData.data;
+        } )
+    };
+
+    this.deleteCards = function () {
+      return $http( {
+          method: "GET",
+          url: '/api/cards'
+        } )
+        .then( function ( cardData ) {
+          return cardData.data;
+        } )
+    };
+
+
+    /**######## Categories ########*/
     this.getCategories = function () {
       return $http( {
           method: "GET",
@@ -67,7 +98,7 @@ angular.module( 'GamifyDevMountain' )
         } )
     };
 
-    /** Cohorts */
+    /**######## Cohorts ########*/
     this.getCohorts = function () {
       return $http( {
           method: "GET",
@@ -78,7 +109,7 @@ angular.module( 'GamifyDevMountain' )
         } )
     };
 
-    /** Curriculums */
+    /**######## Curriculums ########*/
     this.getCurriculums = function () {
       return $http( {
           method: "GET",
