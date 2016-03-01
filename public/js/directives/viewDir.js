@@ -3,9 +3,9 @@ angular.module('GamifyDevMountain')
         return {
             restrict: 'E',
             templateUrl: 'html/templates/viewTmpl.html',
-            controller: function ($scope) {
-                // $scope.userViewDir = 'User View';
-                // console.log('userView Controller: Running');
+            controller: function ($scope, viewSvc) {
+                // $scope.viewDir = 'User View';
+                // console.log('View Controller: Running');
             }
         }
     });

@@ -3,12 +3,12 @@ angular.module('GamifyDevMountain')
         return {
             restrict: 'E',
             templateUrl: 'html/templates/studentTmpl.html',
-            controller: function ($scope, userViewSvc, $http) {
+            controller: function ($scope, viewSvc, $http) {
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');
                
                 $scope.getCards = function (cardData) {
-                    userViewSvc.getCards(cardData).then(function (cardData) {
+                    viewSvc.getCards(cardData).then(function (cardData) {
                         $scope.cards = cardData;
                     })
                 };
