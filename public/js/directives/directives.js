@@ -59,6 +59,13 @@ angular.module( "GamifyDevMountain" )
   }
 } )
 
+.directive( "headerAdminDir", function () {
+  return {
+    templateUrl: './html/templates/headerAdminTmpl.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+} )
 
 .directive( "leftNavAreaDir", function () {
   return {
