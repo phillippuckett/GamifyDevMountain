@@ -18,14 +18,14 @@ var currsCtrl = require('./server/controllers/currsCtrl');
 var usersCtrl = require('./server/controllers/usersCtrl');
 
 /** Policies */
-var isAuthed = function (req, res, next) { 
-    if (!req.isAuthenticated()) 
-    return res.status(401).send(); 
-    return next(); 
-    // console.log('Function: isAuthed'); 
+var isAuthed = function (req, res, next) {
+    if (!req.isAuthenticated())
+    return res.status(401).send();
+    return next();
+    // console.log('Function: isAuthed');
     };
-    
-/** Front End Connection */    
+
+/** Front End Connection */
 // var __dirname;
 
 /** Express */
@@ -61,7 +61,7 @@ app.post('/api/login',
         // console.log('Function: authenticate');
     }
 );
-    
+
 /** Log Out */
 app.get('/api/logout', function (req, res) {
     req.logout();
@@ -71,13 +71,15 @@ app.get('/api/logout', function (req, res) {
 
 /* Users End Points */
 app.post('/api/register', usersCtrl.createUser);
-app.get('/api/users', usersCtrl.getUser);
 app.get('/api/currentUser', usersCtrl.getCurrentUser);
+app.get('/api/users', usersCtrl.getUser);
 app.put('/api/users/:id', usersCtrl.updateUser);
 app.delete('/api/users/:id', usersCtrl.deleteUser);
 app.put('/api/users/badgerequest/:badge', usersCtrl.requestBadge);
-
 app.get('/api/getUserInfo', usersCtrl.getInformation);
+app.get('/api/getStudentsByCohort/:cohort', usersCtrl.getStudentsByCohort);
+
+
 
 /* Curriculums End Points */
 app.post('/api/curriculums', currsCtrl.createCurriculum);
