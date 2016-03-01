@@ -15,7 +15,7 @@ angular.module('GamifyDevMountain')
                 // console.log(user);
                 if (user.Login === true) {
                     // console.log('Auth Controller: Successful Log In');
-                    $state.go('user');
+                    $state.go('student');
                 }
             }).catch(function (err) {
                 if (err.status === 401) {

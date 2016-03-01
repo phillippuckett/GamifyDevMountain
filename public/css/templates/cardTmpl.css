@@ -1,56 +1,77 @@
-.card { 
-    border: 1px solid rgb(200, 0, 0);
+.card { font-family: 'Cinzel', serif;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 2.5%;
+    background-color: rgba(0,50,100,1);
+    background-image: url('/media/blue-cloth.png');
+    -webkit-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);    
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 450px; max-height: 600px;
     min-width: 350px; max-width: 33.33%;
     padding: .75%;
-    margin: auto;
+    margin: auto 1%;
 }
    
-.trophyTitle { color: rgb(1000, 1000, 1000); text-align: center;
-    border: 1px solid rgb(250, 250, 0);
+.trophyTitle {  color: rgb(225, 250, 250); 
+                text-align: center; 
+                font-size: 35px; 
+                text-shadow: 0px 0px 2.5px rgba(250, 250, 250, 1);
+    /*border: 1px solid rgb(250, 250, 0);*/
     height: 50px;
     width: 100%;
     margin: auto;
 }
 
 .cardTrophyImage {
-    border: 1px solid rgb(250, 250, 0);
-    height: 50px;
-    margin: auto;
+    /*border: 1px solid rgb(250, 250, 0);*/
+    height: 65px;
+    margin: 2.5%;
 }
 
-.cardFace { color: rgb(1000, 1000, 1000); text-align: center;
-    border: 1px solid rgb(150, 100, 0);
-    height: 75%;
-    width: 100%;
-    margin: auto;  
-    overflow-y: auto;
+.cardFace { color: rgb(250, 250, 250); 
+            text-align: center;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 2.5%;
+    -webkit-box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);     
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-repeat: no-repeat;
+            height: 75%;
+            width: 100%;
+            margin: auto;  
+            overflow-y: auto;
 }
 
 
 .badge {
-   border: 1px solid rgb(0, 0, 75);
+   /*border: 1px solid rgba(250, 250, 250, .25);*/
     width: 95%;
-    margin: auto;
+    margin: 2.5% auto;
     display: inline-flex;
 }
 
 .badgeImage {
-    border: 1px solid rgb(0, 0, 250);
+    border: 1px solid rgba(250, 250, 250, .5);
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.5);
     height: 25px;
     width: 25px;
     padding: 2.5%;
     margin: auto;   
 }
 .milestone { text-align: left;
-    border: 1px solid rgb(0, 0, 250);
+    /*border: 1px solid rgb(0, 0, 250);*/
     width: 75%;
     padding: 0 2.5%;
     margin: auto;
 }
 
 .difficultyLevel { color: orangered;
-    border: 1px solid rgb(0, 0, 250);
+    /*border: 1px solid rgb(0, 0, 250);*/
     height: 25px;
     padding: 2.5%;
     width: 25%;

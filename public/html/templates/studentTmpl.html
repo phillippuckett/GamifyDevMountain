@@ -1,8 +1,9 @@
 <div class="view">
+    <p class="tableTextTop">Course Cards</p>
+    
     <div class="student">
 
         <!--Student Header-->
-        Your Curriculum Cards
         <div class="stateSpace">
 
             <!--Card-->
@@ -34,11 +35,12 @@
 
                 <!--Point Tally-->
                 <div class="stateSpace">
-                    {{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}
+                    <p>{{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}</p>
                 </div>
             </div>
         </div>
-        <!--Student Point Counter-->
-        Points {{number}}/{{number}}
     </div>
+
+    <!--Student Point Counter-->
+    <p class="tableTextBottom">Total Points {{number}}/{{number}}</p>
 </div>
