@@ -1390,36 +1390,8 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   flex: 2;
 }
 
-<<<<<<< HEAD=======<<<<<<< HEAD=======* {
-  outline: 1px solid red;
-}
-
->>>>>>> 92ca44fb857b3363f83a9894a26a1bed9287216f body {
+{
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
-
-.alert,
-.register {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  font: 100% helvetica, sans-serif;
-  color: black;
-}
-
-.register {
-  border-color: #444444;
-  padding: 10px;
-}
-
-.dmLogoTransp {
-  height: 50px;
-  width: 50px;
-  background-image: url("./../media/DMLogoTransparent.png");
-  background-size: contain;
-}
-
->>>>>>> master
