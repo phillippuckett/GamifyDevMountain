@@ -6,29 +6,18 @@ html {
   width: 98.75%;
 }
 
-body {
-  border: 1px solid rgba(75, 75, 75, 1);
-  background-image: url('/media/charcoalstone.jpg');
-  box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
-  background-size: cover;
-  background-color: rgb(0, 0, 0);
-  margin: auto;
-  height: 105%;
-  width: 101.05%;
-}
-
-.state {
-  text-align: center;
-  /*border: 1px solid rgb(100, 100, 100);*/
-  background-color: rgba(1000, 1000, 1000, .85);
-  /*background-image: url('/media/graystone.jpg');*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 92.5%;
-  width: 100.25%;
-}
+body { 
+/*border: 1px solid rgba(75, 75, 75, 1);*/
+    background-image: url('/media/charcoalstone.jpg');
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.75);
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    margin: auto; 
+    height: 105%;
+    width: 101.05%;
+    }
 
 .stateSpace {
   text-align: center;
