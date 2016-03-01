@@ -213,53 +213,53 @@ angular.module( 'GamifyDevMountain' )
 
       // ############### Badges ################ \\
 
-      $scope.getBadges = function () {
-        console.log('badges have been requested from mvs')
-        avs.getBadges()
-          .then( function ( response ) {
-              $scope.badges = response.data;
-              console.log(response);
-          } );
-    }
-    $scope.badges = $scope.getBadges();
-    //   $scope.badges = [
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //      },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //     },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //     },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //     },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //     },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //     },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //    },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //     },
-    //     {
-    //       badgeName: 'CSS Card',
-    //       badgeImgLink: './../media/Css100.png',
-    //    }
-    //  ];
+    //   $scope.getBadges = function () {
+    //     console.log('badges have been requested from mvs')
+    //     avs.getBadges()
+    //       .then( function ( response ) {
+    //           $scope.badges = response.data;
+    //           console.log(response);
+    //       } );
+    // }
+    // $scope.badges = $scope.getBadges();
+      $scope.badges = [
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+         },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+        },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+        },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+        },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+        },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+        },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+       },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+        },
+        {
+          badgeName: 'CSS Card',
+          badgeImgLink: './../media/Css100.png',
+       }
+     ];
 
 
 
