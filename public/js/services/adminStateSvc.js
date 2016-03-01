@@ -12,10 +12,19 @@ angular.module( 'GamifyDevMountain' )
         } )
     };
 
-    this.putBadges = function () {
+    this.getBadge = function () {
       return $http( {
-          method: 'GET',
-          url: '/api/badges'
+        method: 'GET',
+        url: '/badge?_id=' + id
+      } );
+    };
+
+
+    this.createBadges = function () {
+      return $http( {
+          method: 'POST',
+          url: '/api/badges',
+          data: badge
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
@@ -23,10 +32,11 @@ angular.module( 'GamifyDevMountain' )
     };
 
 
-    this.postBadges = function () {
+    this.editBadges = function () {
       return $http( {
-          method: 'GET',
-          url: '/api/badges'
+          method: 'PUT',
+          url: '/api/badges' + id,
+          data: badge
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
@@ -36,8 +46,8 @@ angular.module( 'GamifyDevMountain' )
 
     this.deleteBadges = function () {
       return $http( {
-          method: 'GET',
-          url: '/api/badges'
+          method: 'DELETE',
+          url: '/api/badges' + id
         } )
         .then( function ( badgeData ) {
           return badgeData.data;
