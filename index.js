@@ -80,8 +80,6 @@ app.get('/api/getUserInfo', usersCtrl.getInformation);
 app.get('/api/getStudentsByCohort/:cohort', usersCtrl.getStudentsByCohort);
 app.put('/api/badgeApproval', usersCtrl.badgeApproval);
 
-
-
 /* Curriculums End Points */
 app.post('/api/curriculums', currsCtrl.createCurriculum);
 app.get('/api/curriculums', currsCtrl.getCurriculum);
