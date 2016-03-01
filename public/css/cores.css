@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-size: 1.3em;
 }
 
 .badgeRepeated {
@@ -42,6 +43,41 @@ body {
   background-image: url("./../media/DMLogoTransparent.png");
   background-size: contain;
 }
+
+.crudButtonBar {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 345px;
+  width: 150px;
+  height: 300px;
+  /*background-color: #444444;*/
+  color: #bdbdbd;
+  /*border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);*/
+}
+
+.crudButtons {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #444444;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+}
+
+
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -1089,7 +1125,7 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   left: 160px;
   top: 70px;
   width: calc(100vw - 200px);
-  height: calc(100vh - 85px);
+  height: calc(100vh - 90px);
   background-size: contain;
   z-index: 100;
 }
@@ -1243,16 +1279,16 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .leftNavAreaDirWrap {
   position: absolute;
-  width: 140px;
+  width: 157px;
   padding: 1px;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 90px);
 }
 
 .leftNavArea {
   position: relative;
   padding: 20px;
   top: 20px;
-  width: 130px;
+  width: 150px;
   height: 300px;
   background-color: #444444;
   color: #bdbdbd;
@@ -1307,9 +1343,9 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   max-width: calc(100% - 10px);
   display: inline-block;
   position: relative;
-  left: 0px;
+  left: 15px;
   top: 20px;
-  height: 100%;
+  height: 97%;
   overflow: scroll;
   max-width: calc();
   -webkit-border-radius: 13px;
@@ -1373,8 +1409,8 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   padding: 10px;
   background: #202020;
   margin: 5px;
-  width: 89%;
-  height: 73%;
+  width: 96%;
+  height: 82%;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   -ms-border-radius: 13px;
