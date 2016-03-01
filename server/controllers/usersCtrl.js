@@ -108,7 +108,7 @@ module.exports = {
         users.find({
             cohort: req.params.cohort
             , role: 'Student'
-        }, function (err, result) {
+        }).populate({path: 'badgesRequested'}).exec(function (err, result) {
             if (err) {
                 res.send(err)
             } else {
@@ -116,5 +116,24 @@ module.exports = {
             }
         })
     },
+    
+    badgeApproval: function(req, res){
+        users.findById(req.body.student, function(err, result){
+            if(err){res.send(err)}
+            else{
+                var student = result;
+                student.badgesRequested.splice((student.badgesRequested.indexOf(req.body.badge)), 1);
+                student.badgesAwarded.push(req.body.badge);
+                student.earnedPoints += req.body.points;
+                users.findByIdAndUpdate(req.body.student, student, function(err1, result1){
+                    if (err1) {
+                            res.send(err1)
+                        } else {
+                            res.send(result1)
+                        }
+                })
+            }
+        })
+    }
 
 }
