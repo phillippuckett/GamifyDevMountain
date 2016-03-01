@@ -1,11 +1,25 @@
 * {
   /*outline: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-size: 1.3em;
+}
+
+.badgeRepeated {
+  width: 440px;
+  height: 102px;
+  border: 1px solid black;
+  margin: 5px;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
 }
 
 .alert,
@@ -29,6 +43,41 @@ body {
   background-image: url("./../media/DMLogoTransparent.png");
   background-size: contain;
 }
+
+.crudButtonBar {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 345px;
+  width: 150px;
+  height: 300px;
+  /*background-color: #444444;*/
+  color: #bdbdbd;
+  /*border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);*/
+}
+
+.crudButtons {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #444444;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+}
+
+
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -1076,7 +1125,7 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   left: 160px;
   top: 70px;
   width: calc(100vw - 200px);
-  height: calc(100vh - 85px);
+  height: calc(100vh - 90px);
   background-size: contain;
   z-index: 100;
 }
@@ -1142,12 +1191,16 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .gridDirWrap {
   position: relative;
   left: calc(50% - 250px);
+  top: 20px;
   width: 500px;
   background-color: #444444;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   -ms-border-radius: 13px;
   border-radius: 13px;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
 .gridHeader {
@@ -1160,6 +1213,7 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   font-size: proxima-nova;
   max-height: 70px;
   height: 50px;
+  padding-top: 8px;
   justify-content: center;
   text-align: center;
 }
@@ -1225,23 +1279,31 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .leftNavAreaDirWrap {
   position: absolute;
-  width: 140px;
+  width: 157px;
   padding: 1px;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 90px);
 }
 
 .leftNavArea {
   position: relative;
   padding: 20px;
   top: 20px;
-  width: 100px;
+  width: 150px;
   height: 300px;
   background-color: #444444;
   color: #bdbdbd;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
-.lefNavArea p {
-  border: 1px solid #2AABE2;
+
+/* TODO: mispelled leftNavArea, bookmarking because I'm not sure what this will break. I may add styling to make them look more like buttons, or at least clickable text.*/
+
+.leftNavArea p {
+  /*border: 1px solid #2AABE2;*/
   padding: 2px;
 }
 
@@ -1281,14 +1343,18 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   max-width: calc(100% - 10px);
   display: inline-block;
   position: relative;
-  left: 5px;
-  height: 100%;
+  left: 15px;
+  top: 20px;
+  height: 97%;
   overflow: scroll;
   max-width: calc();
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   -ms-border-radius: 13px;
   border-radius: 13px;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
 .cardHeader {
@@ -1296,10 +1362,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   justify-content: center;
   position: relative;
   left: 0px;
-  height: 20px;
+  height: 50px;
   background-color: #202020;
   color: #bdbdbd;
-  padding: 20px;
+  padding: 8px;
   margin: 5px;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
@@ -1334,14 +1400,17 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   background-color: #bdbdbd;
   color: #202020;
   overflow: scroll;
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.75);
 }
 
 .cardContents {
   padding: 10px;
   background: #202020;
   margin: 5px;
-  width: 89%;
-  height: 73%;
+  width: 96%;
+  height: 82%;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   -ms-border-radius: 13px;
@@ -1388,10 +1457,4 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .badgeDescription {
   flex: 2;
-}
-
-{
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
 }
