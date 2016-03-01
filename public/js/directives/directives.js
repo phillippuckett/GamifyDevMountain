@@ -41,6 +41,14 @@ angular.module( "GamifyDevMountain" )
 //   }
 // } )
 
+.directive( "crudButtonsDir", function () {
+  return {
+    templateUrl: './html/templates/crudButtonsTmpl.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+  } )
+
 .directive( "leftNavAreaDir", function () {
   return {
     templateUrl: './html/templates/leftNavAreaTmpl.html',

@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var badgesSchema = new Schema({
+    badgeName: {type: String},
     badgeImage: { type: String },
+    desc: {type: String},
     mileStone: { type: String },
     pointValue: {
         type: Object,

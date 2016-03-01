@@ -1,16 +1,18 @@
 <div class="cardAdminWrapper">
   <h1 class="cardHeader">Available Badges</h1>
-  
   <div class="cardsShallBehave">
     <div ng-repeat="badge in badges">
-      <!-- 
-      I'm thinking that we can include the card they apply to within the list, 
-      and have some sorting options as well. 
-      For MVP, we'll just display all of them in the objects' order. -->
-      {{badge.badgeName}}
-      <img src="./../media/css100.png" alt="" />
-      <img ng-src="{{badge.badgeImgLink}}"/>
-      {{badge.badgeImgLink}}
+      <div class="badgeRepeated">
+        <img ng-src="{{badge.badgeImage}}"/>
+        {{badge.badgeName}}
+        {{badge.desc}}
+      </div>
     </div>
   </div>
 </div>
+
+<!--
+I'm thinking that we can include the card they apply to within the list,
+and have some sorting options as well.
+For MVP, we'll just display all of them in the objects' order. -->
+<!-- <img src="./../media/css100.png" alt="" /> -->
