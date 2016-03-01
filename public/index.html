@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="GamifyDevMountain">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <title>GamifyDevMountain</title>
 
@@ -25,9 +25,9 @@
     <!--<link rel="stylesheet" href="css/templates/courseTmpl.css">-->
     <!--<link rel="stylesheet" href="css/templates/cohortTmpl.css">-->
     <!--<link rel="stylesheet" href="css/templates/menteeTmpl.css">-->
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!--Ui-Router-->
     <ui-view></ui-view>
@@ -41,16 +41,15 @@
     <script src="js/app.js"></script>
 
     <!--Controllers-->
-    <script src="js/controllers/studentCtrl.js"></script>
-    <script src="js/controllers/authCtrl.js"></script>
-    <script src="./js/controllers/mainCtrl.js"></script>
-    <script src="./js/controllers/adminCtrl.js"></script>
     <script src="./js/controllers/headerCtrl.js"></script>
-    <script src="./js/controllers/studentCtrl.js"></script>
+    <script src="js/controllers/authCtrl.js"></script>
+    <script src="./js/controllers/mainCtrl.js"></script>      
+    <script src="js/controllers/studentCtrl.js"></script>
+    <script src="./js/controllers/adminCtrl.js"></script>
 
     <!--Custom Directives-->
+    <script src="js/directives/headerDir.js"></script>    
     <script src="js/directives/navDir.js"></script>
-    <script src="js/directives/headerDir.js"></script>
     <script src="js/directives/viewDir.js"></script>
     <script src="js/directives/studentDir.js"></script>
     <script src="./js/directives/directives.js"></script>
@@ -62,10 +61,9 @@
 
     <!--Services-->
     <script src="js/services/authSvc.js"></script>
-    <script src="js/services/viewSvc.js"></script>
     <script src="./js/services/mainSvc.js"></script>
     <script src="./js/services/adminViewSvc.js"></script>
 
-  </body>
+</body>
 
 </html>
