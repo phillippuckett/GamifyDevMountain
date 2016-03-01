@@ -1,5 +1,6 @@
-angular.module( "GamifyDevMountain", [ 'ui.router' ] )
+angular.module( "GamifyDevMountain", [ 'ui.router', 'ui.grid' ] )
   .config( function ( $stateProvider, $urlRouterProvider ) {
+
     $stateProvider
 
     /** Login State */
@@ -20,7 +21,7 @@ angular.module( "GamifyDevMountain", [ 'ui.router' ] )
     .state( 'user', {
       url: '/user',
       templateUrl: 'html/states/userState.html',
-      controller: 'userCtrl'
+      controller: 'userCtrl',
     } )
 
     /** Admin State */
@@ -28,30 +29,34 @@ angular.module( "GamifyDevMountain", [ 'ui.router' ] )
       name: 'admin',
       url: '/admin',
       templateUrl: './html/states/adminView.html',
-      controller: 'adminCtrl'
-    })
+      controller: 'adminCtrl',
+      // resolve: {
+      //   user: function ( authSvc, $state ) {
+      //     return authSvc.getCurrentUserObject()
+      //       .then( function ( response ) {
+      //         if ( response.status != 200 ) {
+      //           $state.go( 'login' )
+      //           return;
+      //         }
+      //         if ( response.data.role.indexOf( 'mentor' ) > -1 ) {
+      //           console.log( response );
+      //           return response.data;
+      //         }
+      //         $state.go( 'login' )
+      //         return;
+      //       } )
+      //     console.log( 'Resolve in login' );
+      //   }
+      // }
 
-    .state('studentState', {
+    } )
+
+    .state( 'studentState', {
       name: 'student',
       url: '/student',
       templateUrl: './html/states/studentView.html',
       controller: 'studentCtrl'
-    });
+    } );
 
     $urlRouterProvider.otherwise( '/login' );
   } );
-
-
-
-// resolve: {
-//     user: function (authSvc, $state) {
-//         return authSvc.getCurrentUserObject().then(function (response) {
-//             if (response.status != 200) {
-//                 $state.go('login')
-//             }
-//             console.log(response);
-//             return response.data;
-//         })
-//         console.log('Resolve in login');
-//     }
-// }

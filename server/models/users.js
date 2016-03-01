@@ -13,7 +13,7 @@ var usersSchema = new Schema({
     badgesRequested: { type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'badges' }], default: [] },
     badgesAwarded: { type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'badges' }], default: [] },
     earnedPoints: { type: Number, default: 0 },
-    role: { type: [{}] }
+    role: [String]
 });
 
 usersSchema.pre('save', function (next) {
