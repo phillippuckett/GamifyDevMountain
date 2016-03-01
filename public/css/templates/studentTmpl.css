@@ -8,7 +8,7 @@
 
 .student {  color: rgb(1000, 1000, 1000); 
             text-align: center; 
-    /*border: 1px solid rgb(200, 100, 0);*/
+    border: 1px solid rgba(150, 100, 0, .5);
     /*background-color: rgb(50, 25, 0);*/
     min-height: 100%; max-height: 100%;
     min-width: 100%; max-width: 100%;
@@ -19,8 +19,8 @@
 
 .tableTextBottom {  color: white; font-family: 'Cinzel', serif;
                     text-align: center; 
-                    font-size: 15px;
-    /*border: 1px solid deeppink;*/
+                    font-size: 25px;
+    /*border-bottom: 1px solid deeppink;*/
     width: 100%;
     margin: .5% auto;
 }
