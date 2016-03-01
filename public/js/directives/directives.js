@@ -60,7 +60,6 @@ angular.module( "GamifyDevMountain" )
 } )
 
 
-
 .directive( "leftNavAreaDir", function () {
   return {
     templateUrl: './html/templates/leftNavAreaTmpl.html',
