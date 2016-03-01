@@ -1,4 +1,4 @@
-angular.module("GamifyDevMountain", ['ui.router'])
+angular.module("GamifyDevMountain", ['ui.router', 'ui.grid'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
 
@@ -25,9 +25,29 @@ angular.module("GamifyDevMountain", ['ui.router'])
 
         /** Admin State */
             .state('adminState', {
+                name: 'admin',
                 url: '/admin',
                 templateUrl: './html/states/adminView.html',
-                controller: 'adminCtrl'
+                controller: 'adminCtrl',
+                // resolve: {
+                //   user: function ( authSvc, $state ) {
+                //     return authSvc.getCurrentUserObject()
+                //       .then( function ( response ) {
+                //         if ( response.status != 200 ) {
+                //           $state.go( 'login' )
+                //           return;
+                //         }
+                //         if ( response.data.role.indexOf( 'mentor' ) > -1 ) {
+                //           console.log( response );
+                //           return response.data;
+                //         }
+                //         $state.go( 'login' )
+                //         return;
+                //       } )
+                //     console.log( 'Resolve in login' );
+                //   }
+                // }
+
             })
 
         $urlRouterProvider.otherwise('/login');
