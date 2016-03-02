@@ -1,0 +1,21 @@
+<div class="createModalPane overlay">
+
+  <!-- Badge Create -->
+  <form action="demo_form.asp">
+    Badge Name:
+    <input class="badgeInputs" type="text" name="badgeName" value="" placeholder="badgeName">
+    Badge Image:
+    <div class="imgDdWrap">
+      <div ng-click="dd = !dd" ng-style="{'background-image':'url({{selectedBadgeImage.imagimageLocation}})'}" class="imgDdPlaceholder badgeImg"></div>
+      <div ng-if="dd" ng-repeat="image in images" ng-style="{'background-image':'url({{image.imageLocation}})'}" ng-click="selectBI(image)" class="imgsRepDd badgeImg"></div>
+
+    </div>
+
+    <input type="submit">
+
+    <textarea name="badgeDescription" rows="8" cols="40"></textarea>
+  </form>
+
+</div>
+
+<div ng-click="close()" class="createModalBG fade"></div>
