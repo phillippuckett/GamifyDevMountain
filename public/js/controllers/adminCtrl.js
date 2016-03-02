@@ -1,12 +1,15 @@
 /* Administrator */
 angular.module( 'GamifyDevMountain' )
-  .controller( 'adminCtrl', function ( $scope, adminStateSvc ) {
+  .controller( 'adminCtrl', ["$scope", "$state", "adminStateSvc", "ModalService", function ( $scope, $state, adminStateSvc, ModalService ) {
+
+    $scope.test = 'testingfrom adminCtrl';
 
     var ass = adminStateSvc;
 
     $scope.activeDir = {};
     $scope.toggleDirs = function ( selectedDir ) {
-      $scope.activeDir.student = false;
+      console.log('toggleDir has been triggered');
+      $scope.activeDir.students = false;
       $scope.activeDir.badgeAdmin = false;
       $scope.activeDir.cohorts = false;
       $scope.activeDir.cardAdmin = false;
@@ -18,19 +21,31 @@ angular.module( 'GamifyDevMountain' )
     }
 
 
+    $scope.showAModal = function() {
+
+        ModalService.showModal({
+          templateUrl: "yesno/yesno.html",
+          controller: "YesNoController"
+        }).then(function(modal) {
+
+          modal.element.modal();
+          modal.close.then(function(result) {
+            $scope.message = result ? "You said Yes" : "You said No";
+          });
+        });
+
+      };
 
 
 
     // ############### Badges ################ \\
-
+    $scope.badges = [];
     $scope.getBadges = function () {
       ass.getBadges()
         .then( function ( response ) {
           $scope.badges = response;
         } );
     }
-    $scope.badges = $scope.getBadges();
-
     $scope.getBadge = function ( id ) {
       ass.getbadge( id )
         .then( function ( response ) {
@@ -71,7 +86,7 @@ angular.module( 'GamifyDevMountain' )
           $scope.cards = response;
         } );
     }
-    $scope.cards = $scope.getCards();
+    // $scope.cards = $scope.getCards();
 
     $scope.getCard = function ( id ) {
       ass.getcard( id )
@@ -113,7 +128,7 @@ angular.module( 'GamifyDevMountain' )
           $scope.cohorts = response;
         } );
     }
-    $scope.cohorts = $scope.getCohorts();
+    // $scope.cohorts = $scope.getCohorts();
 
     $scope.getCohort = function ( id ) {
       ass.getcohort( id )
@@ -153,7 +168,7 @@ angular.module( 'GamifyDevMountain' )
           $scope.curriculums = response;
         } );
     }
-    $scope.curriculums = $scope.getCurriculums();
+    // $scope.curriculums = $scope.getCurriculums();
 
     $scope.getCurriculum = function ( id ) {
       ass.getcurriculum( id )
@@ -194,7 +209,7 @@ angular.module( 'GamifyDevMountain' )
           $scope.students = response;
         } );
     }
-    $scope.students = $scope.getStudents();
+    // $scope.students = $scope.getStudents();
 
     $scope.getStudent = function ( id ) {
       ass.getstudent( id )
@@ -263,159 +278,159 @@ angular.module( 'GamifyDevMountain' )
 
     /*############### Dummy Data ###############*/
 
-    $scope.cards = [
-      {
-        cardName: 'CSS Card',
-        otherKey: 'CSS',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-              }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-              }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-              }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-              }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-              } ]
-              },
-      {
-        cardName: 'JS Card',
-        cardKeyOne: 'JS',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
+    // $scope.cards = [
+    //   {
+    //     cardName: 'CSS Card',
+    //     otherKey: 'CSS',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //           }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //           }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //           }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //           }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //           } ]
+    //           },
+    //   {
+    //     cardName: 'JS Card',
+    //     cardKeyOne: 'JS',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           },
+    //   {
+    //     cardName: 'HTML Card',
+    //     cardKeyOne: 'HTML',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           },
+    //   {
+    //     cardName: 'Angular Card',
+    //     cardKeyOne: 'angular',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           },
+    //   {
+    //     cardName: 'Scss Card',
+    //     cardKeyOne: 'Scss',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           } ]
+    //
+    //
+    // $scope.thisIsSomeData = [
+    //       // {
+    //       //   "firstName": "Box",
+    //       //   "lastName": "Barney"
+    //       // },
+    //       // {
+    //       //   "firstName": "Sketer",
+    //       //   "lastName": "Skeetegrew"
+    //       // },
+    //   {
+    //     "firstName": "Florraine",
+    //     "lastName": "Flise",
+    //     "company": "Flomveyer",
+    //     "employed": false
+    //      },
+    //   {
+    //     "firstName": "Prancy",
+    //     "lastName": "Praters",
+    //     "company": "Pruelton",
+    //     "employed": false
+    //       }
+    //     ];
+    //
+    // $scope.thisIsMyData = [
+    //   {
+    //     "firstName": "Cox",
+    //     "lastName": "Carney"
+    //       },
+    //   {
+    //     "firstName": "peter",
+    //     "lastName": "petegrew"
+    //       },
+    //   {
+    //     "firstName": "Lorraine",
+    //     "lastName": "Wise",
+    //     "company": "Comveyer",
+    //     "employed": false
+    //      },
+    //   {
+    //     "firstName": "Nancy",
+    //     "lastName": "Waters",
+    //     "company": "Fuelton",
+    //     "employed": false
+    //       }
+    //     ];
 
-              },
-      {
-        cardName: 'HTML Card',
-        cardKeyOne: 'HTML',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              },
-      {
-        cardName: 'Angular Card',
-        cardKeyOne: 'angular',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              },
-      {
-        cardName: 'Scss Card',
-        cardKeyOne: 'Scss',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              } ]
 
 
-    $scope.thisIsSomeData = [
-          // {
-          //   "firstName": "Box",
-          //   "lastName": "Barney"
-          // },
-          // {
-          //   "firstName": "Sketer",
-          //   "lastName": "Skeetegrew"
-          // },
-      {
-        "firstName": "Florraine",
-        "lastName": "Flise",
-        "company": "Flomveyer",
-        "employed": false
-         },
-      {
-        "firstName": "Prancy",
-        "lastName": "Praters",
-        "company": "Pruelton",
-        "employed": false
-          }
-        ];
-
-    $scope.thisIsMyData = [
-      {
-        "firstName": "Cox",
-        "lastName": "Carney"
-          },
-      {
-        "firstName": "peter",
-        "lastName": "petegrew"
-          },
-      {
-        "firstName": "Lorraine",
-        "lastName": "Wise",
-        "company": "Comveyer",
-        "employed": false
-         },
-      {
-        "firstName": "Nancy",
-        "lastName": "Waters",
-        "company": "Fuelton",
-        "employed": false
-          }
-        ];
-
-
-
-  } );
+  } ] );

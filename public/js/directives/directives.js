@@ -11,7 +11,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "cardAdminDir", function () {
   return {
-    templateUrl: './../html/templates/cardAdminTmpl.html',
+    templateUrl: './../html/templates/adminStuff/cardAdminTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -19,7 +19,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "categoryAdminDir", function () {
   return {
-    templateUrl: './../html/templates/categoryAdminTmpl.html',
+    templateUrl: './../html/templates/adminStuff/categoryAdminTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -27,7 +27,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "cohortsDir", function () {
   return {
-    templateUrl: './../html/templates/gridTmpl.html',
+    templateUrl: './../html/templates/adminStuff/gridTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -36,7 +36,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "crudButtonsDir", function () {
   return {
-    templateUrl: './html/templates/crudButtonsTmpl.html',
+    templateUrl: './html/templates/adminStuff/crudButtonsTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -44,7 +44,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "curriculumAdminDir", function () {
   return {
-    templateUrl: './../html/templates/curriculumAdminTmpl.html',
+    templateUrl: './../html/templates/adminStuff/curriculumAdminTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -53,16 +53,23 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "gridDir", function () {
   return {
-    templateUrl: './../html/templates/gridTmpl.html',
+    templateUrl: './../html/templates/adminStuff/gridTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
 } )
 
+.directive( "headerAdminDir", function () {
+  return {
+    templateUrl: './../html/templates/adminStuff/headerAdminTemplate.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+} )
 
 .directive( "leftNavAreaDir", function () {
   return {
-    templateUrl: './html/templates/leftNavAreaTmpl.html',
+    templateUrl: './html/templates/adminStuff/leftNavAreaTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -70,7 +77,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "poptartDir", function () {
   return {
-    templateUrl: './../html/templates/poptartTmpl.html',
+    templateUrl: './../html/templates/adminStuff/poptartTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
@@ -78,7 +85,7 @@ angular.module( "GamifyDevMountain" )
 
 .directive( "studentsDir", function () {
   return {
-    templateUrl: './../html/templates/studentsTmpl.html',
+    templateUrl: './../html/templates/adminStuff/studentsTmpl.html',
     controller: 'adminCtrl',
     restrict: 'E'
   }
