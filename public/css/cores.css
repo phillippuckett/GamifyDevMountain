@@ -12,6 +12,14 @@ body {
   font-size: 1.3em;
 }
 
+.bookmarkForNow {
+  height: 500px;
+  width: 500px;
+  background-color: pink;
+  color: red;
+  z-index: 200;
+
+}
 .badgeRepeated {
   width: 440px;
   height: 102px;

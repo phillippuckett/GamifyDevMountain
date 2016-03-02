@@ -1,6 +1,6 @@
 /* Administrator */
 angular.module( 'GamifyDevMountain' )
-  .controller( 'adminCtrl', ["$scope", "$state", "adminStateSvc", "ModalService", function ( $scope, $state, adminStateSvc, ModalService ) {
+  .controller( 'adminCtrl', [ "ModalService", "$state", "adminStateSvc", "$scope", function ( ModalService, $state, adminStateSvc, $scope ) {
 
     $scope.test = 'testingfrom adminCtrl';
 
@@ -8,7 +8,6 @@ angular.module( 'GamifyDevMountain' )
 
     $scope.activeDir = {};
     $scope.toggleDirs = function ( selectedDir ) {
-      console.log('toggleDir has been triggered');
       $scope.activeDir.students = false;
       $scope.activeDir.badgeAdmin = false;
       $scope.activeDir.cohorts = false;
@@ -20,21 +19,6 @@ angular.module( 'GamifyDevMountain' )
       $scope.activeDir[ selectedDir ] = true;
     }
 
-
-    $scope.showAModal = function() {
-
-        ModalService.showModal({
-          templateUrl: "yesno/yesno.html",
-          controller: "YesNoController"
-        }).then(function(modal) {
-
-          modal.element.modal();
-          modal.close.then(function(result) {
-            $scope.message = result ? "You said Yes" : "You said No";
-          });
-        });
-
-      };
 
 
 
@@ -81,12 +65,12 @@ angular.module( 'GamifyDevMountain' )
     /**#################  Cards #################*/
 
     $scope.getCards = function () {
-      ass.getCards()
-        .then( function ( response ) {
-          $scope.cards = response;
-        } );
-    }
-    // $scope.cards = $scope.getCards();
+        ass.getCards()
+          .then( function ( response ) {
+            $scope.cards = response;
+          } );
+      }
+      // $scope.cards = $scope.getCards();
 
     $scope.getCard = function ( id ) {
       ass.getcard( id )
@@ -123,12 +107,12 @@ angular.module( 'GamifyDevMountain' )
     /**#################  Cohorts #################*/
 
     $scope.getCohorts = function () {
-      ass.getCohorts()
-        .then( function ( response ) {
-          $scope.cohorts = response;
-        } );
-    }
-    // $scope.cohorts = $scope.getCohorts();
+        ass.getCohorts()
+          .then( function ( response ) {
+            $scope.cohorts = response;
+          } );
+      }
+      // $scope.cohorts = $scope.getCohorts();
 
     $scope.getCohort = function ( id ) {
       ass.getcohort( id )
@@ -163,12 +147,12 @@ angular.module( 'GamifyDevMountain' )
     /**############  Curriculums ############*/
 
     $scope.getCurriculums = function () {
-      ass.getCurriculums()
-        .then( function ( response ) {
-          $scope.curriculums = response;
-        } );
-    }
-    // $scope.curriculums = $scope.getCurriculums();
+        ass.getCurriculums()
+          .then( function ( response ) {
+            $scope.curriculums = response;
+          } );
+      }
+      // $scope.curriculums = $scope.getCurriculums();
 
     $scope.getCurriculum = function ( id ) {
       ass.getcurriculum( id )
@@ -204,12 +188,12 @@ angular.module( 'GamifyDevMountain' )
     /** ############## Students ############## */
 
     $scope.getStudents = function () {
-      ass.getStudents()
-        .then( function ( response ) {
-          $scope.students = response;
-        } );
-    }
-    // $scope.students = $scope.getStudents();
+        ass.getStudents()
+          .then( function ( response ) {
+            $scope.students = response;
+          } );
+      }
+      // $scope.students = $scope.getStudents();
 
     $scope.getStudent = function ( id ) {
       ass.getstudent( id )

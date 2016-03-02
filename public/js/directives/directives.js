@@ -37,7 +37,7 @@ angular.module( "GamifyDevMountain" )
 .directive( "crudButtonsDir", function () {
   return {
     templateUrl: './html/templates/adminStuff/crudButtonsTmpl.html',
-    controller: 'adminCtrl',
+    controller: 'crudButtonCtrl',
     restrict: 'E'
   }
 } )
