@@ -33,7 +33,6 @@ angular.module( "GamifyDevMountain" )
   }
 } )
 
-
 .directive( "crudButtonsDir", function () {
   return {
     templateUrl: './html/templates/adminStuff/crudButtonsTmpl.html',
@@ -49,7 +48,6 @@ angular.module( "GamifyDevMountain" )
     restrict: 'E'
   }
 } )
-
 
 .directive( "gridDir", function () {
   return {
