@@ -1,10 +1,21 @@
-<div class="bookmarkForNow">
-<h1>Here is a header from createModal</h1>
-aiowpchpawtcaweoiuhawcuiha]
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="createModalPane overlay">
 
+  <!-- Badge Create -->
+  <form action="demo_form.asp">
+    Badge Name:
+    <input class="badgeInputs" type="text" name="badgeName" value="" placeholder="badgeName">
+    Badge Image:
+    <div class="imgDdWrap">
+      <div ng-click="dd = !dd" ng-style="{'background-image':'url({{selectedBadgeImage.imagimageLocation}})'}" class="imgDdPlaceholder badgeImg"></div>
+      <div ng-if="dd" ng-repeat="image in images" ng-style="{'background-image':'url({{image.imageLocation}})'}" ng-click="selectBI(image)" class="imgsRepDd badgeImg"></div>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <input type="submit">
+
+    <textarea name="badgeDescription" rows="8" cols="40"></textarea>
+  </form>
+
 </div>
+
+<div ng-click="close()" class="createModalBG fade"></div>

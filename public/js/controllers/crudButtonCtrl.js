@@ -1,6 +1,5 @@
 angular.module("GamifyDevMountain").controller("crudButtonCtrl", function($scope, $location, ModalService) {
 
-  // $scope.close = close;
   // $scope.dismissModal = function(result) {
   //    close(result, 200);
   // };
@@ -8,8 +7,8 @@ angular.module("GamifyDevMountain").controller("crudButtonCtrl", function($scope
   $scope.showAModal = function () {
     console.log( "showAModal is being called" );
     ModalService.showModal( {
-        templateUrl:"/html/templates/adminStuff/poptartTmpl.html" /*"./html/modals/createModal.html"*/,
-        controller: "adminCtrl"
+        templateUrl:"/html/modals/createModal.html",
+        controller: "createModalCtrl"
       } )
       .then( function ( modal ) {
         //function that runs when modal closes

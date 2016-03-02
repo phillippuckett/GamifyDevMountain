@@ -6,18 +6,7 @@ angular.module( 'GamifyDevMountain' )
 
     var ass = adminStateSvc;
 
-    $scope.activeDir = {};
-    $scope.toggleDirs = function ( selectedDir ) {
-      $scope.activeDir.students = false;
-      $scope.activeDir.badgeAdmin = false;
-      $scope.activeDir.cohorts = false;
-      $scope.activeDir.cardAdmin = false;
-      $scope.activeDir.poptart = false;
-      $scope.activeDir.curriculumAdmin = false;
-      $scope.activeDir.categoryAdmin = false;
-      $scope.activeDir.hideLogo = true;
-      $scope.activeDir[ selectedDir ] = true;
-    }
+  
 
 
 
