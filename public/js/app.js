@@ -1,4 +1,4 @@
-angular.module( "GamifyDevMountain", [ 'ui.router', 'ui.grid' ] )
+angular.module( "GamifyDevMountain", [ 'angularModalService', 'ui.router', 'ui.grid' ] )
   .config( function ( $stateProvider, $urlRouterProvider ) {
     $stateProvider
 
@@ -24,7 +24,7 @@ angular.module( "GamifyDevMountain", [ 'ui.router', 'ui.grid' ] )
     } )
 
     /** Admin State */
-    .state( 'adminState', {
+    .state( 'admin', {
       name: 'admin',
       url: '/admin',
       templateUrl: './html/states/adminState.html',
@@ -55,8 +55,41 @@ angular.module( "GamifyDevMountain", [ 'ui.router', 'ui.grid' ] )
       //   }
       // }
 
-    // }
+      // }
     } )
+
+    //##########  Admin Nested States ########\\
+
+    .state( 'admin.cards', {
+      url: '/card',
+      templateUrl: './html/states/nested/cardAdminNested.html'
+    } )
+
+    .state( 'admin.badges', {
+      url: '/badge',
+      templateUrl: './html/states/nested/badgeAdminNested.html'
+    } )
+
+    .state( 'admin.cohorts', {
+      url: '/cohorts',
+      templateUrl: './html/states/nested/cohortAdminNested.html'
+    } )
+
+    .state( 'admin.students', {
+      url: '/students',
+      templateUrl: './html/states/nested/studentsAdminNested.html'
+    } )
+
+    .state( 'admin.category', {
+      url: '/category',
+      templateUrl: './html/states/nested/categoryAdminNested.html'
+    } )
+
+    .state( 'admin.curriculum', {
+      url: '/curriculum',
+      templateUrl: './html/states/nested/curriculumAdminNested.html'
+    } )
+
 
     $urlRouterProvider.otherwise( '/login' );
   } );
