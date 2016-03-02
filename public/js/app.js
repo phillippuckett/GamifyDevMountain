@@ -16,20 +16,27 @@ angular.module( "GamifyDevMountain", [ 'ui.router', 'ui.grid' ] )
       controller: 'authCtrl'
     } )
 
-    /** User State */
-    .state( 'user', {
-      url: '/user',
-      templateUrl: 'html/states/userState.html',
-      controller: 'userCtrl'
+    /** Student State */
+    .state( 'student', {
+      url: '/student',
+      templateUrl: 'html/states/studentState.html',
+      controller: 'studentCtrl'
     } )
 
     /** Admin State */
     .state( 'adminState', {
       name: 'admin',
       url: '/admin',
-      templateUrl: './html/states/adminView.html',
+      templateUrl: './html/states/adminState.html',
       controller: 'adminCtrl',
       // resolve: {
+      //   badges: function ( adminStateSvc ) {
+      //     return adminStateSvc.getBadges()
+      //       .then( function ( response ) {
+      //         return response.data;
+      //       } )
+      //   },
+      //{
       //   user: function ( authSvc, $state ) {
       //     return authSvc.getCurrentUserObject()
       //       .then( function ( response ) {
@@ -48,29 +55,8 @@ angular.module( "GamifyDevMountain", [ 'ui.router', 'ui.grid' ] )
       //   }
       // }
 
-    } )
-
-    .state( 'studentState', {
-      name: 'student',
-      url: '/student',
-      templateUrl: './html/states/studentView.html',
-      controller: 'studentCtrl'
+    // }
     } )
 
     $urlRouterProvider.otherwise( '/login' );
   } );
-
-
-
-// resolve: {
-//     user: function (authSvc, $state) {
-//         return authSvc.getCurrentUserObject().then(function (response) {
-//             if (response.status != 200) {
-//                 $state.go('login')
-//             }
-//             console.log(response);
-//             return response.data;
-//         })
-//         console.log('Resolve in login');
-//     }
-// }

@@ -1,5 +1,6 @@
+
 angular.module('GamifyDevMountain')
-    .service('userViewSvc', function ($state, $http) {
+    .service('viewSvc', function ($state, $http) {
        
         /** Badges */
         this.getBadges = function () {

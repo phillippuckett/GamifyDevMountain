@@ -17,6 +17,14 @@ angular.module( "GamifyDevMountain" )
   }
 } )
 
+.directive( "categoryAdminDir", function () {
+  return {
+    templateUrl: './../html/templates/categoryAdminTmpl.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+} )
+
 .directive( "cohortsDir", function () {
   return {
     templateUrl: './../html/templates/gridTmpl.html',
@@ -24,6 +32,24 @@ angular.module( "GamifyDevMountain" )
     restrict: 'E'
   }
 } )
+
+
+.directive( "crudButtonsDir", function () {
+  return {
+    templateUrl: './html/templates/crudButtonsTmpl.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+} )
+
+.directive( "curriculumAdminDir", function () {
+  return {
+    templateUrl: './../html/templates/curriculumAdminTmpl.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+} )
+
 
 .directive( "gridDir", function () {
   return {
@@ -33,13 +59,13 @@ angular.module( "GamifyDevMountain" )
   }
 } )
 
-// .directive( "headerDir", function () {
-//   return {
-//     templateUrl: './../html/templates/headerTemplate.html',
-//     controller: 'headerCtrl',
-//     restrict: 'E'
-//   }
-// } )
+.directive( "headerAdminDir", function () {
+  return {
+    templateUrl: './html/templates/headerAdminTmpl.html',
+    controller: 'adminCtrl',
+    restrict: 'E'
+  }
+} )
 
 .directive( "leftNavAreaDir", function () {
   return {
