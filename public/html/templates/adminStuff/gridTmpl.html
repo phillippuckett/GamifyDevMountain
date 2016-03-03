@@ -1,10 +1,8 @@
 <div class="gridDirWrap">
   <!-- picture, mentor, name, level, requests -->
-    <div ng-if="activeDir.cohorts == true || activeDir.student == true" class="gridHeader">
-      <h1 class="selectedGrid" >{{selected}}</h1>
-    </div>
-    <div ng-if="activeDir.catagory == true" ui-grid="{ data: thisIsMyData }" class="myGrid"></div>
-    <div ng-if="activeDir.curriculum == true" ui-grid="{ data: thisIsMyData }" class="myGrid"></div>
-    <div  ng-if="activeDir.cohorts == true" ui-grid="{ data: thisIsSomeData }" class="myGrid"></div>
-    <div ng-if="activeDir.student == true" ui-grid="{ data: thisIsMyData }" class="myGrid"></div>
+  <h1 class="selectedGrid">{{selected}}</h1>
+  <div ng-if="activeDir.cohorts == true" ui-grid="{ data: thisIsSomeData }" class="myGrid"></div>
+  <div ng-if="activeDir.student == true" ui-grid="{ data: thisIsMyData }" class="myGrid"></div>
+  <div ng-if="activeDir.catagory == true" ui-grid="{ data: thisIsMyData }" class="myGrid"></div>
+  <div ng-if="activeDir.curriculum == true" ui-grid="{ data: thisIsMyData }" class="myGrid"></div>
 </div>

@@ -17,34 +17,10 @@ angular.module( "GamifyDevMountain" )
   }
 } )
 
-.directive( "categoryAdminDir", function () {
-  return {
-    templateUrl: './../html/templates/adminStuff/categoryAdminTmpl.html',
-    controller: 'adminCtrl',
-    restrict: 'E'
-  }
-} )
-
-.directive( "cohortsDir", function () {
-  return {
-    templateUrl: './../html/templates/adminStuff/gridTmpl.html',
-    controller: 'adminCtrl',
-    restrict: 'E'
-  }
-} )
-
 .directive( "crudButtonsDir", function () {
   return {
     templateUrl: './html/templates/adminStuff/crudButtonsTmpl.html',
     controller: 'crudButtonCtrl',
-    restrict: 'E'
-  }
-} )
-
-.directive( "curriculumAdminDir", function () {
-  return {
-    templateUrl: './../html/templates/adminStuff/curriculumAdminTmpl.html',
-    controller: 'adminCtrl',
     restrict: 'E'
   }
 } )
