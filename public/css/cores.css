@@ -168,13 +168,20 @@ body {
   background-size: contain;
 }
 
+.crudButtonsDirWrap {
+  position: absolute;
+  top: 450px;
+  left: 0px;
+}
+
+
 .crudButtonBar {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  top: 345px;
+  top: 0px;
+  left: 0px;
   width: 150px;
-  height: 300px;
   /*background-color: #444444;*/
   color: #bdbdbd;
   /*border-top-right-radius: 10px;
@@ -226,6 +233,40 @@ body {
   width: 350px;
   flex: 2;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*@#####################################@*/
 
 ::-webkit-scrollbar {
@@ -1241,6 +1282,45 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   color: black;
 }
 
+
+/*#################### (End) - UI-Grid ####################*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .adminWrap {
   background-color: #202020;
   height: 100vh;
@@ -1272,20 +1352,28 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .innerFrame {
   position: absolute;
-  left: 160px;
+  left: 150px;
   top: 70px;
-  width: calc(100vw - 200px);
-  height: calc(100vh - 90px);
+  width: calc(100vw - 145px);
+  height: calc(100vh - 70px);
   background-size: contain;
-  z-index: 100;
+  /*z-index: 100;*/
+}
+
+.centerLogoWrap {
+  position: absolute;
+  top: calc(-270px + 50%);
+  left: calc(-270px + 50%);
+  width: 540px;
+  height: 540px;
 }
 
 .shinyDmLogo {
   position: relative;
   width: 500px;
   height: 500px;
-  top: calc(-337px + 50vh);
-  left: calc(-407px + 50vw);
+  top: 20px;
+  left: 20px;
 }
 
 .clip-circleOne {
@@ -1429,9 +1517,9 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .leftNavAreaDirWrap {
   position: absolute;
-  width: 157px;
+  width: 150px;
   padding: 1px;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
 }
 
 .leftNavArea {

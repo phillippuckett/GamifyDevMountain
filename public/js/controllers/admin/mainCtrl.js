@@ -2,7 +2,7 @@ angular.module( "GamifyDevMountain" )
   .controller( "mainCtrl", function ( $scope, $state ) {
     $scope.mainCtrl = 'mainCtrl';
 
-    $scope.activeDir = {};
+    // $scope.activeDir = {};
     // $scope.toggleDirs = function ( selectedDir ) {
     //   $scope.activeDir.students = false;
     //   $scope.activeDir.badgeAdmin = false;
