@@ -6,7 +6,7 @@ angular.module('GamifyDevMountain')
         this.getBadges = function () {
             return $http({
                 method: 'GET',
-                url: '/api/cards'
+                url: '/api/badges'
             }).then(function (badgeData) {
                 return badgeData.data;
             })
@@ -33,7 +33,7 @@ angular.module('GamifyDevMountain')
         };
         
         /** Cohorts */
-        this.getCohorts = function () {
+        this.getCohort = function () {
             return $http({
                 method: "GET",
                 url: '/api/cohorts'

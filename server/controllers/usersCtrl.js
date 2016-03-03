@@ -103,6 +103,16 @@ module.exports = {
             }
         })
     },
+    
+    // getAwardedBadges: function (req, res) {
+    //     users.findById("56d12aa81322471f3cf604e6", function (err, result){
+    //         if (err) {
+    //             res.send(err)
+    //         } else {
+                
+    //         }
+    //     })        
+    // },
 
     getStudentsByCohort: function (req, res) {
         users.find({
@@ -134,6 +144,6 @@ module.exports = {
                 })
             }
         })
-    }
+    },
 
 }

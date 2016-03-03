@@ -2,8 +2,8 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   /*border: 1px solid rgb(1000, 1000, 1000);*/
   background-color: rgb(0, 0, 0);
-  height: 98%;
-  width: 98.75%;
+  height: 100%;
+  width: 100%;
 }
 
 body { 
@@ -16,8 +16,8 @@ body {
     background-repeat: initial;
     background-color: rgb(0, 0, 0);
     margin: auto; 
-    height: 105%;
-    width: 101.05%;
+    height: 100%;
+    width: 100%;
     }
 
 .stateSpace {

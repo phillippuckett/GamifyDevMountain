@@ -25,11 +25,15 @@ angular.module('GamifyDevMountain')
                     return totalPoints
                 };
 
+                /** Users Cohort */
+                
+                /** Badges Awarded */                
+
                 $scope.NBSGP = function (card) {
                     var tpa = 0;
                     var tpp = 0;
                     for (var i = 0; i < card.badges.length; i++) {
-                        if ($scope.users.badgesAwarded.indexOf(card.badges[i]._id) !== -1) {
+                        if ($scope.user.badgesAwarded.indexOf(card.badges[i]._id) !== -1) {
                             tpa += card.badges[i].pointValue.points;
                         }
                     }
@@ -53,7 +57,7 @@ angular.module('GamifyDevMountain')
                         return "/media/trophyNone.png"
                     }
 
-                }
+                };
             }
         }
     });
