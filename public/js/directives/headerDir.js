@@ -15,6 +15,12 @@ angular.module('GamifyDevMountain')
                     // console.log($scope.user);
                 });
                 $scope.image = false;
+                
+                /** Users Cohort */
+                authSvc.getUserObject().then(function (userResult) {
+                    $scope.user = userResult.data[0];
+                    console.log('Result', userResult.data[0]);
+                });
             }
         }
     });
