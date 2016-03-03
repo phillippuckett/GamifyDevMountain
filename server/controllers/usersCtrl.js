@@ -52,7 +52,7 @@ module.exports = {
 
     getInformation: function (req, res) {
         //change to req.user._id
-        users.findById("56d093376629e38018ec0901").populate({
+        users.findById("56d12aa81322471f3cf604e6").populate({
             path: 'cohort'
             , populate: {
                 path: 'cohortCurriculum'
@@ -81,14 +81,14 @@ module.exports = {
 
     requestBadge: function (req, res) {
         //change to req.user._id
-        users.findById("56d093376629e38018ec0901", function (err, result) {
+        users.findById("56d12aa81322471f3cf604e6", function (err, result) {
             if (err) {
                 res.send(err)
             } else {
                 if (result.badgesRequested.indexOf(req.params.badge) === -1) {
                     var badges = result.badgesRequested;
                     badges.push(req.params.badge);
-                    users.findByIdAndUpdate("56d093376629e38018ec0901", {
+                    users.findByIdAndUpdate("56d12aa81322471f3cf604e6", {
                         badgesRequested: badges
                     }, function (err1, result1) {
                         if (err1) {

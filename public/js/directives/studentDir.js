@@ -7,6 +7,7 @@ angular.module('GamifyDevMountain')
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');
                
+                /** Cards on the Table */
                 $scope.getCards = function (cardData) {
                     viewSvc.getCards(cardData).then(function (cardData) {
                         $scope.cards = cardData;
@@ -14,6 +15,7 @@ angular.module('GamifyDevMountain')
                 };
                 $scope.getCards();
                 
+                /** Total Points */
                 $scope.cardTotalPoints = function (card) {
                     var totalPoints = 0;
                     // console.log(card);
@@ -22,6 +24,36 @@ angular.module('GamifyDevMountain')
                     })
                     return totalPoints
                 };
+
+                $scope.NBSGP = function (card) {
+                    var tpa = 0;
+                    var tpp = 0;
+                    for (var i = 0; i < card.badges.length; i++) {
+                        if ($scope.users.badgesAwarded.indexOf(card.badges[i]._id) !== -1) {
+                            tpa += card.badges[i].pointValue.points;
+                        }
+                    }
+                    for (var j = 0; j < card.badges.length; j++) {
+                        tpp += card.badges[j].pointValue.points;
+                    }
+                    var perc = (tpa / tpp) * 100;
+                    if (perc > 100) {
+                        return "/media/img/trophyplatinum.png"
+                    }
+                    if (perc >= card.trophyLevels.gold) {
+                        return "/media/trophygold.png"
+                    }
+                    if (perc >= card.trophyLevels.silver) {
+                        return "/media/trophysilver.png"
+                    }
+                    if (perc >= card.trophyLevels.bronze) {
+                        return "/media/trophybronze.png"
+                    }
+                    else {
+                        return "/media/trophyNone.png"
+                    }
+
+                }
             }
         }
     });

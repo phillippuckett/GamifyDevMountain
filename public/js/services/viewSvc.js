@@ -51,4 +51,14 @@ angular.module('GamifyDevMountain')
                 return curriculumData.data;
             })
         };
+        
+        /** Student */
+        this.getSttudent = function () {
+            return $http({
+                method: "GET",
+                url: '/api/users'
+            }).then(function (studentData) {
+                return studentData.data;
+            })
+        };
     });
