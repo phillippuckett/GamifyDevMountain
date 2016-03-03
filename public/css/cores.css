@@ -1344,20 +1344,20 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   top: 20px;
   width: 500px;
   background-color: #444444;
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
 .gridHeader {
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   color: #bdbdbd;
   background-color: #444444;
   font-size: proxima-nova;
@@ -1498,10 +1498,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   height: 97%;
   overflow: scroll;
   max-width: calc();
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
@@ -1517,10 +1517,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   color: #bdbdbd;
   padding: 8px;
   margin: 5px;
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .cardsShallBehave {
@@ -1532,17 +1532,17 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   overflow: scroll;
   padding: 10px;
   max-height: 100%;
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .cardsDisplayed {
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   margin: 5px;
   position: relative;
   width: 280px;
@@ -1561,10 +1561,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   margin: 5px;
   width: 96%;
   height: 82%;
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   color: #bdbdbd;
@@ -1579,10 +1579,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   margin-top: 3px;
   margin-bottom: 3px;
   padding: 5px;
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  border-radius: 13px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   min-height: 50px;
   display: flex;
   flex-direction: row;
