@@ -90,7 +90,7 @@ module.exports = {
                 if (result.badgesRequested.indexOf(req.params.badge) === -1) {
                     var badges = result.badgesRequested;
                     badges.push(req.params.badge);
-                    users.findByIdAndUpdate("56d093376629e38018ec0901", {
+                    users.findByIdAndUpdate("56d12aa81322471f3cf604e6", {
                         badgesRequested: badges
                     }, function (err1, result1) {
                         if (err1) {
@@ -105,6 +105,16 @@ module.exports = {
             }
         })
     },
+    
+    // getAwardedBadges: function (req, res) {
+    //     users.findById("56d12aa81322471f3cf604e6", function (err, result){
+    //         if (err) {
+    //             res.send(err)
+    //         } else {
+                
+    //         }
+    //     })        
+    // },
 
     getStudentsByCohort: function (req, res) {
         users.find({
@@ -137,7 +147,6 @@ module.exports = {
             }
         })
     },
-    
     getStudentInfo: function(req, res){
         users.findById(req.params.id).populate({
             path: 'cohort'

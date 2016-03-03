@@ -15,7 +15,6 @@ angular.module('GamifyDevMountain')
                     // console.log($scope.user);
                 });
                 $scope.image = false;
-
             }
         }
     });

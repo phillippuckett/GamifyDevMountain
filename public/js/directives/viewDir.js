@@ -4,7 +4,7 @@ angular.module('GamifyDevMountain')
             restrict: 'E',
             templateUrl: 'html/templates/viewTmpl.html',
             controller: function ($scope, viewSvc) {
-                // $scope.viewDir = 'User View';
+                $scope.viewDir = 'Nested View';
                 // console.log('View Controller: Running');
             }
         }
