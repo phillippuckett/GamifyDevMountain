@@ -112,7 +112,7 @@ app.put('/api/badges/:id', badgesCtrl.updateBadge);
 app.delete('/api/badges/:id', badgesCtrl.deleteBadge);
 
 /** Connections */
-var nodePort = 4002;
+var nodePort = 4000;
 app.listen(nodePort, function () {
     console.log('Running nodemon://localhost:' + nodePort);
 });

@@ -52,6 +52,7 @@ module.exports = {
 
     getInformation: function (req, res) {
         //change to req.user._id
+        console.log(req.user);
         users.findById("56d093376629e38018ec0901").populate({
             path: 'cohort'
             , populate: {
@@ -81,6 +82,7 @@ module.exports = {
 
     requestBadge: function (req, res) {
         //change to req.user._id
+        console.log("user :", req.user);
         users.findById("56d093376629e38018ec0901", function (err, result) {
             if (err) {
                 res.send(err)
