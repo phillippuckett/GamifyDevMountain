@@ -1,6 +1,7 @@
+<!--Course Cards Title-->
+<p class="tableTextTop">Cohort : {{user.cohort}}</p>
+
 <div class="view">
-    <p class="tableTextTop">Course Cards</p>
-    
     <div class="student">
 
         <!--Student Header-->
@@ -13,12 +14,12 @@
                     <!--Category-->
                     <div class="stateSpace">
                         <div class="trophyTitle">
-                            Category {{category.categoryTitle}}
+                            {{card.trophyTitle}}
                         </div>
                     </div>
 
                     <!--Trophy-->
-                    <img class="cardTrophyImage" ng-src="{{card.trophyImage}}">
+                    <img class="cardTrophyImage" ng-src="{{NBSGP(card)}}">
                 </div>
 
                 <!--Badge Field-->
@@ -40,7 +41,7 @@
             </div>
         </div>
     </div>
-
-    <!--Student Point Counter-->
-    <p class="tableTextBottom">Total Points {{number}}/{{number}}</p>
 </div>
+
+<!--Student Point Counter-->
+<p class="tableTextBottom">235{{deckTotalPoints(user)}}/{{totalPossiblePoints(curriculum)}}5000</p>
