@@ -5,17 +5,14 @@
     <div class="student">
 
         <!--Student Header-->
-        <div class="stateSpace">
 
+        <div class="stateSpace">
             <!--Card-->
             <div class="card" ng-repeat="card in cards">
                 <div class="stateSpace">
-
                     <!--Category-->
                     <div class="stateSpace">
-                        <div class="trophyTitle">
-                            {{card.trophyTitle}}
-                        </div>
+                        <div class="trophyTitle"><div class="catTitle">Nintendo{{category.categoryTitle}}</div>{{card.trophyTitle}}</div>
                     </div>
 
                     <!--Trophy-->

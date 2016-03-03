@@ -2,10 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var badgesSchema = new Schema({
-    badgeName: { type: String },
     badgeImage: { type: String },
-    desc: { type: String },
     mileStone: { type: String },
+    desc: { type: String },
+    category: { type: mongoose.Schema.Types.ObjectId, ref: 'categories' },
     pointValue: {
         type: Object,
         enum: [
@@ -26,8 +26,7 @@ var badgesSchema = new Schema({
                 points: 40
             }
         ]
-    },
-    category: { type: mongoose.Schema.Types.ObjectId, ref: 'categories' }
+    }
 });
 
 module.exports = mongoose.model('badges', badgesSchema);
