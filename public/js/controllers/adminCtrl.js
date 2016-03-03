@@ -10,7 +10,6 @@ angular.module( 'GamifyDevMountain' )
 
 
 
-
     // ############### Badges ################ \\
     $scope.badges = [];
     $scope.getBadges = function () {
