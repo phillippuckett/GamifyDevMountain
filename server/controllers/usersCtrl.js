@@ -52,7 +52,8 @@ module.exports = {
 
     getInformation: function (req, res) {
         //change to req.user._id
-        users.findById("56d12aa81322471f3cf604e6").populate({
+        console.log(req.user);
+        users.findById("56d093376629e38018ec0901").populate({
             path: 'cohort'
             , populate: {
                 path: 'cohortCurriculum'
@@ -81,7 +82,8 @@ module.exports = {
 
     requestBadge: function (req, res) {
         //change to req.user._id
-        users.findById("56d12aa81322471f3cf604e6", function (err, result) {
+        console.log("user :", req.user);
+        users.findById("56d093376629e38018ec0901", function (err, result) {
             if (err) {
                 res.send(err)
             } else {
@@ -145,5 +147,32 @@ module.exports = {
             }
         })
     },
+    getStudentInfo: function(req, res){
+        users.findById(req.params.id).populate({
+            path: 'cohort'
+            , populate: {
+                path: 'cohortCurriculum'
+                , model: 'curriculums'
+                , populate: {
+                    path: 'deck'
+                    , model: 'cards'
+                    , populate: {
+                        path: 'badges'
+                        , model: 'badges'
+                        , populate: {
+                            path: 'category'
+                            , model: 'categories'
+                        }
+                    }
+                }
+            }
+        }).exec(function (err, result) {
+            if (err) {
+                res.send(err)
+            } else {
+                res.send(result)
+            }
+        })
+    }
 
 }
