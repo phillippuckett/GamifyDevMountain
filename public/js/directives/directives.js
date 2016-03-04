@@ -33,7 +33,6 @@ angular.module( "GamifyDevMountain" )
   }
 } )
 
-
 .directive( "crudButtonsDir", function () {
   return {
     templateUrl: './html/templates/adminStuff/crudButtonsTmpl.html',
@@ -49,7 +48,6 @@ angular.module( "GamifyDevMountain" )
     restrict: 'E'
   }
 } )
-
 
 .directive( "gridDir", function () {
   return {
@@ -73,29 +71,4 @@ angular.module( "GamifyDevMountain" )
     controller: 'adminCtrl',
     restrict: 'E'
   }
-} )
-
-.directive( "poptartDir", function () {
-  return {
-    templateUrl: './../html/templates/adminStuff/poptartTmpl.html',
-    controller: 'adminCtrl',
-    restrict: 'E'
-  }
-} )
-
-.directive( "studentsDir", function () {
-  return {
-    templateUrl: './../html/templates/adminStuff/studentsTmpl.html',
-    controller: 'adminCtrl',
-    restrict: 'E'
-  }
-} )
-
-// .directive( "statusDir", function () {
-//   return {
-//     templateUrl: './../html/templates/statusTmpl.html',
-//     controller: 'adminCtrl',
-//     restrict: 'E'
-//   }
-// })
-;
+} );

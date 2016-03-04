@@ -8,12 +8,15 @@ angular.module( "GamifyDevMountain" )
     };
 
     $scope.dd = false;
-    $scope.selectedBadgeImage = null;
+    $scope.selectedBadgeImage = {};
+    $scope.selectedBadgeImage.imageLocation = './../media/DMLogoTransparent.png';
+
     $scope.selectBI = function(selectedBI){
       $scope.selectedBadgeImage = selectedBI;
-      console.log($scope.selectedBadgeImage);
-      console.log($scope.selectedBadgeImage.imagimageLocation);
+      $scope.dd = false;
     }
+
+
 
 
     //############## Dummy Data ##############\\
@@ -34,30 +37,5 @@ angular.module( "GamifyDevMountain" )
       imageName: 'marge',
       imageLocation: './media/Css100.png'
     } ];
-
-
-
-
-
-
-
-
-
-    // $scope.imageInAndOut = $( function () {
-    //   $scope( ":file" )
-    //     .change( function () {
-    //       if ( this.files && this.files[ 0 ] ) {
-    //         var reader = new FileReader();
-    //         reader.onload = imageIsLoaded;
-    //         reader.readAsDataURL( this.files[ 0 ] );
-    //       }
-    //     } );
-    // } );
-    //
-    // function imageIsLoaded( e ) {
-    //   $scope( '#myImg' )
-    //     .attr( 'src', e.target.result );
-    // };
-
 
   } );
