@@ -28,7 +28,8 @@ angular.module( "GamifyDevMountain" )
 .directive( "gridDir", function () {
   return {
     templateUrl: './../html/templates/adminStuff/gridTmpl.html',
-    controller: 'adminCtrl',
+    // controller: 'adminCtrl',
+    // controller: 'mainCtrl',
     restrict: 'E'
   }
 } )

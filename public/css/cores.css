@@ -1468,6 +1468,7 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .myGrid {
   width: 500px;
   height: 200px;
+  background-color: turquoise;
 }
 
 #headerWrapper {
@@ -1518,7 +1519,6 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .leftNavAreaDirWrap {
   position: absolute;
   width: 150px;
-  padding: 1px;
   height: calc(100vh - 70px);
 }
 
@@ -1578,14 +1578,13 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .cardAdminWrapper {
   color: #bdbdbd;
   background-color: #444444;
-  max-width: calc(100% - 10px);
+  max-width: calc(100% - 40px);
   display: inline-block;
   position: relative;
-  left: 15px;
+  left: 20px;
   top: 20px;
-  height: 97%;
+  height: calc(100% - 40px);
   overflow: scroll;
-  max-width: calc();
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
