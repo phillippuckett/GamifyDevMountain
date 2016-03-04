@@ -1,6 +1,6 @@
 .studentState { text-align: center;
     /*border: 1px solid rgb(100, 100, 100);*/
-    background-color: rgba(0, 0, 0, .75); 
+    background-color: rgba(0, 0, 0, .5); 
     background-size: cover;
     background-repeat: no-repeat;
     height: 92.5%;

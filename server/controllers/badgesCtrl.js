@@ -12,7 +12,7 @@ module.exports = {
     
     /** R */
     getBadge: function (req, res) {
-        badges.find(req.query).populate('users').exec(function (err, readBadge) {
+        badges.find(req.query).populate('categories').exec(function (err, readBadge) {
             if (err) { res.status(500).send(err); }
             else { res.status(200).send('Badge Data Retrieved!', readBadge); }
         })

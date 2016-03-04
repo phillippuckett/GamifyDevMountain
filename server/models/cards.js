@@ -14,3 +14,5 @@ var cardsSchema = new Schema({
 });
 
 module.exports = mongoose.model('cards', cardsSchema);
+
+/** what about pulling other data from 'category' through this model? */

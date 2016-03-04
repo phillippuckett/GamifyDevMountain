@@ -5,15 +5,16 @@
 }
 
 .userHeader {
-    /*border: 1px solid rgb(100, 100, 100);*/
+    /*border: 1px solid rgb(250, 0, 0);*/
     background-image: url('/media/whitemountains.jpg');
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     background-size: contain;
     background-color: rgb(25, 25, 0);
-    min-height: 70px; max-height: 10%;
-    width: 100.2%;  
+    min-height: 70px; height: 100%; max-height: 10%;
+    width: 100.2%;
+    margin: auto;
     display: inline-flex;
 }
 
@@ -32,13 +33,14 @@
     margin: 12.5%; margin-left: 25%;
 }
 
-.userName { color: rgba(0,0,0,.75); text-align: right;
+.userName { color: rgba(0,0,0,.75); 
+            text-align: right;
     padding: 2.5%;
     margin: auto;    
 }
 
 .visHeader {
-    background-color: rgba(25, 25, 25, .75);
+    background-color: rgba(0, 0, 0, .5);
     border-bottom: 1px solid rgba(0, 0, 0, .25);
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);

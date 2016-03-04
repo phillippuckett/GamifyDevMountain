@@ -75,7 +75,9 @@ app.get('/api/currentUser', usersCtrl.getCurrentUser);
 app.get('/api/users', usersCtrl.getUser);
 app.put('/api/users/:id', usersCtrl.updateUser);
 app.delete('/api/users/:id', usersCtrl.deleteUser);
+
 app.put('/api/users/badgerequest/:badge', usersCtrl.requestBadge);
+// app.get('api/users/badgesawarded/:badge', usersCtrl.awardedBadge);
 app.get('/api/getUserInfo', usersCtrl.getInformation);
 app.get('/api/getStudentsByCohort/:cohort', usersCtrl.getStudentsByCohort);
 app.put('/api/badgeApproval', usersCtrl.badgeApproval);
@@ -111,7 +113,7 @@ app.put('/api/badges/:id', badgesCtrl.updateBadge);
 app.delete('/api/badges/:id', badgesCtrl.deleteBadge);
 
 /** Connections */
-var nodePort = 4002;
+var nodePort = 4000;
 app.listen(nodePort, function () {
     console.log('Running nodemon://localhost:' + nodePort);
 });

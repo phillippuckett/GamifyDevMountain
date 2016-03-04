@@ -12,10 +12,12 @@ module.exports = {
     
     /** R */
     getCard: function (req, res) {
-        cards.find(req.query).populate({ path: 'badges', select: 'badgeImage mileStone pointValue' }).exec(function (err, readCard) {
-            if (err) { res.status(500).send(err); }
-            else { res.status(200).send('Card Data Retrieved!', readCard); }
-        })
+        cards.find(req.query)
+            .populate({ path: 'badges', select: 'badgeImage mileStone pointValue' })
+            .exec(function (err, readCard) {
+                if (err) { res.status(500).send(err); }
+                else { res.status(200).send('Card Data Retrieved!', readCard); }
+            })
     },
         
     /** U */
