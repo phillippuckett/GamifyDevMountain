@@ -16,7 +16,14 @@ angular.module('GamifyDevMountain')
             })
             // console.log('Service: Current User Object Retrieved');
         };
-    
+        
+        /** Get User Object */
+        this.getUserObject = function () {
+            return $http.get('api/users').then(function (user) {
+                return user;
+            })
+        };
+        
         /** Register User */
         this.register = function (user) {
             return $http.post('/api/register', user).then(function (registeredUser) {
