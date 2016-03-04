@@ -3,13 +3,13 @@ angular.module('GamifyDevMountain')
         return {
             restrict: 'E',
             templateUrl: 'html/templates/studentTmpl.html',
-            controller: function ($scope, viewSvc, $http) {
+            controller: function ($scope, viewSvc, authSvc, $http) {
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');
                
                 /** Cards on the Table */
                 $scope.getCards = function (cardData) {
-                    viewSvc.getCards(cardData).then(function (cardData) {
+                    viewSvc.getUsersCards(cardData).then(function (cardData) {
                         $scope.cards = cardData;
                     })
                 };
@@ -24,10 +24,10 @@ angular.module('GamifyDevMountain')
                     })
                     return totalPoints
                 };
+              
+                /** Users Badges */
 
-                /** Users Cohort */
-                
-                /** Badges Awarded */                
+                /** Users Trophies */
 
                 $scope.NBSGP = function (card) {
                     var tpa = 0;

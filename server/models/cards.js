@@ -10,8 +10,9 @@ var cardsSchema = new Schema({
         bronze: { type: Number, default: 33 },
         silver: { type: Number, default: 66 },
         gold: { type: Number, default: 99 }
-    },
-    category: { type: mongoose.Schema.Types.ObjectId, ref: 'categories' }
+    }
 });
 
 module.exports = mongoose.model('cards', cardsSchema);
+
+/** what about pulling other data from 'category' through this model? */

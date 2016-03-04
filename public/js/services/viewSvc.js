@@ -13,7 +13,7 @@ angular.module('GamifyDevMountain')
         };
        
         /** Cards */
-        this.getCards = function () {
+        this.getUsersCards = function () {
             return $http({
                 method: "GET",
                 url: '/api/cards'
@@ -53,7 +53,7 @@ angular.module('GamifyDevMountain')
         };
         
         /** Student */
-        this.getSttudent = function () {
+        this.getStudent = function () {
             return $http({
                 method: "GET",
                 url: '/api/users'

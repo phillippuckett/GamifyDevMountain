@@ -1,19 +1,21 @@
-<!--Course Cards Title-->
-<p class="tableTextTop">Cohort : {{user.cohort}}</p>
+<!--Cohort-->
+<p class="tableTextTop">{{user.cohort.cohortName}}</p>
 
 <div class="view">
     <div class="student">
 
-        <!--Student Header-->
+        <!--Student-->
         <div class="stateSpace">
-
             <!--Card-->
-            <div class="card" ng-repeat="card in cards">
+            <div class="card" ng-repeat="card in user.cohort.curriculum.card">
                 <div class="stateSpace">
 
                     <!--Category-->
                     <div class="stateSpace">
                         <div class="trophyTitle">
+                            <div class="catTitle">
+                                {{card.category.categoryTitle}}
+                            </div>
                             {{card.trophyTitle}}
                         </div>
                     </div>
@@ -29,8 +31,9 @@
                     <div class="badge" ng-repeat="badge in card.badges">
                         <img class="badgeImage" ng-src="{{badge.badgeImage}}">
                         <div class="milestone">{{badge.mileStone}}</div>
-                        <div class="difficultyLevel">{{badge.pointValue.difficulty}}</div>
-
+                        <div class="difficultyLevel">
+                            {{badge.pointValue.difficulty}}
+                        </div>
                     </div>
                 </div>
 
