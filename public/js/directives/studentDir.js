@@ -54,7 +54,7 @@ angular.module('GamifyDevMountain')
                         return "/media/trophybronze.png"
                     }
                     else {
-                        return "/media/trophyNone.png"
+                        return "/media/awardEmblems/trophyNone.png"
                     }
 
                 };
