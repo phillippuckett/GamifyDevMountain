@@ -21,7 +21,13 @@ module.exports = {
     /** R *//* getUserCohort *//* getUserBadgeNumber */
     getUser: function (req, res) {
         users.find({})
-            .populate({path: 'cohort', populate: ({path: 'cohortCurriculum', model: 'curriculums', populate: ({path: 'deck', model: 'cards'})})})
+            .populate({ path: 'cohort', 
+            populate: ({ path: 'curriculum', model: 'curriculums', 
+            populate: ({ path: 'category', model: 'categories', 
+            populate: ({ path: 'card', model: 'cards',
+            populate: ({ path: 'badge', model: 'badges'
+                
+            })})})})})
             .exec(function (err, readUser) { 
                 if (err) { res.status(500).send(err); 
                 } 

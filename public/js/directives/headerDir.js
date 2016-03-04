@@ -11,7 +11,7 @@ angular.module('GamifyDevMountain')
                 authSvc.getCurrentUserObject().then(function (currentUserResult) {
                     $scope.user = currentUserResult.data;
                     $scope.image = true;
-                    console.log('Result', currentUserResult.data);
+                    // console.log('CURRENT USER ', currentUserResult.data);
                     // console.log($scope.user);
                 });
                 $scope.image = false;
@@ -19,7 +19,7 @@ angular.module('GamifyDevMountain')
                 /** Users Cohort */
                 authSvc.getUserObject().then(function (userResult) {
                     $scope.user = userResult.data[0];
-                    console.log('Result', userResult.data[0]);
+                    console.log('USER INFORMATION', userResult.data[0]);
                 });
             }
         }
