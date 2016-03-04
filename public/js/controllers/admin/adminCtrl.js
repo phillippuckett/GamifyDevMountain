@@ -220,8 +220,8 @@ angular.module( 'GamifyDevMountain' )
     $scope.gridData = [];
 
     $scope.activeData = function ( selected ) {
-      // console.log( selected );
-      $scope.gridData[ selected ] = 'true';
+      console.log( selected );
+      // $scope.gridData[ selected ] = 'true';
       // console.log( $scope.gridData );
       $scope.selected = selected;
     }

@@ -3,6 +3,7 @@ angular.module( "GamifyDevMountain" )
     $scope.mainCtrl = 'mainCtrl';
 
     $scope.test = 'testing from mainCtrl';
+
     $scope.activeDir = {};
     $scope.toggleDirs = function ( selectedDir ) {
       console.log('testing from toggleDirs');
