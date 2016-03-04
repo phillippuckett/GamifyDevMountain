@@ -6,14 +6,18 @@
 
         <!--Student-->
         <div class="stateSpace">
-            
             <!--Card-->
-            <div class="card" ng-repeat="card in cards">
+            <div class="card" ng-repeat="card in user.cohort.curriculum.card">
                 <div class="stateSpace">
-                    
+
                     <!--Category-->
                     <div class="stateSpace">
-                        <div class="trophyTitle"><div class="catTitle">{{user.cohort.curriculum.category.categoryTitle}}</div>{{card.trophyTitle}}</div>
+                        <div class="trophyTitle">
+                            <div class="catTitle">
+                                {{card.category.categoryTitle}}
+                            </div>
+                            {{card.trophyTitle}}
+                        </div>
                     </div>
 
                     <!--Trophy-->
@@ -27,8 +31,9 @@
                     <div class="badge" ng-repeat="badge in card.badges">
                         <img class="badgeImage" ng-src="{{badge.badgeImage}}">
                         <div class="milestone">{{badge.mileStone}}</div>
-                        <div class="difficultyLevel">{{badge.pointValue.difficulty}}</div>
-
+                        <div class="difficultyLevel">
+                            {{badge.pointValue.difficulty}}
+                        </div>
                     </div>
                 </div>
 

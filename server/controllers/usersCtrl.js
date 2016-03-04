@@ -23,11 +23,9 @@ module.exports = {
         users.find({})
             .populate({ path: 'cohort', 
             populate: ({ path: 'curriculum', model: 'curriculums', 
-            populate: ({ path: 'category', model: 'categories', 
             populate: ({ path: 'card', model: 'cards',
-            populate: ({ path: 'badge', model: 'badges'
-                
-            })})})})})
+            populate: ([{ path: 'category', model: 'categories'},{path: 'badges', model: 'badges'}]            
+            )})})})
             .exec(function (err, readUser) { 
                 if (err) { res.status(500).send(err); 
                 } 
