@@ -53,7 +53,7 @@
 
 .visImageSpace {
     border-bottom: 1px solid rgba(0,0,0,.05);
-    background-image: url('/media/whitemountains.jpg');
+    background-image: url('/media/skins/whitemountains.jpg');
     background-size: contain;
     background-color: white;
     margin: auto;
@@ -74,7 +74,7 @@
 .visImage {
     /*border: 1px solid black;    */
     border-radius: 50%;
-    background-image: url('/media/logoonly.png');
+    background-image: url('/media/miscellaneous/logoonly.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 40px;
