@@ -1,4 +1,4 @@
-<!--Vis Header-->
+<!------------------------Vis Header------------------------>
 <div class="visHeader">
     <!--1st Quarter-->
     <div class="headerSpace">
@@ -14,65 +14,27 @@
     <!--4th Quarter-->
     <div class="headerSpace"></div>
 </div>
-
-
-
-
-
-<!--vis State-->
+<!------------------------Vis State------------------------>
 <div class="visState">
-
-    <!--Top-->
-    <div class="stateSpace"></div>
-
-    <!--vis Body-->
-    <div class="stateSpace">
-
-        <!--left-->
-        <div class="stateSpace"></div>
-        <div class="menu">
-            <div class="visImageSpace">
-                <div class="visImageOutline">
-                    <div class="visImage"></div>
-                </div>
-            </div>
-            <div class="stateSpace">
-                <p class="visTitle">Login</p>
-            </div>
+    <p></p>
+    <!------------------------Vis Menu------------------------>
+    <div class="menu">
+        <div class="visSpace">
+            <div class="visImage"></div>
+            <p class="visTitle">Login</p>
             <div class="stateSpace">
                 <a class="visText" href="/#/registration">Need an account?</a>
             </div>
-            <div class="stateSpace">
-                <form ng-submit="login(user)">
-                    <div class="stateSpace">
-                        <input type="text" class="visInput" placeholder="What is your username ?" ng-model="user.username">
-                    </div>
-                    <div class="stateSpace">
-                        <input type="password" class="visInput" placeholder="What is your password ?" ng-model="user.password">
-                    </div>
-                    <div class="stateSpace">
-                        <button class="visSubmit" type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-            <div class="stateSpace">
-                <p class="forgotPssWrd">Forgot password?</p>
-            </div>
-
-            <div class="visLinks">
-                <div class="stateSpace">
-                    <button class="visSubmit" type="submit">O| Login with GitHub</button>
-                </div>
-                <div class="stateSpace">
-                    <button class="visSubmit" type="submit">
-                        In| Login with LinkedIn</button>
-                </div>
-            </div>
+            <form ng-submit="login(user)">
+                <input type="text" class="visInput" placeholder="What is your username ?" ng-model="user.username">
+                <input type="password" class="visInput" placeholder="What is your password ?" ng-model="user.password">
+                <button class="visSubmit" type="submit">Submit</button>
+            </form>
+            <p class="visText">Forgot password?</p>
         </div>
-        <!--Right-->
-        <div class="stateSpace"></div>
+        <div class="visLinks">
+            <button class="visSubmit" type="submit">O| Login with GitHub</button>
+            <button class="visSubmit" type="submit">In| Login with LinkedIn</button>
+        </div>
     </div>
-    <!--Bottom-->
-    <div class="stateSpace"></div>
-
 </div>

@@ -1,4 +1,4 @@
-.headerSpace {
+.headerSpace { font-family: 'Poppins', sans-serif;
     /*border: 1px solid rgb(150, 0, 250);*/
     width: 100%;
     display: inline-flex;
@@ -19,6 +19,7 @@
 }
 
 .userLogo { text-align: center;
+    /*border: 1px solid rgba(0,0,250,1); */
     background-image: url('/media/miscellaneous/logowhiteblue.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -27,15 +28,20 @@
 }
 
 .userImage {
-    /*border: 1px solid rgb(0, 0, 1000);*/
+    /*border: 1px solid rgba(0,0,250,1);*/
+    border: 1px solid rgba(0,0,0,.05);
+    background-color: rgba(0,0,0,.05);
     border-radius: 50%;
-    width: 40px;
-    margin: 12.5%; margin-left: 25%;
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    margin: auto;
 }
 
 .userName { color: rgba(0,0,0,.75); 
             text-align: right;
-    padding: 2.5%;
+    /*border: 1px solid rgb(150,0,250);*/
+    width: 75%;
     margin: auto;    
 }
 
@@ -51,7 +57,7 @@
 }
 
 .visLogo {
-    /*border: 1px solid rgb(500, 500, 0);*/
+    /*border: 1px solid rgb(250, 150, 0);*/
     text-align: center;
     background-image: url('/media/miscellaneous/logoonly.png');
     background-size: contain;
