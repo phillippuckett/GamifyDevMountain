@@ -1,18 +1,19 @@
-.tableTextTop { color: rgba(0,0,0,.75);
+.tableText { color: rgba(0,0,0,.75);
                 text-shadow: 0px 2px 1px rgba(250, 250, 250,.25);
                 font-family: 'Cinzel', serif;
                 text-align: center; 
-                font-size: 35px;
-    /*border: 1px solid deepskyblue;*/
+                font-size: 25px;
+    /*border: 1px solid rgb(0,150,250);*/
     width: 100%;
-    margin: auto;
+    margin: .5% auto;
 }
 
 .student {  color: rgb(250, 250, 250); 
             font-family: 'Cinzel', serif;
             text-align: center; 
+    /*border: 1px solid rgba(0,250,0,1);        */
     border: 1px solid rgba(100, 100, 100, .05);
-    border-radius: 2.5%;
+    border-radius: .5%;
     box-shadow: inset 0px 5px 5px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: inset 0px 5px 5px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 0px 5px 5px 5px rgba(0,0,0,0.75);     
@@ -22,14 +23,4 @@
     padding: .75% 0;
     margin: auto;
     overflow-x: auto;
-}
-
-.tableTextBottom {  color: rgba(0,0,0,.75); 
-                    text-shadow: 0px 2px 1px rgba(250, 250, 250,.25);
-                    font-family: 'Cinzel', serif;
-                    text-align: center; 
-                    font-size: 25px;
-    /*border-bottom: 1px solid cadetblue;*/
-    width: 100%;
-    margin: .5% auto;
 }

@@ -1,13 +1,14 @@
-.stateSpace {
-  text-align: center;
-  border: 1px solid rgb(250, 0, 150);
+/*.html { background-color: rgb(0,0,0); }*/
+/*.body { background-color: rgb(0,0,0); }*/
+
+.stateSpace { text-align: center;
+  /*border: 1px solid rgb(250, 0, 150);*/
   width: 100%;
   margin: auto;
   display: inline-flex;
 }
 
-p { /*border: 1px solid rgb(250, 0, 0);*/ }
-
-a { /*border: 1px solid rgb(0, 250, 0);*/ }
+/*p { border: 1px solid rgb(250, 0, 0); }*/
+/*a { border: 1px solid rgb(0, 250, 0); }*/
 
 
