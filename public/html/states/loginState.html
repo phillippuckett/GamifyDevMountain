@@ -1,40 +1,46 @@
-<!------------------------Vis Header------------------------>
-<div class="visHeader">
-    <!--1st Quarter-->
-    <div class="headerSpace">
+<div class="charcoalBackground">
+    <!------------------------Vis Header------------------------>
+    <div class="visHeader">
+        <!--1st Quarter-->
         <div class="headerSpace">
-            <a class="visLogo" href="/#/login"></a>
+            <div class="headerSpace">
+                <a class="visLogo" href="/#/login"></a>
+            </div>
+            <div class="headerSpace"></div>
         </div>
+        <!--2nd Quarter-->
+        <div class="headerSpace"></div>
+        <!--3rd Quarter-->
+        <div class="headerSpace"></div>
+        <!--4th Quarter-->
         <div class="headerSpace"></div>
     </div>
-    <!--2nd Quarter-->
-    <div class="headerSpace"></div>
-    <!--3rd Quarter-->
-    <div class="headerSpace"></div>
-    <!--4th Quarter-->
-    <div class="headerSpace"></div>
-</div>
-<!------------------------Vis State------------------------>
-<div class="visState">
-    <p></p>
-    <!------------------------Vis Menu------------------------>
-    <div class="menu">
-        <div class="visSpace">
-            <div class="visImage"></div>
-            <p class="visTitle">Login</p>
-            <div class="stateSpace">
-                <a class="visText" href="/#/registration">Need an account?</a>
+    <!------------------------Vis State------------------------>
+    <div class="visState">
+        <br>
+        <!------------------------Vis Menu------------------------>
+        <div class="menu">
+            <div class="visSpace">
+                <div class="visSpace">
+                    <div class="visImagePadding">
+                        <div class="visImage"></div>
+                    </div>
+                    <p class="visTitle">Login</p>
+                    <div class="stateSpace">
+                        <a class="visText" href="/#/registration">Need an account?</a>
+                    </div>
+                    <form ng-submit="login(user)">
+                        <input type="text" class="visInput" placeholder="What is your username ?" ng-model="user.username">
+                        <input type="password" class="visInput" placeholder="What is your password ?" ng-model="user.password">
+                        <button class="visSubmit" type="submit">Submit</button>
+                    </form>
+                    <p class="visText">Forgot password?</p>
+                </div>
+                <div class="visLinks">
+                    <button class="visSubmit" type="submit">O| Login with GitHub</button>
+                    <button class="visSubmit" type="submit">In| Login with LinkedIn</button>
+                </div>
             </div>
-            <form ng-submit="login(user)">
-                <input type="text" class="visInput" placeholder="What is your username ?" ng-model="user.username">
-                <input type="password" class="visInput" placeholder="What is your password ?" ng-model="user.password">
-                <button class="visSubmit" type="submit">Submit</button>
-            </form>
-            <p class="visText">Forgot password?</p>
         </div>
-        <div class="visLinks">
-            <button class="visSubmit" type="submit">O| Login with GitHub</button>
-            <button class="visSubmit" type="submit">In| Login with LinkedIn</button>
-        </div>
+        <!------------------------Vis Footing------------------------>
     </div>
-</div>
