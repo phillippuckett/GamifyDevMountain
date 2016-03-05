@@ -1,4 +1,4 @@
-<!--Vis Header-->
+<!------------------------Vis Header------------------------>
 <div class="visHeader">
     <!--1st Quarter-->
     <div class="headerSpace">
@@ -14,74 +14,27 @@
     <!--4th Quarter-->
     <div class="headerSpace"></div>
 </div>
-
-
-<!--vis State-->
+<!------------------------Vis State------------------------>
 <div class="visState">
-
-    <!--Top-->
-    <div class="stateSpace"></div>
-
-    <!--vis Body-->
-    <div class="stateSpace">
-
-        <!--left-->
-        <div class="stateSpace"></div>
-        <div class="menu">
-            <div class="visImageSpace">
-                <div class="visImageOutline">
-                    <div class="visImage"></div>
-                </div>
-            </div>
-            <div class="stateSpace">
-                <p class="visTitle">Sign Up</p>
-            </div>
+    <p></p>
+    <!------------------------Vis Menu------------------------>
+    <div class="menu">
+        <div class="visSpace">
+            <div class="visImage"></div>
+            <p class="visTitle">Sign Up</p>
             <div class="stateSpace">
                 <a class="visText" href="/#/login">Log In Instead?</a>
             </div>
             <form ng-submit="register()">
-                <!--<div class="stateSpace">-->
-                <!--<input class="visInput" type="text" placeholder="Enter First Name" ng-model="user.firstName">-->
-                <!--<input class="visInput" type="text" placeholder="Enter Last Name" ng-model="user.lastName">-->
-               <!--</div>-->
-                <div class="stateSpace">
                 <input class="visInput" type="text" placeholder="emailAddress@email.com" ng-model="user.email">
-                </div>
-                <!--<div class="stateSpace">-->
-                <!--<input class="visInput" type="text" placeholder="Create Username" ng-model="user.username" required>-->
-                <!--</div>-->
-                <!--<div class="stateSpace">-->
-                <!--<input class="visInput" type="text" placeholder="Enter Cohort" ng-model="user.cohort">-->
-                <!--<input class="visInput" type="text" placeholder="Student, Mentor, Brack?" ng-model="user.role">-->
-                <!--</div>-->
-                <div class="stateSpace">
                 <input class="visInput" type="text" placeholder="Add Photo URL" ng-model="user.userImage">
-                </div>
-                <div class="stateSpace">
                 <input class="visInput" type="password" placeholder="Create Password" ng-model="user.password" required>
-                </div>
-                <div class="stateSpace">
                 <button class="visSubmit" type="submit">Create Account</button>
-                </div>
             </form>
-
-
-
-
-            <div class="visLinks">
-                <div class="stateSpace">
-                    <button class="visSubmit" type="submit">O| Login with GitHub</button>
-                </div>
-                <div class="stateSpace">
-                    <button class="visSubmit" type="submit">
-                        In| Login with LinkedIn</button>
-                </div>
-            </div>
         </div>
-        <!--Right-->
-        <div class="stateSpace"></div>
+        <div class="visLinks">
+            <button class="visSubmit" type="submit">O| Login with GitHub</button>
+            <button class="visSubmit" type="submit">In| Login with LinkedIn</button>
+        </div>
     </div>
-    <!--Bottom-->
-    <div class="stateSpace"></div>
-
 </div>
