@@ -1,4 +1,5 @@
 .card { font-family: 'Cinzel', serif;
+        font-size: 2.5vh;
     border: 1px solid rgba(0, 0, 0, .25);
     border-radius: 2.5%;
     background-color: rgba(0,0,0,.05);
@@ -8,33 +9,33 @@
     box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);    
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 450px; height: 70vh;
-    min-width: 300px;
+    height: 70vh;
+    min-width: 22.5vw;
     padding: .75%;
     margin: 1%;
 }
    
-.catTitle { color: rgba(225, 250, 250, .5); 
-                text-align: left; 
-                font-size: 15px; 
+.catTitle {     color: rgba(225, 250, 250, .5); 
+                text-align: center;  
                 text-shadow: 0px 0px 2.5px rgba(250, 250, 250, .5);
     /*border: 1px solid rgb(250, 100, 0);*/
-    width: 100%;    
+    width: 16vw;    
     margin: auto;
     
 }   
 .trophyTitle {  color: rgb(225, 250, 250); 
                 text-align: center; 
-                font-size: 25px; 
+                font-size: 3vh; 
                 text-shadow: 0px 0px 2.5px rgba(250, 250, 250, 1);
     /*border: 1px solid rgb(0, 250, 0);*/
-    width: 75%;
+    width: 16vw;
     margin: auto;
 }
 
 .cardTrophyImage {
     /*border: 1px solid rgb(250, 0, 0);*/
-    height: 65px;
+    height: 10vh;
+    width: 5vw;
     margin: 2.5%;
 }
 
@@ -48,7 +49,7 @@
     background-color: rgba(0, 0, 0, .5);
     background-size: cover;
     background-repeat: no-repeat;
-            min-height: 350px; height: 50vh;
+            height: 50vh;
             width: 100%;
             margin: auto;  
             overflow-y: auto;
@@ -57,31 +58,29 @@
 
 .badge {
    /*border: 1px solid rgba(250, 250, 250, .25);*/
-    width: 95%;
-    margin: 2.5% auto;
+    width: 21vw;
+    margin: .5vh auto;
     display: inline-flex;
 }
 
 .badgeImage {
     /*border: 1px solid rgba(250, 250, 250, .5);*/
     border-radius: 50%;
-    /*background-color: rgba(0,0,0,.5);*/
-    height: 25px;
-    min-width: 25px;
+    height: 5vh;
+    min-width: 2.5vw;
     padding: 2.5%;
     margin: auto;   
 }
 .milestone { text-align: left;
-    /*border: 1px solid rgb(0, 0, 250);*/
-    width: 50%;
+    /*border: 1px solid rgb(250, 0, 250);*/
+    width: 20vw;
     padding: 0 2.5%;
     margin: auto;
 }
 
 .difficultyLevel { color: yellow;
     /*border: 1px solid rgb(0, 0, 250);*/
-    height: 25px;
+    height: 2.5vh;
     padding: 2.5%;
-    width: 25%;
     margin: auto;
 }

@@ -1,5 +1,5 @@
 .headerSpace {
-    border: 1px solid rgb(150, 0, 250);
+    /*border: 1px solid rgb(150, 0, 250);*/
     width: 100%;
     display: inline-flex;
 }
@@ -18,7 +18,7 @@
 }
 
 .userLogo { text-align: center;
-    border: 1px solid rgba(0,0,250,1); 
+    /*border: 1px solid rgba(0,0,250,1); */
     background-image: url('/media/miscellaneous/logowhiteblue.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -41,8 +41,9 @@
     }
 
 .userName { color: rgba(0,0,0,.75); 
+            font-size: 2.5vh;
             text-align: right;
-    border: 1px solid rgb(150,0,250);
+    /*border: 1px solid rgb(150,0,250);*/
     width: 75%;
     margin: auto;    
 }
@@ -60,7 +61,7 @@
 }
 
 .visLogo {
-    border: 1px solid rgb(250, 150, 0);
+    /*border: 1px solid rgb(250, 150, 0);*/
     text-align: center;
     background-image: url('/media/miscellaneous/logoonly.png');
     background-size: contain;

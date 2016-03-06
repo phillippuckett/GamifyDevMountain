@@ -1,16 +1,8 @@
-.nav {  color: rgba(50, 15, 0, .75);
-        font-family: 'Cinzel', serif;
-    /*border: 1px solid green;*/
-    height: 100%;
-    width: 100%;
-    margin: auto;    
-}
-
-.navTitle { font-size: 35px; 
+.navTitle { font-size: 5vh;
             text-align: center; 
     border-bottom: 2px dashed rgba(75,25,0,.25);
     width: 100%;
-    padding: 2.5% 0 0 0;
+    padding: .5vh 0 0 0;
     margin: auto;           
 }
 
@@ -25,9 +17,11 @@
     margin: 5% auto;
 }*/
 
-.studentNav {   text-shadow: 0px 0px 2.5px rgba(50, 15, 0, .75);
-                font-size: 20px; 
+.studentNav {   color: rgba(50, 15, 0, .75);
+                font-family: 'Cinzel', serif;
+                text-shadow: 0px 0px 2.5px rgba(50, 15, 0, .75);
                 font-family: 'Fondamento', cursive;
+                font-size: 2.5vh;
     border: 1px solid rgba(0, 0, 0, .25);
     border-radius: 1%;
     background-image: url('/media/skins/clothTan.jpg');
@@ -36,7 +30,7 @@
     -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);    
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 75vh;
+    height: 82.5vh;
     width: 20vw;  
     margin: auto;
 }
@@ -58,7 +52,7 @@
     }
 
 .studentCats { text-align: left;
-    border: 1px solid gold;
+    /*border: 1px solid gold;*/
     width: 100%;
     margin: 15%;
 }
