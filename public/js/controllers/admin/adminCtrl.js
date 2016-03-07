@@ -6,7 +6,11 @@ angular.module( 'GamifyDevMountain' )
 
     var ass = adminStateSvc;
 
-
+    // $scope.badges = {
+    //   badgeImage: ''
+    //   badgeName: ''
+    //   desc: ''
+    // }
 
 
 

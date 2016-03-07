@@ -3,14 +3,10 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  /*font-size: 1.3em;*/
+
 }
 
-body {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  font-size: 1.3em;
-}
 
 .badgeCreateForm {
   position: relative;
@@ -169,8 +165,8 @@ body {
 }
 
 .crudButtonsDirWrap {
-  position: absolute;
-  top: 450px;
+  position: fixed;
+  bottom: 0px;
   left: 0px;
 }
 

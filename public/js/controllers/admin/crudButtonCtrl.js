@@ -8,7 +8,7 @@ angular.module("GamifyDevMountain").controller("crudButtonCtrl", function($scope
     console.log( "showAModal is being called" );
     ModalService.showModal( {
         templateUrl:"/html/modals/createModal.html",
-        controller: "createModalCtrl"
+        controller: "createBadgeModalCtrl"
       } )
       .then( function ( modal ) {
         //function that runs when modal closes

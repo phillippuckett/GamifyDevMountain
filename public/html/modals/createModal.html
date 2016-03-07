@@ -9,15 +9,16 @@
   </div>
 
 
-  <form class="badgeCreateForm" action="">
 
-    <input class="badgeInputs" type="text" name="badgeName" placeholder="Enter badge name here...">
+  <form class="badgeCreateForm" ng-submit="createBadge(newBadge)">
 
-    <input class="badgeInputs" type="text" name="MileStone" placeholder="Enter Mile stone here...">
+    <input class="badgeInputs" type="text" name="MileStone" placeholder="Enter Badge Name here..." ng-model="newBadge.mileStone">
 
-    <input class="badgeInputs" type="text" name="badgePoints" placeholder="Enter badge point-value here...">
+    <select class="badgeInputs" placeholder="Select a point value..." ng-options="option as option.difficulty for option in possiblePointValues" ng-model="newBadge.pointValue">
+    </select>
 
-    <input class="badgeInputs" type="text" name="badgePoints" placeholder="Enter badge point-value here...">
+    <select class="badgeInputs" ng-options="category as category.categoryTitle for category in categories" ng-model="newBadge.category">
+    </select>
 
     <select class ="badgeInputSelect">
       <option value="Bronze">Bronze</option>
@@ -36,12 +37,16 @@
         </div>
       </div>
 
-      <textarea name="badgeCreateDesc" class="badgeCreateDesc" placeholder="Enter badge descriton here."></textarea>
+      <textarea name="badgeCreateDesc" class="badgeCreateDesc" placeholder="Enter badge descriton here." ng-model="newBadge.desc"></textarea>
     </div>
 
     <input class="badgeCreateSubmit" type="submit">
   </form>
 
 </div>
+
+
+
+
 
 <div ng-click="close()" class="createModalBG fade"></div>

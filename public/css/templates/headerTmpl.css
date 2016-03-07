@@ -6,7 +6,7 @@
 
 .userHeader {
     /*border: 1px solid rgb(250, 0, 0);*/
-    background-image: url('/media/whitemountains.jpg');
+    background-image: url('/media/skins/whitemountains.jpg');
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
@@ -19,7 +19,7 @@
 }
 
 .userLogo { text-align: center;
-    background-image: url('/media/logowhiteblue.png');
+    background-image: url('/media/miscellaneous/logowhiteblue.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -33,10 +33,10 @@
     margin: 12.5%; margin-left: 25%;
 }
 
-.userName { color: rgba(0,0,0,.75); 
+.userName { color: rgba(0,0,0,.75);
             text-align: right;
     padding: 2.5%;
-    margin: auto;    
+    margin: auto;
 }
 
 .visHeader {
@@ -44,7 +44,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, .25);
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);    
+    -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
     min-height: 70px; max-height: 10%;
     width: 100.2%;
     display: inline-flex;
@@ -53,7 +53,7 @@
 .visLogo {
     /*border: 1px solid rgb(500, 500, 0);*/
     text-align: center;
-    background-image: url('/media/logoonly.png');
+    background-image: url('/media/miscellaneous/logoonly.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;

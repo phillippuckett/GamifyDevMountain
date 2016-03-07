@@ -67,7 +67,8 @@ angular.module( "GamifyDevMountain", [ 'angularModalService', 'ui.router', 'ui.g
 
     .state( 'admin.badges', {
       url: '/badge',
-      templateUrl: './html/states/nested/badgeAdminNested.html'
+      templateUrl: './html/states/nested/badgeAdminNested.html',
+      controller: 'adminBadgeCtrl'
     } )
 
     .state( 'admin.cohorts', {
@@ -82,7 +83,8 @@ angular.module( "GamifyDevMountain", [ 'angularModalService', 'ui.router', 'ui.g
 
     .state( 'admin.category', {
       url: '/category',
-      templateUrl: './html/states/nested/categoryAdminNested.html'
+      templateUrl: './html/states/nested/categoryAdminNested.html',
+      controller: 'categoryAdminCtrl'
     } )
 
     .state( 'admin.curriculum', {
