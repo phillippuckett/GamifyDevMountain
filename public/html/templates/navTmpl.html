@@ -1,65 +1,68 @@
-<div class="nav">
-    <!--Student-->
-    <div class="studentNav" ng-hide="false">
-        <div class="navTitle">Score Card</div>
-        <!--Badges-->
+<!--Student-->
+<div class="studentNav" ng-hide="false">
+    <div class="navTitle">Score Card</div>
+    <!--Badges-->
+    <div class="stateSpace">
         <div class="stateSpace">
-            <div class="stateSpace">
-                <p class="studentCats">Badges</p>
-            </div>
-            <div class="stateSpace">
-                <p class="studentStats">#{{badgesNumber}}</p>
-            </div>
+            <p class="studentCats">Badges</p>
         </div>
-
-        <!--Bronze Medals-->
         <div class="stateSpace">
-            <div class="stateSpace">
-                <p class="studentCats">Bronze</p>
-            </div>
-            <div class="stateSpace">
-                <p class="studentStats">#{{bronzeNumber}}</p>
-            </div>
+            <p class="studentStats">{{user.badgesAwarded}}</p>
         </div>
+    </div>
 
-        <!--Silver Medals-->
+    <!--Bronze Medals-->
+    <div class="stateSpace">
         <div class="stateSpace">
-            <div class="stateSpace">
-                <p class="studentCats">Silver</p>
-            </div>
-            <div class="stateSpace">
-                <p class="studentStats">#{{silverNumber}}</p>
-            </div>
+            <p class="studentCats">Bronze</p>
         </div>
-
-        <!--Gold Medals-->
         <div class="stateSpace">
-            <div class="stateSpace">
-                <p class="studentCats">Gold</p>
-            </div>
-            <div class="stateSpace">
-                <p class="studentStats">#{{goldNumber}}</p>
-            </div>
+            <p class="studentStats">{{user.earnedTrophies.bronze}}</p>
         </div>
+    </div>
 
-        <!--Student Level-->
-        <div class="studentLvl">
-                <p class="studentLvlText">Level</p>
-                <p class="studentLvlText">#{{goldNumber}}</p>
-        </div>
-
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <!--Mentor-->
+    <!--Silver Medals-->
+    <div class="stateSpace">
         <div class="stateSpace">
-            <div class="stateSpace">
-                <p class="studentCats">Mentor</p>
-            </div>
-            <div class="stateSpace">
-                <p class="studentStats">${{name}}Brack</p>
-            </div>
+            <p class="studentCats">Silver</p>
+        </div>
+        <div class="stateSpace">
+            <p class="studentStats">{{user.earnedTrophies.silver}}</p>
+        </div>
+    </div>
+
+    <!--Gold Medals-->
+    <div class="stateSpace">
+        <div class="stateSpace">
+            <p class="studentCats">Gold</p>
+        </div>
+        <div class="stateSpace">
+            <p class="studentStats">{{user.earnedTrophies.gold}}</p>
+        </div>
+    </div>
+
+    <!--Student Level-->
+    <div class="studentLvl">
+        <p class="studentLvlText">#n00b</p>
+        <p class="studentLvlText"></p>
+        <p class="studentLvlText">0{{}}</p>
+    </div>
+
+    <!--Total Points-->
+    <div class="stateSpace">
+        <div class="stateSpace">
+            <p class="studentCats">Points</p>
+        </div>
+        <div class="studentStats">{{user.earnedPoints}} / 5000</div>
+    </div>
+
+    <!--Mentor-->
+    <div class="stateSpace">
+        <div class="stateSpace">
+            <p class="studentCats">Mentor</p>
+        </div>
+        <div class="stateSpace">
+            <p class="studentStats">{{user.watchlist}}</p>
         </div>
     </div>
 </div>

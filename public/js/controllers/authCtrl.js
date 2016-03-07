@@ -28,9 +28,8 @@ angular.module('GamifyDevMountain')
   
         /** Registration */
         $scope.register = function () {
-            authSvc.register($scope.user)
-                .then(function (response) {
-                    // console.log('Auth Controller: Successful Registration', response);
+            authSvc.register($scope.user).then(function (response) {
+                    console.log('AUTHCTRL: Successful Registration', response);
                     $scope.user = response;
                 })
         };

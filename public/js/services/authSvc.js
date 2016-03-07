@@ -32,9 +32,9 @@ angular.module('GamifyDevMountain')
                     loggedIn = true;
                 }
                 $state.go('login');
+                // console.log('AUTHSVC:', registeredUser.data);
                 return registeredUser.data;
             })
-            // console.log('Service: Successful Registration');
         };    
     
         /** Log In */
