@@ -8,6 +8,7 @@ var passport = require('passport');
 var local = require('passport-local');
 var key = require('./server/services/cookie.js');
 var LocalStrategy = require('passport-local').Strategy;
+var jwt = require('jsonwebtoken');
 
 /* Controllers */
 var badgesCtrl = require('./server/controllers/badgesCtrl');
@@ -16,6 +17,7 @@ var catsCtrl = require('./server/controllers/catsCtrl');
 var cohsCtrl = require('./server/controllers/cohsCtrl');
 var currsCtrl = require('./server/controllers/currsCtrl');
 var usersCtrl = require('./server/controllers/usersCtrl');
+var mobileLoginCtrl = require('./server/controllers/mobileLoginCtrl');
 
 /** Policies */
 var isAuthed = function (req, res, next) {
@@ -37,7 +39,7 @@ require('./server/services/passport.js')(passport);
 
 /** Storage Cookie */
 app.use(session({
-    secret: key, // Remove from Final Project
+    secret: key.secret, // Remove from Final Project
     resave: true,
     saveUninitialized: true
 }));
@@ -68,6 +70,11 @@ app.get('/api/logout', function (req, res) {
     return res.redirect('/#/login');
     // console.log('Running Function: logout');
 });
+
+
+//Mobile Login
+app.post('/api/mobileLogin', mobileLoginCtrl.mobileLogin);
+
 
 /* Users End Points */
 app.post('/api/register', usersCtrl.createUser);
@@ -112,6 +119,7 @@ app.post('/api/badges', badgesCtrl.createBadge);
 app.get('/api/badges', badgesCtrl.getBadge);
 app.put('/api/badges/:id', badgesCtrl.updateBadge);
 app.delete('/api/badges/:id', badgesCtrl.deleteBadge);
+
 
 /** Connections */
 var nodePort = 4000;
