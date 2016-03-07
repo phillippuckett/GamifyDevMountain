@@ -8,19 +8,19 @@ module.exports = {
 
     /** C */
     createUser: function (req, res) {
-        // console.log(req.body);
+        console.log('USERSCTRL:', req.body);
         users.create(req.body, function (err, createUser) {
             if (err) {
                 console.error(err);
                 return res.status(500).json(err);
             }
-            res.status(200).json('User Created!', createUser);
+            res.status(200).json('CREATEUSER:', createUser);
         })
     },
 
     /** R *//* getUserCohort *//* getUserBadgeNumber */
     getUser: function (req, res) {
-        users.find({})
+        users.findOne({ _id: req.user._id })
             .populate({ path: 'cohort', 
             populate: ({ path: 'curriculum', model: 'curriculums', 
             populate: ({ path: 'card', model: 'cards',
@@ -29,7 +29,7 @@ module.exports = {
             .exec(function (err, readUser) { 
                 if (err) { res.status(500).send(err); 
                 } 
-            else { res.status(200).send('User Data Retrieved!', readUser); 
+            else { res.status(200).send('GETUSER', readUser); 
             } 
             })
     },
@@ -46,7 +46,7 @@ module.exports = {
     updateUser: function (req, res, next) {
         users.findByIdAndUpdate(req.params._id, req.body, function (err, updateUser) {
             if (err) next(err);
-            res.status(200).send('User Updated!', updateUser);
+            res.status(200).send('UPDATEUSER', updateUser);
         })
     },
 
@@ -56,7 +56,7 @@ module.exports = {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.send('User Deleted!', deleteUser);
+                res.send('DELETEUSER', deleteUser);
             }
         })
     },
@@ -90,33 +90,34 @@ module.exports = {
         })
     },
     
-    getStudentInfo: function(req, res){
-         users.findById(req.params.id).populate({
-             path: 'cohort'
-             , populate: {
-                 path: 'cohortCurriculum'
-                 , model: 'curriculums'
-                 , populate: {
+    getStudentInfo: function (req, res) {
+        //change to req.user._id
+        users.findById("56d093376629e38018ec0901").populate({
+            path: 'cohort'
+            , populate: {
+                path: 'cohortCurriculum'
+                , model: 'curriculums'
+                , populate: {
                     path: 'deck'
                     , model: 'cards'
-                     , populate: {
-                         path: 'badges'
-                         , model: 'badges'
-                         , populate: {
-                             path: 'category'
-                             , model: 'categories'
-                         }
-                     }
-                 }
+                    , populate: {
+                        path: 'badges'
+                        , model: 'badges'
+                        , populate: {
+                            path: 'category'
+                            , model: 'categories'
+                        }
+                    }
+                }
             }
-         }).exec(function (err, result) {
-             if (err) {
-                 res.send(err)
-             } else {
-                 res.send(result)
-             }
-         })
-},
+        }).exec(function (err, result) {
+            if (err) {
+                res.send(err)
+            } else {
+                res.send(result)
+            }
+        })
+    },
 
     requestBadge: function (req, res) {
         //change to req.user._id
@@ -142,16 +143,6 @@ module.exports = {
             }
         })
     },
-    
-    // getAwardedBadges: function (req, res) {
-    //     users.findById("56d12aa81322471f3cf604e6", function (err, result){
-    //         if (err) {
-    //             res.send(err)
-    //         } else {
-                
-    //         }
-    //     })        
-    // },
 
     getStudentsByCohort: function (req, res) {
         users.find({

@@ -54,10 +54,10 @@
 .studentCats { text-align: left;
     /*border: 1px solid gold;*/
     width: 100%;
-    margin: 15%;
+    margin: 15%; margin-right: 0;
 }
 .studentStats { text-align: right;
-    border: 1px solid orangered;
+    /*border: 1px solid orangered;*/
     width: 100%;
-    margin: 15%;
+    margin: 15%; margin-left: 0;
 }
