@@ -4,16 +4,57 @@
   margin: 0px;
   padding: 0px;
   /*font-size: 1.3em;*/
-
 }
 
+.repeatAdminBadge {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 115px;
+  width: 450px;
+}
+
+.updateCardBtn {
+  position: relative;
+  left: 150px;
+  top: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.Capa_1 {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.confirmationModalWrap {
+  position: relative;
+  width: 400px;
+  height: 200px;
+}
+
+.confirmYesBtn {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+}
+
+.confirmNoBtn {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+}
 
 .badgeCreateForm {
   position: relative;
   top: 20px;
   width: 500px;
   padding: 20px 20px 0px 20px;
-
 }
 
 .createModalPane {
@@ -31,7 +72,6 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
-
 }
 
 .overlay {}
@@ -48,9 +88,9 @@
 
 .fade {}
 
-
 .imgDdWrap {
-  position: absolute;;
+  position: absolute;
+  ;
   display: inline-block;
   top: -245px;
   left: 340px;
@@ -70,14 +110,13 @@
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
 .imgRepDd {
   top: 100px;
 }
 
-.ImgAndDiscWrap{
+.ImgAndDiscWrap {
   width: 450px;
   height: 110px;
   position: relative;
@@ -85,7 +124,7 @@
   left: 5px;
 }
 
-.badgeCreateSubmit{
+.badgeCreateSubmit {
   position: relative;
   width: 110px;
   height: 40px;
@@ -170,7 +209,6 @@
   left: 0px;
 }
 
-
 .crudButtonBar {
   position: relative;
   padding-top: 20px;
@@ -203,7 +241,6 @@
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
 }
 
-
 .badgeImgWrapper,
 .badgeImgWrapper img {
   height: 50px;
@@ -229,38 +266,6 @@
   width: 350px;
   flex: 2;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*@#####################################@*/
@@ -1280,42 +1285,6 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 
 /*#################### (End) - UI-Grid ####################*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .adminWrap {
   background-color: #202020;
