@@ -3,7 +3,6 @@ var Schema = mongoose.Schema;
 
 var cardsSchema = new Schema({
     trophyTitle: { type: String },
-    trophyImage: { type: String },
     badges: { type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'badges' }], default: [] },
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'categories' },
     trophyLevels: {

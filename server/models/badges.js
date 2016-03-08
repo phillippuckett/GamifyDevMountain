@@ -5,7 +5,6 @@ var badgesSchema = new Schema({
     badgeImage: { type: String },
     mileStone: { type: String },
     desc: { type: String },
-    category: { type: mongoose.Schema.Types.ObjectId, ref: 'categories' },
     pointValue: {
         type: Object,
         enum: [

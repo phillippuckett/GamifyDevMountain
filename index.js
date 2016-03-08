@@ -77,6 +77,12 @@ app.post('/api/mobileLogin', mobileLoginCtrl.mobileLogin);
 app.get('/api/mobileTokenCheck', mobileLoginCtrl.mobileTokenCheck);
 app.get('/api/mobileGSI', mobileLoginCtrl.getStudentInfo);
 app.put('/api/mobileBadgeRequest/:badge', mobileLoginCtrl.requestBadge);
+app.put('/api/mobileBadgeWithdraw/:badge', mobileLoginCtrl.withdrawBadgeRequest);
+app.get('/api/mobileGSBC/:cohort', mobileLoginCtrl.getStudentsByCohort);
+app.put('/api/mobileBadgeApproval', mobileLoginCtrl.badgeApproval);
+app.get('/api/mobileStudentById/:ID', mobileLoginCtrl.getStudentByID);
+app.put('/api/mobileAddToWatchList', mobileLoginCtrl.addToWatchList);
+app.put('/api/mobileRemoveFromWatchList', mobileLoginCtrl.removeFromWatchList);
 
 /* Users End Points */
 app.post('/api/register', usersCtrl.createUser);
@@ -130,7 +136,7 @@ app.listen(nodePort, function () {
     console.log('Running nodemon://localhost:' + nodePort);
 });
 
-var mongoURI = 'mongodb://localhost:27017/GamifyDevMountain';
+var mongoURI = 'mongodb://GDVuser:user@ds023458.mlab.com:23458/gamifudevmountain';
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', function (err) {
     if (err) { throw err; }
