@@ -27,7 +27,7 @@
 
                     <!--Badge-->
                     <div class="badge" ng-repeat="badge in card.badges">
-                        <button class="badgeImage" ng-click="modToggle()"></button>
+                        <button class="badgeImage" ng-click="modToggle(badge._id)"></button>
                         <div class="milestone">{{badge.mileStone}}</div>
                         <div class="difficultyLevel">
                             {{badge.pointValue.difficulty}}
@@ -36,7 +36,7 @@
                 </div>
                 <!--Point Tally-->
                 <div class="stateSpace">
-                    <p>0/{{totalCardPoints(card)}}</p>
+                    <p class="trophyTitle">0/{{totalCardPoints(card)}}</p>
                 </div>
             </div>
         </div>

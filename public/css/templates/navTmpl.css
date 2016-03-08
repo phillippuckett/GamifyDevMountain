@@ -1,38 +1,15 @@
-.navTitle { font-size: 5vh;
-            text-align: center; 
-    border-bottom: 2px double rgba(75,25,0,.05);
-    width: 100%;
-    padding: .5vh 0 0 0;
-    margin: auto;           
-}
-
-/*.navButton { color: rgb(250, 250, 250); font-size: 20px;
-    border: 1px solid rgba(0,150,250,1);
-    background-color: rgba(0,150,250,1);
-    -webkit-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
-    width: 50%;
-    padding: 2.5%;
-    margin: 5% auto;
-}*/
-
 .studentNav {   color: rgba(50,25,0,.5);
                 font-family: 'Cinzel', serif;
                 text-shadow: 0px 0px 2.5px rgba(50,25,0,.5);
                 font-family: 'Fondamento', cursive;
                 font-size: 2.5vh;
-    border-bottom: 1px double rgba(50,25,0,1);
+    /*border: 1px solid rgb(250,0,100);*/
     border-radius: 1%;
-    background-image: url('/media/skins/clothTan.jpg');
-    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);    
     background-size: cover;
     background-repeat: no-repeat;
-    height: 82.5vh;
+    height: 62.5vh;
     width: 20vw;  
-    margin: auto;
+    margin: auto; margin-top: 12.5%;
 }
 
 .studentLvl {   text-align: center;
@@ -46,7 +23,7 @@
 .studentLvlText {   color: white;
                     text-shadow: 0px 0px 2.5px rgba(250, 250, 250, .75);
                     text-align: center; 
-                    /*border: 1px solid rgb(150, 50, 0); */                  
+                    /*border: 1px solid rgb(150, 50, 0);*/
     width: 100%; 
     margin: auto; 
     }
@@ -54,10 +31,10 @@
 .studentCats { text-align: left;
     /*border: 1px solid gold;*/
     width: 100%;
-    margin: 15%; margin-right: 0;
+    margin: 10% 0 10% 15%;
 }
 .studentStats { text-align: right;
     /*border: 1px solid orangered;*/
     width: 100%;
-    margin: 15%; margin-left: 0;
+    margin: 10% 15% 10% 0;
 }

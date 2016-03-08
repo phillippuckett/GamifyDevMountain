@@ -12,6 +12,16 @@ angular.module('GamifyDevMountain')
             })
         };
        
+        /** Request Badge */
+        this.reqBadge = function (badgeId) {
+            return $http({
+                method: 'PUT',
+                url: '/api/users/badgerequest/' + badgeId
+            }).then(function (badgeData) {
+                return badgeData.data;
+            })
+        };
+       
         /** Cards */
         this.getUsersCards = function () {
             return $http({
