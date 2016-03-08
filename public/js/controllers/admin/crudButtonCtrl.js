@@ -7,7 +7,7 @@ angular.module("GamifyDevMountain").controller("crudButtonCtrl", function($scope
   $scope.showAModal = function () {
     console.log( "showAModal is being called" );
     ModalService.showModal( {
-        templateUrl:"/html/modals/createModal.html",
+        templateUrl:"/html/modals/createBadgeModal.html",
         controller: "createBadgeModalCtrl"
       } )
       .then( function ( modal ) {

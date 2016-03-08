@@ -15,7 +15,7 @@
     <input class="badgeInputs" type="text" name="MileStone" placeholder="Enter Badge Name here..." ng-model="newBadge.mileStone">
 
     <select class="badgeInputs" placeholder="Select a point value..." ng-options="option as option.difficulty for option in possiblePointValues" ng-model="newBadge.pointValue">
-    </select>
+    </select> {{possiblePointValues}}
 
     <select class="badgeInputs" ng-options="category as category.categoryTitle for category in categories" ng-model="newBadge.category">
     </select>

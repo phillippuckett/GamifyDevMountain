@@ -1,10 +1,11 @@
 angular.module( 'GamifyDevMountain' )
-  .service( 'badgeAdminSvceSvc', function ( $state, $http ) {
+  .service( 'badgeAdminSvc', function ( $state, $http ) {
 
 
 
     /**######## Badges ########*/
     this.getBadges = function () {
+      console.log('getBadges is logging from badgeAdminSvc');
       return $http( {
           method: 'GET',
           url: '/api/badges'
