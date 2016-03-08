@@ -53,7 +53,7 @@ module.exports = {
             .populate({
             path: 'cohort'
             , populate: {
-                path: 'cohortCurriculum'
+                path: 'curriculum'
                 , model: 'curriculums'
                 , populate: {
                     path: 'deck'
@@ -156,7 +156,7 @@ module.exports = {
         users.findById(req.params.ID).populate({
             path: 'cohort'
             , populate: {
-                path: 'cohortCurriculum'
+                path: 'curriculum'
                 , model: 'curriculums'
                 , populate: {
                     path: 'deck'

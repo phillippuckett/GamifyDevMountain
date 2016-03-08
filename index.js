@@ -136,7 +136,7 @@ app.listen(nodePort, function () {
     console.log('Running nodemon://localhost:' + nodePort);
 });
 
-var mongoURI = 'mongodb://localhost:27017/GamifyDevMountain';
+var mongoURI = 'mongodb://GDVuser:user@ds023458.mlab.com:23458/gamifudevmountain';
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', function (err) {
     if (err) { throw err; }
