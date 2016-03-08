@@ -6,7 +6,6 @@
   <form class="" method="post">
 
     <!-- type="what kind is it", semi form validation-->
-    <button ng-click="createCard(newCard);">Add new Card</button>
 
     <input ng-model="newCard.trophyTitle" placeholder="Card/Trophy Name">
     <br>
@@ -14,8 +13,8 @@
     <br>
 
     <!-- TODO: I ned a way to spawn new input boxes, while saving the value, maybe pushing it to an array...  -->
-    <select class="badgeInputs" ng-click="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select>
-    <select class="badgeInputs" ng-if="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select>
+    <select class="badgeInputs" ng-click="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="selectedBadge" ng-change="selectBadge(selectedBadge)"></select>
+    <!-- <select class="badgeInputs" ng-if="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select> -->
 
     <br>
     <input ng-model="newCard.trophyLevels.bronze" class="" type="Number" name="" placeholder="Bronze">
@@ -24,17 +23,19 @@
     <br>
     <input ng-model="newCard.trophyLevels.gold" class="" type="Number" name="" placeholder="Gold">
     <br>
+    <button ng-click="createCard(newCard);">Add new Card</button>
+
   </form>
 
   <div class="cardAdminWrap">
     <div class="cardsDisplayed">
       <div class="cardHeader">
-        {{card.trophyTitle}}
-        {{card.trophyImage}}
+        {{newCard.trophyTitle}}
+        {{newCard.trophyImage}}
       </div>
       <br>
       <div class="cardContents">
-        <div class="repeatAdminBadge">
+        <div class="repeatAdminBadge" ng-repeat="thisOne in newCard.badges">
           <div class="badgeRepeated">
             <img ng-src="{{thisOne.badgeImage}}"/>
             {{thisOne.mileStone}}
@@ -46,6 +47,10 @@
       </div>
     </div>
   </div>
+
+
+  <crud-buttons-dir></crud-buttons-dir>
+
 
   <div class="cardsShallBehave">
     <div class="cardsDisplayed" ng-repeat="card in cards">

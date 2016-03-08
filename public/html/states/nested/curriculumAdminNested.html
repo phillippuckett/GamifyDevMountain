@@ -1,7 +1,24 @@
 <div class="gridDirWrap">
   <grid-dir></grid-dir>
   <crud-buttons-dir></crud-buttons-dir>
+  <input ng-model="newCurriculum.curriculumTitle" type="text" placeholder="Enter Title">
 
+  <select class="cardInputs" ng-click="firstClicked" ng-options="card.trophyTitle for card in cards" ng-model="selectedCard" ng-change="selectCard(selectedCard)"></select>
+
+  <ul>
+    <li ng-repeat="card in newCurriculum.deck track by $index">{{card.trophyTitle}}</li>
+  </ul>
+
+<div class="">
+  <h3>Curriculum Availiable</h3>
+  <div class="" ng-repeat="curriculum in curriculums">
+    <h4>{{curriculum.curriculumTitle}}</h4>
+    <ul>
+      <li ng-repeat="card in curriculum.deck track by $index">{{card.trophyTitle}}</li>
+    </ul>
+  </div>
+</div>
+<button type="button" ng-click="createCurriculum(newCurriculum)">Submit curriculum</button>
 </div>
 
 
