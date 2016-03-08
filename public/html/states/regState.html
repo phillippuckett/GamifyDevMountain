@@ -1,4 +1,4 @@
-<div class="charcoalBackground">
+<!--<div class="charcoalBackground">-->
     <!------------------------Vis Header------------------------>
     <div class="visHeader">
         <!--1st Quarter-->
@@ -39,18 +39,33 @@
                             <input class="visInput" type="password" placeholder="Create Password" ng-model="user.password" required>
                     </div>
                     <div>
-                        <input class="visInput" type="text" placeholder="cohort" ng-model="user.cohort">
-                        <input class="visInput" type="text" placeholder="Student, Mentor, or Admin?" ng-model="user.role">
-                        <input class="visInput" type="text" placeholder="your mentor" ng-model="user.watchlist">
+                        <select class="visInput" ng-model="user.cohort">
+                            <option value="mentor">DEVMTN VIII {{cohort.cohortName}}</option>
+                            <option value="mentor">DEVMTN IX {{cohort.cohortName}}</option>
+                            <option value="mentor">DEVMTN X {{cohort.cohortName}}</option>
+                        </select>
+
+                        <select ng-model="user.role" class="visInput">
+                            <option value="student">Student</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                        <select class="visInput" ng-model="user.watchlist">
+                            <option value="mentor">Brack C Obama</option>
+                            <option value="mentor">David Monica Giles</option>
+                            <option value="mentor">Yagov Talij</option>
+                            <option value="mentor">Tin-man Charlesworth</option>
+                            <option value="mentor">Steban Blinkworse</option>
+                        </select>
                         <button class="visSubmit" type="submit">Create Account</button>
                         </form>
                         <!--<div class="visLinks">-->
-                            <!--<button class="visSubmit" type="submit">O| Login with GitHub</button>-->
-                            <!--<button class="visSubmit" type="submit">In| Login with LinkedIn</button>-->
+                        <!--<button class="visSubmit" type="submit">O| Login with GitHub</button>-->
+                        <!--<button class="visSubmit" type="submit">In| Login with LinkedIn</button>-->
                         <!--</div>-->
                     </div>
                 </div>
             </div>
         </div>
         <!------------------------Vis Footing------------------------>
-    </div>
+    <!--</div>-->

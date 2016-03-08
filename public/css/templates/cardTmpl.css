@@ -55,7 +55,6 @@
             overflow-y: auto;
 }
 
-
 .badge {
    /*border: 1px solid rgba(250, 250, 250, .25);*/
     width: 21vw;
@@ -64,7 +63,11 @@
 }
 
 .badgeImage {
-    /*border: 1px solid rgba(250, 250, 250, .5);*/
+    border: 1px solid rgba(0,0,0,.25);
+    background-color: rgba(0,0,0,0);
+    -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.75);
     border-radius: 50%;
     height: 5vh;
     min-width: 2.5vw;
@@ -84,3 +87,38 @@
     padding: 2.5%;
     margin: auto;
 }
+
+.badgeRequestModal {    color: rgba(50,25,0,.5);
+                        font-family: 'Cinzel', serif;
+                        text-shadow: 0px 0px 2.5px rgba(50,25,0,.5);
+                        font-family: 'Fondamento', cursive;
+                        font-size: 5vh;
+    border: 1px double rgba(50,25,0,.5); border-radius: 1%;
+    /*border: 1px solid rgb(0, 0, 250);*/
+    background-image: url('/media/skins/clothTan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.75);
+    height: 30vh; top: calc(35vh);
+    width: 30vw; left: calc(35vw);
+    position: absolute;
+    margin: auto;
+}
+
+.badgeRequestButton {   color: rgba(50,25,0,.5);
+                        font-family: 'Cinzel', serif;
+                        text-shadow: 0px 0px 2.5px rgba(50,25,0,.5);
+                        font-family: 'Fondamento', cursive;
+                        font-size: 2.5vh;
+    background-image: url('/media/skins/clothTan.jpg');  
+    background-size: contain;            
+    border: 1px double rgba(0,0,0,0); border-radius: 50%;
+    margin: auto;
+    }
+.badgeRequestButton:hover { color: rgba(150,25,0,.5);
+                            font-size: 3vh;
+                            text-shadow: 0px 0px 2.5px rgba(150,25,0,.5);
+    border: 1px double rgba(0,0,0,0); border-radius: 50%;
+}    

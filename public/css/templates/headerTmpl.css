@@ -7,9 +7,9 @@
 .userHeader {
     /*border: 1px solid rgb(250, 0, 0);*/
     background-image: url('/media/skins/whitemountains.jpg');
-    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);  
     background-size: contain;
     height: 10vh;
     width: 100%;
@@ -62,10 +62,10 @@
 }
 
 .visHeader {
-    background-color: rgba(0,0,0,.5);
-    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,.75);
+    /*-webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75); */
     background-size: contain;
     height: 10vh;
     min-width: 98vw; width: 100%;

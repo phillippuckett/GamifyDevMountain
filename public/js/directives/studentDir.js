@@ -36,6 +36,7 @@ angular.module('GamifyDevMountain')
                     return cardPoints;
                 };
 
+                /** Trophy Medal Levels */
                 $scope.NBSGP = function (card) {
                     var tpa = 0;
                     var tpp = 0;
@@ -63,7 +64,6 @@ angular.module('GamifyDevMountain')
                     else {
                         return "/media/awardEmblems/trophyNone.png"
                     }
-
                 };
             }
         }
