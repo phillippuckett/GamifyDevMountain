@@ -3,51 +3,13 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  /*font-size: 1.3em;*/
 }
 
-.repeatAdminBadge {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  height: 115px;
-  width: 450px;
-}
-
-.updateCardBtn {
-  position: relative;
-  left: 150px;
-  top: 50px;
-  height: 50px;
-  width: 50px;
-}
-
-.Capa_1 {
-  position: relative;
-  height: 50px;
-  width: 50px;
-}
-
-.confirmationModalWrap {
-  position: relative;
-  width: 400px;
-  height: 200px;
-}
-
-.confirmYesBtn {
-  position: relative;
-  width: 100px;
-  height: 40px;
-  top: 0px;
-  left: 0px;
-}
-
-.confirmNoBtn {
-  position: relative;
-  width: 100px;
-  height: 40px;
-  top: 0px;
-  left: 0px;
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.3em;
 }
 
 .badgeCreateForm {
@@ -55,6 +17,7 @@
   top: 20px;
   width: 500px;
   padding: 20px 20px 0px 20px;
+
 }
 
 .createModalPane {
@@ -72,6 +35,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
+
 }
 
 .overlay {}
@@ -88,9 +52,9 @@
 
 .fade {}
 
+
 .imgDdWrap {
-  position: absolute;
-  ;
+  position: absolute;;
   display: inline-block;
   top: -245px;
   left: 340px;
@@ -110,13 +74,14 @@
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
 .imgRepDd {
   top: 100px;
 }
 
-.ImgAndDiscWrap {
+.ImgAndDiscWrap{
   width: 450px;
   height: 110px;
   position: relative;
@@ -124,7 +89,7 @@
   left: 5px;
 }
 
-.badgeCreateSubmit {
+.badgeCreateSubmit{
   position: relative;
   width: 110px;
   height: 40px;
@@ -203,19 +168,13 @@
   background-size: contain;
 }
 
-.crudButtonsDirWrap {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-}
-
 .crudButtonBar {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  top: 0px;
-  left: 0px;
+  top: 345px;
   width: 150px;
+  height: 300px;
   /*background-color: #444444;*/
   color: #bdbdbd;
   /*border-top-right-radius: 10px;
@@ -240,6 +199,7 @@
   -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
 }
+
 
 .badgeImgWrapper,
 .badgeImgWrapper img {
@@ -266,8 +226,6 @@
   width: 350px;
   flex: 2;
 }
-
-
 /*@#####################################@*/
 
 ::-webkit-scrollbar {
@@ -1283,9 +1241,6 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   color: black;
 }
 
-
-/*#################### (End) - UI-Grid ####################*/
-
 .adminWrap {
   background-color: #202020;
   height: 100vh;
@@ -1317,28 +1272,20 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .innerFrame {
   position: absolute;
-  left: 150px;
+  left: 160px;
   top: 70px;
-  width: calc(100vw - 145px);
-  height: calc(100vh - 70px);
+  width: calc(100vw - 200px);
+  height: calc(100vh - 90px);
   background-size: contain;
-  /*z-index: 100;*/
-}
-
-.centerLogoWrap {
-  position: absolute;
-  top: calc(-270px + 50%);
-  left: calc(-270px + 50%);
-  width: 540px;
-  height: 540px;
+  z-index: 100;
 }
 
 .shinyDmLogo {
   position: relative;
   width: 500px;
   height: 500px;
-  top: 20px;
-  left: 20px;
+  top: calc(-337px + 50vh);
+  left: calc(-407px + 50vw);
 }
 
 .clip-circleOne {
@@ -1397,20 +1344,20 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   top: 20px;
   width: 500px;
   background-color: #444444;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
   -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
 .gridHeader {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
   color: #bdbdbd;
   background-color: #444444;
   font-size: proxima-nova;
@@ -1433,7 +1380,6 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .myGrid {
   width: 500px;
   height: 200px;
-  background-color: turquoise;
 }
 
 #headerWrapper {
@@ -1483,8 +1429,9 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 
 .leftNavAreaDirWrap {
   position: absolute;
-  width: 150px;
-  height: calc(100vh - 70px);
+  width: 157px;
+  padding: 1px;
+  height: calc(100vh - 90px);
 }
 
 .leftNavArea {
@@ -1543,17 +1490,18 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .cardAdminWrapper {
   color: #bdbdbd;
   background-color: #444444;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 10px);
   display: inline-block;
   position: relative;
-  left: 20px;
+  left: 15px;
   top: 20px;
-  height: calc(100% - 40px);
+  height: 97%;
   overflow: scroll;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  max-width: calc();
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
   -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
@@ -1569,10 +1517,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   color: #bdbdbd;
   padding: 8px;
   margin: 5px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
 }
 
 .cardsShallBehave {
@@ -1584,17 +1532,17 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   overflow: scroll;
   padding: 10px;
   max-height: 100%;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
 }
 
 .cardsDisplayed {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
   margin: 5px;
   position: relative;
   width: 280px;
@@ -1613,10 +1561,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   margin: 5px;
   width: 96%;
   height: 82%;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
   display: flex;
   flex-direction: column;
   color: #bdbdbd;
@@ -1631,10 +1579,10 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   margin-top: 3px;
   margin-bottom: 3px;
   padding: 5px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  border-radius: 13px;
   min-height: 50px;
   display: flex;
   flex-direction: row;
