@@ -45,9 +45,9 @@
 
 <!--Badge Request Modal-->
 <div class="bdgReqMod" ng-if="reqModal">
-    <p>You don't have to do this, {{user.firstName}} :(</p>
+    <p>Badge Request</p>
     <div class="stateSpace">
-        <button class="bdgReqButt" ng-click="modToggle()">Withdraw Request</button>
-        <button class="bdgReqButt" ng-click="modToggle()">Submit Request</button>
+        <button class="bdgReqButt" ng-click="modToggle(); wdrawReq()">Withdraw Request</button>
+        <button class="bdgReqButt" ng-click="modToggle(); sbmtReq()">Submit Request</button>
     </div>
 </div>

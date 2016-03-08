@@ -3,26 +3,35 @@ angular.module('GamifyDevMountain')
         return {
             restrict: 'E',
             templateUrl: 'html/templates/studentTmpl.html',
-            controller: function ($scope, viewSvc, authSvc, $http) {
+            controller: function ($scope, studentSvc, authSvc, $http) {
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');
-                $scope.modButton = false;
                 
-                /** Toggle Badge Request Modal */
-                $scope.modToggle = function () {
-                    $scope.reqModal = !$scope.reqModal;
-                    console.log('TOGGLE');
-                }
-               
                 /** Cards on the Table */
                 $scope.getCards = function (cardData) {
-                    viewSvc.getUsersCards(cardData).then(function (cardData) {
+                    studentSvc.getUsersCards(cardData).then(function (cardData) {
                         $scope.cards = cardData;
                     })
                 };
                 $scope.getCards();
-
-
+                
+                /** Toggle Badge Request Modal */
+                $scope.modButton = false;
+                $scope.modToggle = function () {
+                    $scope.reqModal = !$scope.reqModal;
+                    console.log('TOGGLE');
+                }
+                
+                /** Withdraw Request */
+                $scope.wdrawReq = function () {
+                    
+                }
+                
+                /** Submit Request */
+               $scope.sbmtReq = function () {
+                   
+               }
+              
                 /** Total Points */
                 authSvc.getUserObject().then(function (userData) {
                     var curriculumCards = userData.data.cohort.curriculum.card;

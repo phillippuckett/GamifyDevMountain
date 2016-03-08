@@ -115,6 +115,8 @@
     background-image: url('/media/skins/clothTan.jpg');  
     background-size: contain;            
     border: 1px double rgba(0,0,0,0); border-radius: 50%;
+    /*border: 1px solid rgb(0,250,250);*/
+    /*height: 3vh;*/
     margin: auto;
     }
 .bdgReqButt:hover { color: rgba(150,25,0,.5);
