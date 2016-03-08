@@ -2,24 +2,24 @@
 
   <header-dir></header-dir>
   <left-nav-area-dir></left-nav-area-dir>
-  <crud-buttons-dir></crud-buttons-dir>
+
   <div class="innerFrame">
-    <div ng-hide="activeDir.hideLogo" class="shinyDmLogo">
-      <div class="clip-circleOne"></div>
-      <div class="circleDiv">
+    <div class="centerLogoWrap">
+
+      <div ng-hide="activeDir.hideLogo" class="shinyDmLogo">
+        <div class="clip-circleOne"></div>
+        <div class="circleDiv"></div>
+        <div class="svgTwo"></div>
       </div>
-      <div class="svgTwo">
-      </div>
+
     </div>
     <div class="adminDirWrap">
-      <!-- <grid-dir></grid-dir> -->
-      <ui-view ></ui-view>
 
+      <ui-view ></ui-view>
     </div>
   </div>
 
   <!-- using adminCtrl -->
-
 
   <!-- <card-admin-dir ng-if="activeDir.cardAdmin == true"></card-admin-dir>
   <badge-admin-dir ng-if="activeDir.badgeAdmin == true"></badge-admin-dir> -->

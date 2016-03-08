@@ -22,7 +22,7 @@ angular.module( 'GamifyDevMountain' )
     };
 
 
-    this.createBadges = function () {
+    this.createBadge = function ( badge ) {
       return $http( {
           method: 'POST',
           url: '/api/badges',

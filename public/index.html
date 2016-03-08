@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="GamifyDevMountain">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <title>GamifyDevMountain</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="css/cores.css">
     
     <!--Card Font-->
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
@@ -22,56 +25,78 @@
     <link rel="stylesheet" href="css/templates/navTmpl.css">
     <link rel="stylesheet" href="css/templates/studentTmpl.css">
     <link rel="stylesheet" href="css/templates/cardTmpl.css">
-    <!--<link rel="stylesheet" href="css/cores.css">-->
-    <!--<link rel="stylesheet" href="css/templates/courseTmpl.css">-->
-    <!--<link rel="stylesheet" href="css/templates/cohortTmpl.css">-->
-    <!--<link rel="stylesheet" href="css/templates/menteeTmpl.css">-->
-</head>
+    <!-- <link rel="stylesheet" href="css/templates/courseTmpl.css">
+    <link rel="stylesheet" href="css/templates/cohortTmpl.css">
+    <link rel="stylesheet" href="css/templates/menteeTmpl.css"> -->
+  </head>
+  <body ng-controller="mainCtrl">
 
-<body ng-controller="mainCtrl">
 
     <!--Ui-Router-->
     <ui-view></ui-view>
 
-    <!--Content Delivery Network's-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.min.js"></script>
+<<<<<<< HEAD
 
-    <!--Scripts-->
-    <script src="./js/angular-modal-service.js"></script>
-    <script src="js/app.js"></script>
+    <footer>
+      <!--Content Delivery Network's-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.min.js"></script>
 
-    <!--Controllers-->
-    <script src="./js/controllers/crudButtonCtrl.js"></script>
-    <script src="./js/controllers/angularModalCtrl.js"></script>
-    <script src="./js/controllers/createModalCtrl.js"></script>
-    <script src="./js/controllers/headerCtrl.js"></script>
-
-    <script src="./js/controllers/adminCtrl.js"></script>
-    <script src="js/controllers/authCtrl.js"></script>
-    <script src="./js/controllers/mainCtrl.js"></script>
-    <script src="js/controllers/studentCtrl.js"></script>
+      <!--Scripts-->
+      <script src="./js/services/admin/angular-modal-service.js"></script>
+      <script src="js/app.js"></script>
 
 
-    <!--Custom Directives-->
-    <script src="js/directives/headerDir.js"></script>
-    <script src="js/directives/navDir.js"></script>
-    <script src="js/directives/studentDir.js"></script>
-    <script src="./js/directives/directives.js"></script>
+      <!-- Modal Controllers -->
+      <script src="./js/controllers/admin/adminModals/cardCreateAdMoCtrl.js"></script>
+      <script src="./js/controllers/admin/adminModals/createBadgeModalCtrl.js"></script>
+      <script src="./js/controllers/admin/adminModals/angularModalCtrl.js"></script>
+      <script src="./js/controllers/admin/adminModals/confirmDelAdMoCtrl.js"></script>
 
-    <!--<script src="js/directives/courseDir.js"></script>-->
-    <!--<script src="js/directives/cohortDir.js"></script>-->
-    <!--<script src="js/directives/menteeDir.js"></script>-->
-    <!--<script src="js/directives/cardDir.js"></script>-->
 
-    <!--Services-->
-    <script src="./js/services/adminStateSvc.js"></script>
-    <script src="js/services/authSvc.js"></script>
-    <script src="./js/services/mainSvc.js"></script>
-    <script src="./js/services/studentSvc.js"></script>
 
-</body>
+      <!-- Admin Controllers-->
+      <script src="./js/controllers/admin/adminCtrl.js"></script>
+      <script src="./js/controllers/admin/adminBadgeCtrl.js"></script>
+      <script src="./js/controllers/admin/crudButtonCtrl.js"></script>
+      <script src="./js/controllers/admin/mainCtrl.js"></script>
+      <script src="./js/controllers/admin/categoryAdminCtrl.js"></script>
+      <script src="./js/controllers/admin/cardAdminCtrl.js"></script>
+      <script src="./js/controllers/admin/curriculumAdminCtrl.js"></script>
 
+
+      <!-- Sitewide Controllers -->
+      <script src="./js/controllers/headerCtrl.js"></script>
+      <script src="./js/controllers/authCtrl.js"></script>
+      <script src="./js/controllers/studentCtrl.js"></script>
+
+
+
+      <!--Custom Directives-->
+      <script src="./js/directives/directives.js"></script>
+      <script src="./js/directives/headerDir.js"></script>
+      <script src="./js/directives/navDir.js"></script>
+      <script src="./js/directives/viewDir.js"></script>
+      <script src="./js/directives/studentDir.js"></script>
+
+      <!--<script src="js/directives/courseDir.js"></script>-->
+      <!--<script src="js/directives/cohortDir.js"></script>-->
+      <!--<script src="js/directives/menteeDir.js"></script>-->
+      <!--<script src="js/directives/cardDir.js"></script>-->
+
+      <!--Sitewide Services-->
+      <script src="./js/services/authSvc.js"></script>
+      <script src="./js/services/mainSvc.js"></script>
+      <script src="./js/services/categorySvc.js"></script>
+      <script src="./js/services/studentSvc.js"></script>
+
+      <!-- Admin Services -->
+      <script src="./js/services/admin/adminStateSvc.js"></script>
+      <script src="./js/services/admin/cardAdminSvc.js"></script>
+      <script src="./js/services/admin/badgeAdminSvc.js"></script>
+      <script src="./js/services/admin/curriculumAdminSvc.js"></script>
+
+    </footer>
+  </body>
 </html>

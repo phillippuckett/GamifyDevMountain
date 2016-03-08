@@ -1,40 +1,25 @@
-<div class="cardAdminWrapper">
-  <h1 class="cardHeader">Available Cards</h1>
-  <div class="cardsShallBehave">
+<div class="gridDirWrap">
+  <grid-dir></grid-dir>
+  <crud-buttons-dir></crud-buttons-dir>
+  <input ng-model="newCurriculum.curriculumTitle" type="text" placeholder="Enter Title">
 
-    <div class="cardsDisplayed" ng-repeat="card in cards">
-      <div class="cardHeader">
-        {{card.trophyTitle}}
-        {{card.trophyImage}}
-      </div>
-      <hr>
-      <div class="cardContents">
-        <div class="badgesWithinCards" ng-repeat="badge in card.badges">
-          <span class="badgename">
-            {{badge.badgeName}}
-          </span>
-          <div class="badgeDescription">
-            {{badge.badgeDescription}}
-          </div>
-          <span class="badgeImgWrapper">
-          <img src="./media/Css100.png"/>
-        </span>
-        </div>
-        <p>{{card.cardKeyOne}}</p>
-        <span class="cardRequirements"></span>
-      </div>
-    </div>
+  <select class="cardInputs" ng-click="firstClicked" ng-options="card.trophyTitle for card in cards" ng-model="selectedCard" ng-change="selectCard(selectedCard)"></select>
+
+  <ul>
+    <li ng-repeat="card in newCurriculum.deck track by $index">{{card.trophyTitle}}</li>
+  </ul>
+
+<div class="">
+  <h3>Curriculum Availiable</h3>
+  <div class="" ng-repeat="curriculum in curriculums">
+    <h4>{{curriculum.curriculumTitle}}</h4>
+    <ul>
+      <li ng-repeat="card in curriculum.deck track by $index">{{card.trophyTitle}}</li>
+    </ul>
   </div>
 </div>
+<button type="button" ng-click="createCurriculum(newCurriculum)">Submit curriculum</button>
+</div>
 
-<!-- TODO: style the overflow, hidden scrolling, on hover scroll with some kind of indicator, or maybe a button to scroll down per badge, or group of badges.
-The same gos for the available cards list. -->
 
-<!-- TODO: add an modal that would allow the addition of badges by url -->
-
-<!--  -->
-<!-- TODO: Take these images in from adminCtrl, through a seperate query, we need to be able to reference a badge image by the id, and wheather or not the student has earned it.
-
-The cards display should show them all as completed icons, querying, or completed so each status can be CRUD controlled.
-
--->
+<!-- TODO: these directives aren't necessary. They the function that populates grid-div could also call it into being on the adminState.html. There could be a ng-if that is linked to a function, which returns true if any of the four grids are toggled on through leftNavAdmin -->

@@ -1,7 +1,58 @@
+<!-- uses cardAdminCrl,  -->
+
 <div class="cardAdminWrapper">
   <h1 class="cardHeader">Available Cards</h1>
-  <div class="cardsShallBehave">
 
+  <form class="" method="post">
+
+    <!-- type="what kind is it", semi form validation-->
+
+    <input ng-model="newCard.trophyTitle" placeholder="Card/Trophy Name">
+    <br>
+    <input ng-model="newCard.trophyImage" placeholder="Trophy Image URL">
+    <br>
+
+    <!-- TODO: I ned a way to spawn new input boxes, while saving the value, maybe pushing it to an array...  -->
+    <select class="badgeInputs" ng-click="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="selectedBadge" ng-change="selectBadge(selectedBadge)"></select>
+    <!-- <select class="badgeInputs" ng-if="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select> -->
+
+    <br>
+    <input ng-model="newCard.trophyLevels.bronze" class="" type="Number" name="" placeholder="Bronze">
+    <br>
+    <input ng-model="newCard.trophyLevels.silver" class="" type="Number" name="" placeholder="Silver">
+    <br>
+    <input ng-model="newCard.trophyLevels.gold" class="" type="Number" name="" placeholder="Gold">
+    <br>
+    <button ng-click="createCard(newCard);">Add new Card</button>
+
+  </form>
+
+  <div class="cardAdminWrap">
+    <div class="cardsDisplayed">
+      <div class="cardHeader">
+        {{newCard.trophyTitle}}
+        {{newCard.trophyImage}}
+      </div>
+      <br>
+      <div class="cardContents">
+        <div class="repeatAdminBadge" ng-repeat="thisOne in newCard.badges">
+          <div class="badgeRepeated">
+            <img ng-src="{{thisOne.badgeImage}}"/>
+            {{thisOne.mileStone}}
+            {{thisOne.desc}}
+            {{thisOne.pointValue.difficulty}}
+            {{thisOne.pointValue.points}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <crud-buttons-dir></crud-buttons-dir>
+
+
+  <div class="cardsShallBehave">
     <div class="cardsDisplayed" ng-repeat="card in cards">
       <div class="cardHeader">
         {{card.trophyTitle}}
@@ -17,14 +68,49 @@
             {{badge.badgeDescription}}
           </div>
           <span class="badgeImgWrapper">
-          <img src="./media/Css100.png"/>
-        </span>
+            <img src="./media/Css100.png"/>
+          </span>
         </div>
         <p>{{card.cardKeyOne}}</p>
         <span class="cardRequirements"></span>
       </div>
     </div>
   </div>
+</div>
+
+<!-- TODO: use {{newCard.badge.mileStone}} to populate an image of the card in progress. -->
+
+<!-- TODO: function to soft, save one entered badge, before adding more, or some other way to do it.... Just ng-model, a badge or two on there, use ng-click to populate the other inputs. -->
+
+<!-- 1ng-model="newCard.badges"  -->
+<!-- TODO: causing errors -->
+<!-- <select ng-options="badge in badgeData.data" ng-model="badge" class="" name="Add Badges"></select> -->
+
+<div class="cardsShallBehave">
+
+  <div class="cardsDisplayed" ng-repeat="card in cards">
+    <div class="cardHeader">
+      {{card.trophyTitle}}
+      {{card.trophyImage}}
+    </div>
+    <hr>
+    <div class="cardContents">
+      <div class="badgesWithinCards" ng-repeat="badge in card.badges">
+        <span class="badgename">
+          {{badge.badgeName}}
+        </span>
+        <div class="badgeDescription">
+          {{badge.badgeDescription}}
+        </div>
+        <span class="badgeImgWrapper">
+          <img src="./media/Css100.png"/>
+        </span>
+      </div>
+      <p>{{card.cardKeyOne}}</p>
+      <span class="cardRequirements"></span>
+    </div>
+  </div>
+</div>
 </div>
 
 <!-- TODO: style the overflow, hidden scrolling, on hover scroll with some kind of indicator, or maybe a button to scroll down per badge, or group of badges.

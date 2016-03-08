@@ -1,19 +1,28 @@
 angular.module( "GamifyDevMountain" )
-  .controller( "mainCtrl", function ( $scope, $state ) {
+  .controller( "mainCtrl", function ( $scope, $state, mainSvc ) {
     $scope.mainCtrl = 'mainCtrl';
+    $scope.test = 'testing from mainCtrl';
+
+    var ms = mainSvc;
 
     $scope.activeDir = {};
-    $scope.toggleDirs = function ( selectedDir ) {
-      $scope.activeDir.students = false;
-      $scope.activeDir.badgeAdmin = false;
-      $scope.activeDir.cohorts = false;
-      $scope.activeDir.cardAdmin = false;
-      $scope.activeDir.poptart = false;
-      $scope.activeDir.curriculumAdmin = false;
-      $scope.activeDir.categoryAdmin = false;
-      $scope.activeDir.hideLogo = true;
-      $scope.activeDir[ selectedDir ] = true;
-    }
+    $scope.toggleDirs = ms.toggleDirs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // $scope.user = {};
     // temporarily removed authSvc from injection, it was causing errors.
   // $scope.user = {};

@@ -1,7 +1,7 @@
 var curriculums = require('./../models/currs.js');
 
 module.exports = {
-    
+
     /** C */
     createCurriculum: function (req, res) {
         curriculums.create(req.body, function (err, createCurriculum) {
@@ -9,7 +9,7 @@ module.exports = {
             else { res.status(200).json('Curriculum Added!', createCurriculum); }
         })
     },
-    
+
     /** R */
     getCurriculums: function (req, res) {
         curriculums.find(req.query)
@@ -32,15 +32,15 @@ module.exports = {
             else { res.status(200).send('Curriculum Data Retrieved!', readCurriculum); }
         })
     },
-        
+
     /** U */
     updateCurriculum: function (req, res) {
         curriculums.findByIdAndUpdate(req.query._id, { $set: req.body }, function (err, updateCurriculum) {
             if (err) { res.status(500).send(err); }
             else { res.status(200).send('Curriculum Updated!', updateCurriculum); }
         })
-    }, 
-    
+    },
+
     /** D */
     deleteCurriculum: function (req, res) {
         curriculums.findByIdAndRemove(req.query.id, function (err, deleteCurriculum) {
@@ -48,4 +48,5 @@ module.exports = {
             else { res.status(200).send('Curriculum Deleted!', deleteCurriculum); }
         })
     },
+    
 };
