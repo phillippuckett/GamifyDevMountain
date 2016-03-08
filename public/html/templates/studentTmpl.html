@@ -27,7 +27,7 @@
 
                     <!--Badge-->
                     <div class="badge" ng-repeat="badge in card.badges">
-                        <button class="badgeImage" onclick="badgeRequestModal = !badgeRequestModal"></button>
+                        <button class="badgeImage" ng-click="modToggle()"></button>
                         <div class="milestone">{{badge.mileStone}}</div>
                         <div class="difficultyLevel">
                             {{badge.pointValue.difficulty}}
@@ -44,10 +44,10 @@
 </div>
 
 <!--Badge Request Modal-->
-<div class="badgeRequestModal" ng-show="!badgeRequestModal">
-    <p>You don't have to do this</p>
+<div class="bdgReqMod" ng-if="reqModal">
+    <p>You don't have to do this {{user.FirstName}}</p>
     <div class="stateSpace">
-        <button class="badgeRequestButton">Withdraw Request</button>
-        <button class="badgeRequestButton">Submit Request</button>
+        <button class="bdgReqButt">Withdraw Request</button>
+        <button class="bdgReqButt">Submit Request</button>
     </div>
 </div>

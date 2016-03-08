@@ -6,6 +6,13 @@ angular.module('GamifyDevMountain')
             controller: function ($scope, viewSvc, authSvc, $http) {
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');
+                $scope.modButton = false;
+                
+                /** Toggle Badge Request Modal */
+                $scope.modToggle = function () {
+                    $scope.reqModal = !$scope.reqModal;
+                    console.log('TOGGLE');
+                }
                
                 /** Cards on the Table */
                 $scope.getCards = function (cardData) {
