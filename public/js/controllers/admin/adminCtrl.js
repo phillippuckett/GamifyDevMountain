@@ -55,42 +55,42 @@ angular.module( 'GamifyDevMountain' )
 
 
     /**#################  Cards #################*/
-
-    $scope.getCards = function () {
-        ass.getCards()
-          .then( function ( response ) {
-            $scope.cards = response;
-          } );
-      }
-      // $scope.cards = $scope.getCards();
-
-    $scope.getCard = function ( id ) {
-      ass.getcard( id )
-        .then( function ( response ) {
-          $scope.card = response;
-        } );
-    }
-
-    $scope.createCard = function ( card ) {
-      ass.createCard( card )
-        .then( function ( response ) {
-          $scope.getCards();
-        } );
-    }
-
-    $scope.updateCard = function ( id, updatedCard ) {
-      $scope.getCards( id, updateCard )
-        .then( function ( response ) {
-          $scope.getCards();
-        } );
-    }
-
-    $scope.deleteCard = function ( id ) {
-      ass.deleteCard( id )
-        .then( function ( response ) {
-          $scope.getCards();
-        } );
-    }
+    //
+    // $scope.getCards = function () {
+    //     ass.getCards()
+    //       .then( function ( response ) {
+    //         $scope.cards = response;
+    //       } );
+    //   }
+    //   // $scope.cards = $scope.getCards();
+    //
+    // $scope.getCard = function ( id ) {
+    //   ass.getcard( id )
+    //     .then( function ( response ) {
+    //       $scope.card = response;
+    //     } );
+    // }
+    //
+    // $scope.createCard = function ( card ) {
+    //   ass.createCard( card )
+    //     .then( function ( response ) {
+    //       $scope.getCards();
+    //     } );
+    // }
+    //
+    // $scope.updateCard = function ( id, updatedCard ) {
+    //   $scope.getCards( id, updateCard )
+    //     .then( function ( response ) {
+    //       $scope.getCards();
+    //     } );
+    // }
+    //
+    // $scope.deleteCard = function ( id ) {
+    //   ass.deleteCard( id )
+    //     .then( function ( response ) {
+    //       $scope.getCards();
+    //     } );
+    // }
 
 
 
@@ -253,160 +253,160 @@ angular.module( 'GamifyDevMountain' )
 
 
     /*############### Dummy Data ###############*/
-
-    $scope.cards = [
-      {
-        cardName: 'CSS Card',
-        otherKey: 'CSS',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-              }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-              }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-              }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-              }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-              } ]
-              },
-      {
-        cardName: 'JS Card',
-        cardKeyOne: 'JS',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              },
-      {
-        cardName: 'HTML Card',
-        cardKeyOne: 'HTML',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              },
-      {
-        cardName: 'Angular Card',
-        cardKeyOne: 'angular',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              },
-      {
-        cardName: 'Scss Card',
-        cardKeyOne: 'Scss',
-        badges: [ {
-          badgeName: 'badge1',
-          badgeDescription: 'this is a badge'
-                }, {
-          badgeName: 'badge2',
-          badgeDescription: 'this is a description'
-                }, {
-          badgeName: 'badge3',
-          badgeDescription: 'this is an achievement'
-                }, {
-          badgeName: 'badge4',
-          badgeDescription: 'this should reward a badge'
-                }, {
-          badgeName: 'badge5',
-          badgeDescription: 'this is an badge for earning an achievement'
-                } ]
-
-              } ]
-
-
-    $scope.thisIsSomeData = [
-          // {
-          //   "firstName": "Box",
-          //   "lastName": "Barney"
-          // },
-          // {
-          //   "firstName": "Sketer",
-          //   "lastName": "Skeetegrew"
-          // },
-      {
-        "firstName": "Florraine",
-        "lastName": "Flise",
-        "company": "Flomveyer",
-        "employed": false
-         },
-      {
-        "firstName": "Prancy",
-        "lastName": "Praters",
-        "company": "Pruelton",
-        "employed": false
-          }
-        ];
-
-    $scope.thisIsMyData = [
-      {
-        "firstName": "Cox",
-        "lastName": "Carney"
-          },
-      {
-        "firstName": "peter",
-        "lastName": "petegrew"
-          },
-      {
-        "firstName": "Lorraine",
-        "lastName": "Wise",
-        "company": "Comveyer",
-        "employed": false
-         },
-      {
-        "firstName": "Nancy",
-        "lastName": "Waters",
-        "company": "Fuelton",
-        "employed": false
-          }
-        ];
-
-
+    //
+    // $scope.cards = [
+    //   {
+    //     cardName: 'CSS Card',
+    //     otherKey: 'CSS',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //           }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //           }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //           }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //           }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //           } ]
+    //           },
+    //   {
+    //     cardName: 'JS Card',
+    //     cardKeyOne: 'JS',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           },
+    //   {
+    //     cardName: 'HTML Card',
+    //     cardKeyOne: 'HTML',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           },
+    //   {
+    //     cardName: 'Angular Card',
+    //     cardKeyOne: 'angular',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           },
+    //   {
+    //     cardName: 'Scss Card',
+    //     cardKeyOne: 'Scss',
+    //     badges: [ {
+    //       badgeName: 'badge1',
+    //       badgeDescription: 'this is a badge'
+    //             }, {
+    //       badgeName: 'badge2',
+    //       badgeDescription: 'this is a description'
+    //             }, {
+    //       badgeName: 'badge3',
+    //       badgeDescription: 'this is an achievement'
+    //             }, {
+    //       badgeName: 'badge4',
+    //       badgeDescription: 'this should reward a badge'
+    //             }, {
+    //       badgeName: 'badge5',
+    //       badgeDescription: 'this is an badge for earning an achievement'
+    //             } ]
+    //
+    //           } ]
+    //
+    //
+    // $scope.thisIsSomeData = [
+    //       // {
+    //       //   "firstName": "Box",
+    //       //   "lastName": "Barney"
+    //       // },
+    //       // {
+    //       //   "firstName": "Sketer",
+    //       //   "lastName": "Skeetegrew"
+    //       // },
+    //   {
+    //     "firstName": "Florraine",
+    //     "lastName": "Flise",
+    //     "company": "Flomveyer",
+    //     "employed": false
+    //      },
+    //   {
+    //     "firstName": "Prancy",
+    //     "lastName": "Praters",
+    //     "company": "Pruelton",
+    //     "employed": false
+    //       }
+    //     ];
+    //
+    // $scope.thisIsMyData = [
+    //   {
+    //     "firstName": "Cox",
+    //     "lastName": "Carney"
+    //       },
+    //   {
+    //     "firstName": "peter",
+    //     "lastName": "petegrew"
+    //       },
+    //   {
+    //     "firstName": "Lorraine",
+    //     "lastName": "Wise",
+    //     "company": "Comveyer",
+    //     "employed": false
+    //      },
+    //   {
+    //     "firstName": "Nancy",
+    //     "lastName": "Waters",
+    //     "company": "Fuelton",
+    //     "employed": false
+    //       }
+    //     ];
+    //
+    //
 
   } ] );

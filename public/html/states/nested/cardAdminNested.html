@@ -1,6 +1,29 @@
 <div class="cardAdminWrapper">
   <h1 class="cardHeader">Available Cards</h1>
+
+  <form class="" method="post">
+
+    <button ng-click="createCard(newCard);">Add new Card</button>
+    <input ng-model="newCard.trophyTitle" placeholder="Card/Trophy Name">
+    <br>
+    <input ng-model="newCard.trophyImage" placeholder="Trophy Image URL">
+    <br>
+
+
+<!-- 1ng-model="newCard.badges"  -->
+    <select ng-options="badge in badgeData.data" class="" name="Add Badges"></select>
+
+    <input ng-model="newCard.trophyLevels.bronze" class="" name="" placeholder="Bronze">
+    <br>
+    <input ng-model="newCard.trophyLevels.silver" class="" name="" placeholder="Silver">
+    <br>
+    <input ng-model="newCard.trophyLevels.gold" class="" name="" placeholder="Gold">
+    <br>
+  </form>
+
   <div class="cardsShallBehave">
+
+    <!-- make the modal -->
 
     <div class="cardsDisplayed" ng-repeat="card in cards">
       <div class="cardHeader">
@@ -17,8 +40,8 @@
             {{badge.badgeDescription}}
           </div>
           <span class="badgeImgWrapper">
-          <img src="./media/Css100.png"/>
-        </span>
+            <img src="./media/Css100.png"/>
+          </span>
         </div>
         <p>{{card.cardKeyOne}}</p>
         <span class="cardRequirements"></span>

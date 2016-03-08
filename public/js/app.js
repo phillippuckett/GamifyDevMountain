@@ -62,7 +62,8 @@ angular.module( "GamifyDevMountain", [ 'angularModalService', 'ui.router', 'ui.g
 
     .state( 'admin.cards', {
       url: '/card',
-      templateUrl: './html/states/nested/cardAdminNested.html'
+      templateUrl: './html/states/nested/cardAdminNested.html',
+      controller: 'cardAdminCtrl'
     } )
 
     .state( 'admin.badges', {
