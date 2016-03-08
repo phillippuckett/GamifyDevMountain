@@ -7,7 +7,7 @@ angular.module('GamifyDevMountain')
                 $scope.headerDir = 'headerDir';
                 // console.log('Header Controller: Running');
 
-                /** Connects UserData with the userView */
+                /* Connects UserData with the userView */
                 authSvc.getCurrentUserObject().then(function (currentUserResult) {
                     $scope.user = currentUserResult.data;
                     $scope.image = true;
@@ -16,11 +16,11 @@ angular.module('GamifyDevMountain')
                 });
                 $scope.image = false;
 
-                /** Users Cohort */
+                /* Users Cohort */
                 authSvc.getUserObject().then(function (userResult) {
                     $scope.user = userResult.data[0];
                     console.log('USER INFORMATION', userResult.data[0]);
                 });
             }
         }
-    }); */
+    });

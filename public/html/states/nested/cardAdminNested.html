@@ -6,7 +6,6 @@
   <form class="" method="post">
 
     <!-- type="what kind is it", semi form validation-->
-    <button ng-click="createCard(newCard);">Add new Card</button>
 
     <input ng-model="newCard.trophyTitle" placeholder="Card/Trophy Name">
     <br>
@@ -24,6 +23,8 @@
     <br>
     <input ng-model="newCard.trophyLevels.gold" class="" type="Number" name="" placeholder="Gold">
     <br>
+    <button ng-click="createCard(newCard);">Add new Card</button>
+
   </form>
 
   <div class="cardAdminWrap">
@@ -46,6 +47,10 @@
       </div>
     </div>
   </div>
+
+
+  <crud-buttons-dir></crud-buttons-dir>
+
 
   <div class="cardsShallBehave">
     <div class="cardsDisplayed" ng-repeat="card in cards">
