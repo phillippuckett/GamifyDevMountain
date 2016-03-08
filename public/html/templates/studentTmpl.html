@@ -1,6 +1,7 @@
-<!--Cohort-->
+<!--Cohort Name-->
 <p class="tableText">{{user.cohort.cohortName}}</p>
 
+<!--Card Table-->
 <div class="view">
     <div class="student">
         <!--Student-->
@@ -26,7 +27,7 @@
 
                     <!--Badge-->
                     <div class="badge" ng-repeat="badge in card.badges">
-                        <img class="badgeImage" ng-src="{{badge.badgeImage}}">
+                        <button class="badgeImage" ng-click="modToggle()"></button>
                         <div class="milestone">{{badge.mileStone}}</div>
                         <div class="difficultyLevel">
                             {{badge.pointValue.difficulty}}
@@ -39,5 +40,14 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!--Badge Request Modal-->
+<div class="bdgReqMod" ng-if="reqModal">
+    <p>Badge Request</p>
+    <div class="stateSpace">
+        <button class="bdgReqButt" ng-click="modToggle(); wdrawReq()">Withdraw Request</button>
+        <button class="bdgReqButt" ng-click="modToggle(); sbmtReq()">Submit Request</button>
     </div>
 </div>
