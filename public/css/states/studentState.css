@@ -19,6 +19,9 @@
 }
 
 .navTmpl {
+    background-image: url('/media/skins/vertScroll.png');
+    background-size: 22.5vw 80vh;
+    background-repeat: no-repeat;
     /*border: 1px solid rgb(250,0,0);*/
     height: 80vh;
     min-width: 22.5vw;
@@ -26,6 +29,9 @@
 }
 
 .studentTmpl { 
+    background-image: url('/media/skins/hrzScroll.png');
+    background-size: 77vw 85vh;
+    background-repeat: no-repeat;
     /*border: 1px solid rgb(250,0,250);*/
     height: 82.5vh;
     width: 72.5%;
