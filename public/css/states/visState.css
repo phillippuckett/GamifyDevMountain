@@ -1,93 +1,107 @@
 .visState { text-align: center;
     /*border: 1px solid rgb(100, 100, 100);*/
-    background-color: rgba(250, 250, 250, .75); 
+    background-color: rgba(0, 0, 0, .05); 
     background-size: cover;
     background-repeat: no-repeat;
-    height: 92.5%;
+    height: 90vh;
     width: 100.25%;
 }
 
-.menu { text-align: center; 
-    /*border: 1px solid rgb(200, 100, 0);*/
+.loginMenu { text-align: center; 
+    border: 1px solid rgba(0,0,0,.05);
     border-radius: 2.5px;
     background-color: rgb(1000, 1000, 1000);    
     -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);    
-    min-height: 500px;
-    min-width: 400px;
+    min-height: 550px; height: 82.5vh;
+    min-width: 400px; width: 30%;
     margin: auto;
 }
 
-.visTitle { color: rgba(0,0,0,.75); font-size: 20px;
-    /*border: 1px solid rgba(0, 0, 100, 1);*/
-    margin: 5% auto;
+.regMenu { text-align: center; 
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: 2.5px;
+    background-color: rgb(1000, 1000, 1000);    
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);    
+    min-height: 550px; height: 82.5vh;
+    min-width: 400px; width: 60vw;
+    margin: auto;
 }
 
-.visText { color: rgba(0,150,250,1); font-size: 15px; 
-    margin: .5% 0 2.5% 0;
+.visTitle { color: rgba(0,0,0,.75); font-size: 4.5vh;
+    /*border: 1px solid rgba(0, 0, 250, 1);*/
+    margin: .5vh auto;
 }
 
-.visInput { font-size: 4.5mm;
+.visText {  color: rgba(0,150,250,1); 
+            font-size: 2.5vh;
+            text-decoration: none; 
+    /*border: 1px solid rgb(0, 250, 0);*/
+    height: 2.5vh;
+    width: 100%;
+    margin: 1vh auto;
+}
+
+.visSpace {
+    /*border: 1px solid rgba(250, 0, 0, 1);*/
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    background-image: url('/media/skins/whitemountains.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: auto;
+}
+
+.visImagePadding { 
+    border: 1px solid rgba(0,0,0,.05); border-radius: 50%;
+    -webkit-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
+    height: 6.5vh;
+    width: 3.25vw;
+    padding: .5%;
+    margin: 5vh auto;
+    }
+.visImage {
+    /*border: 1px solid rgba(0,250,0,1);*/ border-radius: 50%;      
+    background-image: url('/media/miscellaneous/logoonly.png');
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 6vh;
+    width: 3vw;
+    margin: .3vh auto auto auto;
+    } 
+    
+.visInput { font-size: 2.5vh;
     border: 1px solid rgba(150, 150, 150, 1);
     border-radius: 5px;
     background-color: rgba(100,100,250,.05);
     -webkit-box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
     box-shadow: inset 0px 2.5px 5px 0px rgba(0,0,0,0.75);
-    height: 30px;
+    height: 5vh;
     width: 72.5%;
-    margin: 1% auto; 
+    margin: 1vh auto; 
     }
-.visSubmit { color: white; font-size: 15px;
+.visSubmit { color: white; font-size: 2.5vh;
     border: 1px solid rgba(0,150,250,1);   
     border-radius: 2.5px;
     background-color: rgba(0,150,250,1); 
     -webkit-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);  
-    height: 30px;
+    height: 5vh;
     width: 72.5%;
-    margin: 2.5% auto;
-    }
-
-.visImageSpace {
-    border-bottom: 1px solid rgba(0,0,0,.05);
-    background-image: url('/media/whitemountains.jpg');
-    background-size: contain;
-    background-color: white;
-    margin: auto;
-}
-.visImageOutline {
-    border: 1px solid rgba(0,0,0,.05);    
-    border-radius: 50%;
-    background-color: white;
-    -webkit-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);    
-    height: 45px;
-    width: 45px;
-    padding: 1.25% .75% 0 .75%;
-    margin: 5% auto;
-}
-
-.visImage {
-    /*border: 1px solid black;    */
-    border-radius: 50%;
-    background-image: url('/media/logoonly.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    margin: auto;
-    } 
-
-.forgotPssWrd { color: rgba(0,150,250,1); font-size: 15px;
-    margin: 2.5% auto;
-}
+    margin: 1.5vh auto;
+    }    
 
 .visLinks {
-    border-top: 1px solid rgba(0,0,0.05);
-    padding-top: 2.5%;
-    margin: 2.5% auto;
+    /*border: 1px solid green;*/
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 5vh 0;
+    margin: auto;
 }

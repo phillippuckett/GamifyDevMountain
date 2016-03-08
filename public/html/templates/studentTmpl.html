@@ -1,9 +1,9 @@
-<!--Cohort-->
-<p class="tableTextTop">{{user.cohort.cohortName}}</p>
+<!--Cohort Name-->
+<p class="tableText">{{user.cohort.cohortName}}</p>
 
+<!--Card Table-->
 <div class="view">
     <div class="student">
-
         <!--Student-->
         <div class="stateSpace">
             <!--Card-->
@@ -11,13 +11,11 @@
                 <div class="stateSpace">
 
                     <!--Category-->
-                    <div class="stateSpace">
-                        <div class="trophyTitle">
-                            <div class="catTitle">
-                                {{card.category.categoryTitle}}
-                            </div>
-                            {{card.trophyTitle}}
+                    <div class="trophyTitle">
+                        <div class="catTitle">
+                            {{card.category.categoryTitle}}
                         </div>
+                        {{card.trophyTitle}}
                     </div>
 
                     <!--Trophy-->
@@ -29,22 +27,27 @@
 
                     <!--Badge-->
                     <div class="badge" ng-repeat="badge in card.badges">
-                        <img class="badgeImage" ng-src="{{badge.badgeImage}}">
+                        <button class="badgeImage" ng-click="modToggle(badge._id)"></button>
                         <div class="milestone">{{badge.mileStone}}</div>
                         <div class="difficultyLevel">
                             {{badge.pointValue.difficulty}}
                         </div>
                     </div>
                 </div>
-
                 <!--Point Tally-->
                 <div class="stateSpace">
-                    <p>{{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}</p>
+                    <p class="trophyTitle">0/{{totalCardPoints(card)}}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!--Student Point Counter-->
-<p class="tableTextBottom">235{{deckTotalPoints(user)}}/{{totalPossiblePoints(curriculum)}}5000</p>
+<!--Badge Request Modal-->
+<div class="bdgReqMod" ng-if="reqModal">
+    <p>Badge Request</p>
+    <div class="stateSpace">
+        <button class="bdgReqButt" ng-click="modToggle(); wdrawReq()">Withdraw Request</button>
+        <button class="bdgReqButt" ng-click="modToggle(); sbmtReq()">Submit Request</button>
+    </div>
+</div>

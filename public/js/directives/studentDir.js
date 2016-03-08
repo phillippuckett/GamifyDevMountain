@@ -3,32 +3,61 @@ angular.module('GamifyDevMountain')
         return {
             restrict: 'E',
             templateUrl: 'html/templates/studentTmpl.html',
-            controller: function ($scope, viewSvc, authSvc, $http) {
+            controller: function ($scope, studentSvc, authSvc, $http) {
                 $scope.studentDir = 'Student Directive';
                 // console.log('Student Controller: Running');
-               
+                
                 /** Cards on the Table */
                 $scope.getCards = function (cardData) {
-                    viewSvc.getUsersCards(cardData).then(function (cardData) {
+                    studentSvc.getUsersCards(cardData).then(function (cardData) {
                         $scope.cards = cardData;
                     })
                 };
                 $scope.getCards();
                 
-                /** Total Points */
-                $scope.cardTotalPoints = function (card) {
-                    var totalPoints = 0;
-                    // console.log(card);
-                    card.badges.forEach(function (badge) {
-                        totalPoints += badge.pointValue.points;
+                /** Toggle Badge-Request Modal */
+                $scope.modButton = false;
+                $scope.modToggle = function (badgeId) {
+                    $scope.badgeRequested = badgeId;
+                    $scope.reqModal = !$scope.reqModal;
+                    console.log('TOGGLE');
+                }
+                
+                /** Withdraw Request */
+                $scope.wdrawReq = function () {
+                    studentSvc.reqBadge().then(function () {
+                        
                     })
-                    return totalPoints
-                };
+                }
+                
+                /** Submit Request */
+                $scope.sbmtReq = function () {
+                    studentSvc.reqBadge($scope.badgeRequested).then(function (adminResponse) {
+                        $scope.getCards();
+                    })
+                }
               
-                /** Users Badges */
+                /** Total Points */
+                authSvc.getUserObject().then(function (userData) {
+                    var curriculumCards = userData.data.cohort.curriculum.card;
+                    var currPoints = 0;
+                    curriculumCards.forEach(function (card) {
+                        card.badges.forEach(function (badge) {
+                            currPoints += badge.pointValue.points;
+                        });
+                    });
+                    $scope.currPoints = currPoints;
+                });
 
-                /** Users Trophies */
+                $scope.totalCardPoints = function (card) {
+                    var cardPoints = 0;
+                    card.badges.forEach(function (badge) {
+                        cardPoints += badge.pointValue.points;
+                    })
+                    return cardPoints;
+                };
 
+                /** Trophy Medal Levels */
                 $scope.NBSGP = function (card) {
                     var tpa = 0;
                     var tpp = 0;
@@ -54,9 +83,8 @@ angular.module('GamifyDevMountain')
                         return "/media/trophybronze.png"
                     }
                     else {
-                        return "/media/trophyNone.png"
+                        return "/media/awardEmblems/trophyNone.png"
                     }
-
                 };
             }
         }

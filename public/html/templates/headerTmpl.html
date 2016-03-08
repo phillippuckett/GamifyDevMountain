@@ -1,5 +1,4 @@
 <div class="userHeader">
-
     <!--1st Quarter-->
     <div class="headerSpace">
         <!--Logo-->
@@ -17,12 +16,8 @@
     <!--4th Qurter-->
     <div class="headerSpace">
         <div class="headerSpace">
-            <div class="headerSpace">
-                <div class="headerSpace"></div>
-                <p class="userName">{{user.firstName}}</p>
-                <a href="/api/logout"><img class="userImage" ng-src="{{user.userImage}}" ng-if="image"></a>
-            </div>
+            <p class="userName">{{user.firstName}}</p>
+            <a class="logout" href="/api/logout"><img class="userImage" ng-src="{{user.userImage}}" ng-if="image"></a>
         </div>
     </div>
-
 </div>

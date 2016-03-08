@@ -16,10 +16,10 @@ angular.module('GamifyDevMountain')
                 });
                 $scope.image = false;
 
-                /* Users Cohort */
-                authSvc.getUserObject().then(function (userResult) {
-                    $scope.user = userResult.data[0];
-                    console.log('USER INFORMATION', userResult.data[0]);
+                /** Users Cohort */
+                authSvc.getUserObject().then(function (userData) {
+                    $scope.user = userData.data;
+                    console.log('HEADERDIR : AUTHSVC : getUserObject', userData.data);
                 });
             }
         }

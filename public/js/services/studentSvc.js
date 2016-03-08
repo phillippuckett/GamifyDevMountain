@@ -1,12 +1,22 @@
 
 angular.module('GamifyDevMountain')
-    .service('viewSvc', function ($state, $http) {
+    .service('studentSvc', function ($state, $http) {
        
         /** Badges */
         this.getBadges = function () {
             return $http({
                 method: 'GET',
                 url: '/api/badges'
+            }).then(function (badgeData) {
+                return badgeData.data;
+            })
+        };
+       
+        /** Request Badge */
+        this.reqBadge = function (badgeId) {
+            return $http({
+                method: 'PUT',
+                url: '/api/users/badgerequest/' + badgeId
             }).then(function (badgeData) {
                 return badgeData.data;
             })
@@ -47,6 +57,15 @@ angular.module('GamifyDevMountain')
             return $http({
                 method: "GET",
                 url: '/api/curriculums'
+            }).then(function (curriculumData) {
+                return curriculumData.data;
+            })
+        };
+
+        this.getCurriculum = function (currId) {
+            return $http({
+                method: "GET",
+                url: '/api/curriculum/' + currId
             }).then(function (curriculumData) {
                 return curriculumData.data;
             })
