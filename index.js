@@ -92,7 +92,8 @@ app.get('/api/users/getStudentInfo/:id', usersCtrl.getStudentInfo);
 
 /* Curriculums End Points */
 app.post('/api/curriculums', currsCtrl.createCurriculum);
-app.get('/api/curriculums', currsCtrl.getCurriculum);
+app.get('/api/curriculums', currsCtrl.getCurriculums);
+app.get('/api/curriculums/:id', currsCtrl.getCurriculum);
 app.put('/api/curriculums/:id', currsCtrl.updateCurriculum);
 app.delete('/api/curriculums/:id', currsCtrl.deleteCurriculum);
 

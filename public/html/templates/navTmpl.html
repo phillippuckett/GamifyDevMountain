@@ -7,7 +7,7 @@
             <p class="studentCats">Badges</p>
         </div>
         <div class="stateSpace">
-            <p class="studentStats">{{user.badgesAwarded}}</p>
+            <p class="studentStats">{{user.badgesAwarded.length}}</p>
         </div>
     </div>
 
@@ -53,7 +53,7 @@
         <div class="stateSpace">
             <p class="studentCats">Points</p>
         </div>
-        <div class="studentStats">{{user.earnedPoints}} / 5000</div>
+        <div class="studentStats">{{user.earnedPoints}} / {{currPoints}}</div>
     </div>
 
     <!--Mentor-->

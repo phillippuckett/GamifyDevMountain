@@ -18,7 +18,7 @@ module.exports = {
         })
     },
 
-    /** R *//* getUserCohort *//* getUserBadgeNumber */
+    /** R *//* getUserCohort *//* getUserBadges */
     getUser: function (req, res) {
         users.findOne({ _id: req.user._id })
             .populate({ path: 'cohort', 
@@ -33,8 +33,6 @@ module.exports = {
             } 
             })
     },
-        
-    /* getUserTrophyNumbers */
 
     /** R */
     getCurrentUser: function (req, res) {
