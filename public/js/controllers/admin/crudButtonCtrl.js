@@ -7,10 +7,12 @@ angular.module( "GamifyDevMountain" )
     //    close(result, 200);
     // };
 
-    /* Modal Switcher, changes funcitonality of crudButton based on which view is active. */
+    /* Modal Switcher, changes functionality of crudButton based on which view is active. */
     $scope.confirmationAnswer = null;
     $scope.showAModal = function () {
       console.log( "showAModal is being called" );
+
+      // // the switch statements wer working in conjunction with the mainSvc to enable me to use the same crud bottons to control each modal depending on which directive is in the adminView.
       // var switcher = ms.toggleDirs();
       // switch ( switcher ) {
       //
@@ -69,7 +71,7 @@ angular.module( "GamifyDevMountain" )
       //     controller: "createBadgeModalCtrl"
       //   } )
       //   break;
-// 
+//
       // default: hideLogo;
       //
       // }
