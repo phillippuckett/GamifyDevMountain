@@ -88,10 +88,13 @@
     margin: auto;
 }
 
-.badgeRequestModal {
-    border: 1px solid rgb(0, 0, 250);
+.badgeRequestModal {    color: rgba(50,25,0,.5);
+                        font-family: 'Cinzel', serif;
+                        text-shadow: 0px 0px 2.5px rgba(50,25,0,.5);
+                        font-family: 'Fondamento', cursive;
+                        font-size: 2.5vh;
+    border: 1px double rgba(50,25,0,.5); border-radius: 1%;
     /*border: 1px solid rgb(0, 0, 250);*/
-    border-radius: 1%;
     background-image: url('/media/skins/clothTan.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,3 +106,5 @@
     position: absolute;
     margin: auto;
 }
+
+.badgeRequestButton { }
