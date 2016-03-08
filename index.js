@@ -8,7 +8,7 @@ var passport = require('passport');
 var local = require('passport-local');
 var key = require('./server/services/cookie.js');
 var LocalStrategy = require('passport-local').Strategy;
-var jwt = require('jsonwebtoken');
+var jwt = require('jwt-simple');
 
 /* Controllers */
 var badgesCtrl = require('./server/controllers/badgesCtrl');
@@ -72,9 +72,11 @@ app.get('/api/logout', function (req, res) {
 });
 
 
-//Mobile Login
+//Mobile
 app.post('/api/mobileLogin', mobileLoginCtrl.mobileLogin);
-
+app.get('/api/mobileTokenCheck', mobileLoginCtrl.mobileTokenCheck);
+app.get('/api/mobileGSI', mobileLoginCtrl.getStudentInfo);
+app.put('/api/mobileBadgeRequest/:badge', mobileLoginCtrl.requestBadge);
 
 /* Users End Points */
 app.post('/api/register', usersCtrl.createUser);

@@ -20,7 +20,7 @@ module.exports = {
 
     /** R *//* getUserCohort *//* getUserBadgeNumber */
     getUser: function (req, res) {
-        users.find({})
+        users.findOne({username: req.body.username})
             .populate({ path: 'cohort', 
             populate: ({ path: 'curriculum', model: 'curriculums', 
             populate: ({ path: 'card', model: 'cards',
