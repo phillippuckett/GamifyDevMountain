@@ -11,8 +11,23 @@ module.exports = {
     },
     
     /** R */
-    getCurriculum: function (req, res) {
-        curriculums.find(req.query).populate({path: 'deck', populate: {path: 'badges', model: 'badges', populate: {path: 'category', model: 'categories'}}}).exec(function (err, readCurriculum) {
+    getCurriculums: function (req, res) {
+        curriculums.find(req.query)
+        .populate({path: 'card', 
+        populate: {path: 'badges', model: 'badges', 
+        populate: {path: 'category', model: 'categories'}}})
+        .exec(function (err, readCurriculum) {
+            if (err) { res.status(500).send(err); }
+            else { res.status(200).send('Curriculum Data Retrieved!', readCurriculum); }
+        })
+    },
+    
+        getCurriculum: function (req, res) {
+        curriculums.findOne({ _id: req.params._id })
+        .populate({path: 'card', 
+        populate: {path: 'badges', model: 'badges', 
+        populate: {path: 'category', model: 'categories'}}})
+        .exec(function (err, readCurriculum) {
             if (err) { res.status(500).send(err); }
             else { res.status(200).send('Curriculum Data Retrieved!', readCurriculum); }
         })

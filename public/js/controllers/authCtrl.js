@@ -3,7 +3,7 @@ angular.module('GamifyDevMountain')
         
         /** The User Object */
         $scope.user = {};
-        // console.log($scope.user);
+        console.log($scope.user);
         $scope.user = {
             username: 'phillippuckett88',
             password: 'phillippuckett88'
@@ -28,9 +28,8 @@ angular.module('GamifyDevMountain')
   
         /** Registration */
         $scope.register = function () {
-            authSvc.register($scope.user)
-                .then(function (response) {
-                    // console.log('Auth Controller: Successful Registration', response);
+            authSvc.register($scope.user).then(function (response) {
+                    console.log('AUTHCTRL: Successful Registration', response);
                     $scope.user = response;
                 })
         };

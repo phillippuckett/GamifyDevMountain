@@ -1,40 +1,56 @@
-<!------------------------Vis Header------------------------>
-<div class="visHeader">
-    <!--1st Quarter-->
-    <div class="headerSpace">
+<div class="charcoalBackground">
+    <!------------------------Vis Header------------------------>
+    <div class="visHeader">
+        <!--1st Quarter-->
         <div class="headerSpace">
-            <a class="visLogo" href="/#/login"></a>
+            <div class="headerSpace">
+                <a class="visLogo" href="/#/login"></a>
+            </div>
+            <div class="headerSpace"></div>
         </div>
+        <!--2nd Quarter-->
+        <div class="headerSpace"></div>
+        <!--3rd Quarter-->
+        <div class="headerSpace"></div>
+        <!--4th Quarter-->
         <div class="headerSpace"></div>
     </div>
-    <!--2nd Quarter-->
-    <div class="headerSpace"></div>
-    <!--3rd Quarter-->
-    <div class="headerSpace"></div>
-    <!--4th Quarter-->
-    <div class="headerSpace"></div>
-</div>
-<!------------------------Vis State------------------------>
-<div class="visState">
-    <p></p>
-    <!------------------------Vis Menu------------------------>
-    <div class="menu">
-        <div class="visSpace">
-            <div class="visImage"></div>
-            <p class="visTitle">Sign Up</p>
-            <div class="stateSpace">
-                <a class="visText" href="/#/login">Log In Instead?</a>
+    <!------------------------Vis State------------------------>
+    <div class="visState">
+        <br>
+        <!------------------------Vis Menu------------------------>
+        <div class="regMenu">
+            <div class="visSpace">
+                <div class="visImagePadding">
+                    <div class="visImage"></div>
+                </div>
+                <p class="visTitle">Sign Up</p>
+                <div class="stateSpace">
+                    <a class="visText" href="/#/login">Log In Instead?</a>
+                </div>
+                <div class="headerSpace">
+                    <div>
+                        <form ng-submit="register()">
+                            <input class="visInput" type="text" placeholder="Add Photo URL" ng-model="user.userImage">
+                            <input class="visInput" type="text" placeholder="fristName" ng-model="user.firstName">
+                            <input class="visInput" type="text" placeholder="lastName" ng-model="user.lastName">
+                            <input class="visInput" type="text" placeholder="username" ng-model="user.username">
+                            <input class="visInput" type="text" placeholder="email@address" ng-model="user.email">
+                            <input class="visInput" type="password" placeholder="Create Password" ng-model="user.password" required>
+                    </div>
+                    <div>
+                        <input class="visInput" type="text" placeholder="cohort" ng-model="user.cohort">
+                        <input class="visInput" type="text" placeholder="Student, Mentor, or Admin?" ng-model="user.role">
+                        <input class="visInput" type="text" placeholder="your mentor" ng-model="user.watchlist">
+                        <button class="visSubmit" type="submit">Create Account</button>
+                        </form>
+                        <!--<div class="visLinks">-->
+                            <!--<button class="visSubmit" type="submit">O| Login with GitHub</button>-->
+                            <!--<button class="visSubmit" type="submit">In| Login with LinkedIn</button>-->
+                        <!--</div>-->
+                    </div>
+                </div>
             </div>
-            <form ng-submit="register()">
-                <input class="visInput" type="text" placeholder="emailAddress@email.com" ng-model="user.email">
-                <input class="visInput" type="text" placeholder="Add Photo URL" ng-model="user.userImage">
-                <input class="visInput" type="password" placeholder="Create Password" ng-model="user.password" required>
-                <button class="visSubmit" type="submit">Create Account</button>
-            </form>
         </div>
-        <div class="visLinks">
-            <button class="visSubmit" type="submit">O| Login with GitHub</button>
-            <button class="visSubmit" type="submit">In| Login with LinkedIn</button>
-        </div>
+        <!------------------------Vis Footing------------------------>
     </div>
-</div>

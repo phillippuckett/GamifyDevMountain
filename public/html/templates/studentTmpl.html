@@ -10,12 +10,12 @@
                 <div class="stateSpace">
 
                     <!--Category-->
-                        <div class="trophyTitle">
-                            <div class="catTitle">
-                                {{card.category.categoryTitle}}
-                            </div>
-                            {{card.trophyTitle}}
+                    <div class="trophyTitle">
+                        <div class="catTitle">
+                            {{card.category.categoryTitle}}
                         </div>
+                        {{card.trophyTitle}}
+                    </div>
 
                     <!--Trophy-->
                     <img class="cardTrophyImage" ng-src="{{NBSGP(card)}}">
@@ -33,13 +33,11 @@
                         </div>
                     </div>
                 </div>
-
                 <!--Point Tally-->
-                    <p>{{cardTotalPoints(card)}}/{{cardTotalPoints(card)}}</p>
+                <div class="stateSpace">
+                    <p>0/{{totalCardPoints(card)}}</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<!--Student Point Counter-->
-<p class="tableText">235{{deckTotalPoints(user)}}/{{totalPossiblePoints(curriculum)}}5000</p>
