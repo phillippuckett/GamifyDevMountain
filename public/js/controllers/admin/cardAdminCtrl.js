@@ -28,7 +28,7 @@ angular.module( "GamifyDevMountain" )
       cas.createCard( card )
         .then( function ( response ) {
           $scope.getCards();
-        } );
+          } );
     };
 
 
@@ -43,6 +43,10 @@ angular.module( "GamifyDevMountain" )
     $scope.getBadges();
 
 
+    $scope.newCard = {badges:[]};
+    $scope.selectBadge = function (selectedBadge) {
+      $scope.newCard.badges.push(selectedBadge);
+    }
 
 
 

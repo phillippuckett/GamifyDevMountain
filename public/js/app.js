@@ -90,7 +90,8 @@ angular.module( "GamifyDevMountain", [ 'angularModalService', 'ui.router', 'ui.g
 
     .state( 'admin.curriculum', {
       url: '/curriculum',
-      templateUrl: './html/states/nested/curriculumAdminNested.html'
+      templateUrl: './html/states/nested/curriculumAdminNested.html',
+      controller: 'curriculumAdminCtrl'
     } )
 
 

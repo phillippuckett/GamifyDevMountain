@@ -13,8 +13,8 @@
     <br>
 
     <!-- TODO: I ned a way to spawn new input boxes, while saving the value, maybe pushing it to an array...  -->
-    <select class="badgeInputs" ng-click="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select>
-    <select class="badgeInputs" ng-if="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select>
+    <select class="badgeInputs" ng-click="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="selectedBadge" ng-change="selectBadge(selectedBadge)"></select>
+    <!-- <select class="badgeInputs" ng-if="firstClicked" ng-options="option as option.mileStone for option in badges | orderBy:'mileStone'" ng-model="thisOne"></select> -->
 
     <br>
     <input ng-model="newCard.trophyLevels.bronze" class="" type="Number" name="" placeholder="Bronze">
@@ -30,12 +30,12 @@
   <div class="cardAdminWrap">
     <div class="cardsDisplayed">
       <div class="cardHeader">
-        {{card.trophyTitle}}
-        {{card.trophyImage}}
+        {{newCard.trophyTitle}}
+        {{newCard.trophyImage}}
       </div>
       <br>
       <div class="cardContents">
-        <div class="repeatAdminBadge">
+        <div class="repeatAdminBadge" ng-repeat="thisOne in newCard.badges">
           <div class="badgeRepeated">
             <img ng-src="{{thisOne.badgeImage}}"/>
             {{thisOne.mileStone}}
