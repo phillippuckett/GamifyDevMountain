@@ -14,20 +14,27 @@ angular.module('GamifyDevMountain')
                     })
                 };
                 $scope.getCards();
-                
-                /** Total Points */
-                $scope.cardTotalPoints = function (card) {
-                    var totalPoints = 0;
-                    // console.log(card);
-                    card.badges.forEach(function (badge) {
-                        totalPoints += badge.pointValue.points;
-                    })
-                    return totalPoints
-                };
-              
-                /** Users Badges */
 
-                /** Users Trophies */
+
+                /** Total Points */
+                authSvc.getUserObject().then(function (userData) {
+                    var curriculumCards = userData.data.cohort.curriculum.card;
+                    var currPoints = 0;
+                    curriculumCards.forEach(function (card) {
+                        card.badges.forEach(function (badge) {
+                            currPoints += badge.pointValue.points;
+                        });
+                    });
+                    $scope.currPoints = currPoints;
+                });
+
+                $scope.totalCardPoints = function (card) {
+                    var cardPoints = 0;
+                    card.badges.forEach(function (badge) {
+                        cardPoints += badge.pointValue.points;
+                    })
+                    return cardPoints;
+                };
 
                 $scope.NBSGP = function (card) {
                     var tpa = 0;

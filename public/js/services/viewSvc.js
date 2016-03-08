@@ -51,6 +51,15 @@ angular.module('GamifyDevMountain')
                 return curriculumData.data;
             })
         };
+
+        this.getCurriculum = function (currId) {
+            return $http({
+                method: "GET",
+                url: '/api/curriculum/' + currId
+            }).then(function (curriculumData) {
+                return curriculumData.data;
+            })
+        };
         
         /** Student */
         this.getStudent = function () {
