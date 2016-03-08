@@ -1,6 +1,6 @@
 .navTitle { font-size: 5vh;
             text-align: center; 
-    border-bottom: 2px dashed rgba(75,25,0,.25);
+    border-bottom: 2px double rgba(75,25,0,.05);
     width: 100%;
     padding: .5vh 0 0 0;
     margin: auto;           
@@ -22,7 +22,7 @@
                 text-shadow: 0px 0px 2.5px rgba(50, 15, 0, .75);
                 font-family: 'Fondamento', cursive;
                 font-size: 2.5vh;
-    border: 1px solid rgba(0, 0, 0, .25);
+    border-bottom: 2px double rgba(125,75,0,.5);
     border-radius: 1%;
     background-image: url('/media/skins/clothTan.jpg');
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.75);
