@@ -118,8 +118,7 @@ module.exports = {
     },
 
     requestBadge: function (req, res) {
-        //change to req.user._id
-        users.findById("56d093376629e38018ec0901", function (err, result) {
+        users.findById(req.user._id, function (err, result) {
             if (err) {
                 res.send(err)
             } else {

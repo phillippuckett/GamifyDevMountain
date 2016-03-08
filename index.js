@@ -77,6 +77,12 @@ app.post('/api/mobileLogin', mobileLoginCtrl.mobileLogin);
 app.get('/api/mobileTokenCheck', mobileLoginCtrl.mobileTokenCheck);
 app.get('/api/mobileGSI', mobileLoginCtrl.getStudentInfo);
 app.put('/api/mobileBadgeRequest/:badge', mobileLoginCtrl.requestBadge);
+app.put('/api/mobileBadgeWithdraw/:badge', mobileLoginCtrl.withdrawBadgeRequest);
+app.get('/api/mobileGSBC/:cohort', mobileLoginCtrl.getStudentsByCohort);
+app.put('/api/mobileBadgeApproval', mobileLoginCtrl.badgeApproval);
+app.get('/api/mobileStudentById/:ID', mobileLoginCtrl.getStudentByID);
+app.put('/api/mobileAddToWatchList', mobileLoginCtrl.addToWatchList);
+app.put('/api/mobileRemoveFromWatchList', mobileLoginCtrl.removeFromWatchList);
 
 /* Users End Points */
 app.post('/api/register', usersCtrl.createUser);
