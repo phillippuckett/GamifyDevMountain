@@ -1,77 +1,151 @@
-<div class="canvas">BADGES
-    <h1 class="cardHeader">Available Badges</h1>
-    <div class="cardsShallBehave">
-        <div class="repeatAdminBadge" ng-repeat="badge in badges">
+<!------------------------VIEW------------------------>
+<ui-view>
+    <div class="adminState">
+        <div class="adminSpacing">
+            <div class="adminNav">
+                <!------------------------NAVIGATION------------------------>
+                <p class="adminText">NAVIGATION</p>
+                <p class="adminButton" Students ui-sref="admin.badges">badges</p>
+                <p class="adminButton" ui-sref="admin.cards">cards</p>
+                <p class="adminButton" ng-click="toggleDirs('categoryAdmin');" ui-sref="admin.category">category</p>
+                <p class="adminButton" ng-click="toggleDirs('cohorts');" ui-sref="admin.cohorts">cohorts</p>
+                <p class="adminButton" ng-click="toggleDirs('curriculumAdmin');" ui-sref="admin.curriculum">curriculum</p>
+                <p class="adminButton" ng-click="toggleDirs('students');" ui-sref="admin.students">students</p>
+                <!------------------------NAVIGATION------------------------>
 
-            <div class="badgeRepeated">
-                <img ng-src="{{badge.badgeImage}}" /> {{badge.mileStone}} {{badge.desc}}
+                <!------------------------CRUD------------------------>
+                <p class="adminText">CRUD MENU</p>
+                <p class="adminButton" type="button" name="button" ng-click="showAModal()">CREATE</p>
+                <p class="adminButton" type="button" name="button">UPDATE</p>
+                <p class="adminButton" type="button" name="button">DELETE</p>
+                <!------------------------CRUD------------------------>
             </div>
-            <!-- TODO: control the location of the SVG's with the parent container, allowing a smoothe repeat -->
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-            width="60px" height="60px" viewBox="0 0 327.573 327.573" style="enable-background:new 0 0 327.573 327.573;" xml:space="preserve">
-                <g>
-                    <path d="M327.573,59.513L268.055,0L5.709,262.343L0,327.573l27.492-2.413l0.14,0.144l0.163-0.166   l37.433-3.276L327.573,59.513z M311.014,59.513l-17.079,17.08L250.98,33.639l17.08-17.08L311.014,59.513z M36.718,247.898   L229.761,54.855l6.725,6.728l-193.04,193.04L36.718,247.898z M244.765,69.863l15.01,15.01L66.732,277.912l-15.007-15.01   L244.765,69.863z M268.055,93.155l4.654,4.657L79.672,290.853l-4.654-4.654L268.055,93.155z M238.041,46.579l4.66-4.657   l42.953,42.956L281,89.533L238.041,46.579z M12.883,314.691l0.334-3.803l3.465,3.465L12.883,314.691z M31.912,313.021l-17.36-17.36   l2.458-28.053l11.428-11.43l42.957,42.953l-11.43,11.431L31.912,313.021z"
-                    fill="#006DF0" />
-                </g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-            </svg>
-
-            <div class="updateCardBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="Capa_1" x="0px" y="0px"
-                viewBox="0 0 392.619 392.619" style="enable-background:new 0 0 392.619 392.619;" xml:space="preserve" width="60px"
-                height="60px">
-                    <g>
-                        <path d="M310.724,0.929H81.896C36.738,0.929,0,37.667,0,82.825v226.969c0,45.158,36.738,81.896,81.896,81.896h228.828   c45.157,0,81.896-36.738,81.896-81.896V82.825C392.619,37.667,355.881,0.929,310.724,0.929z M362.619,309.794   c0,28.616-23.28,51.896-51.896,51.896H81.896C53.28,361.69,30,338.41,30,309.794V82.825c0-28.615,23.28-51.896,51.896-51.896   h228.828c28.615,0,51.896,23.28,51.896,51.896V309.794z"
-                        fill="#006DF0" />
-                        <path d="M286.559,107.182c-5.839-5.877-15.336-5.908-21.214-0.069l-66.539,66.106l-66.572-66.572   c-5.857-5.858-15.355-5.858-21.213,0c-5.858,5.858-5.858,15.355,0,21.213l66.502,66.503l-65.968,65.539   c-5.877,5.839-5.907,15.336-0.069,21.213c2.933,2.952,6.786,4.428,10.642,4.428c3.822,0,7.646-1.452,10.572-4.359l66.037-65.608   l66.073,66.073c2.929,2.929,6.768,4.394,10.606,4.394c3.838,0,7.678-1.465,10.606-4.394c5.858-5.858,5.858-15.355,0-21.213   l-66.004-66.004l66.47-66.038C292.366,122.556,292.396,113.059,286.559,107.182z"
-                        fill="#006DF0" />
-                    </g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                </svg>
+            <!------------------------BADGES------------------------>
+            <div class="adminCanvas">
+                <div class="adminCard">
+                    <div class="adminSpacing">
+                        <div class="adminCardCorner">PROP</div>
+                        <div class="adminText">TITLE/NAME PROP</div>
+                        <div class="adminCardCorner">PROP</div>
+                    </div>
+                    <div class="adminCardFace"></div>
+                    <div class="adminSpacing">
+                        <div class="adminCardCorner">PROP</div>
+                        <div class="adminText">PROP</div>
+                        <div class="adminCardCorner">PROP</div>
+                    </div>
+                    <div class="adminSpacing">
+                        <div class="adminCardButton">DELETE</div>
+                        <div class="adminCardButton">UPDATE</div>
+                    </div>
+                </div>
             </div>
-
+            <!------------------------BADGES------------------------>
         </div>
     </div>
-</div>
+</ui-view>
+<!------------------------VIEW------------------------>
 
-<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 
-<!-- <div class="" ng-repeat="blah">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    /*</!--BODY-->
+                <div class="cardsShallBehave">
+                    <div class="repeatAdminBadge" ng-repeat="badge in badges">
+
+                        <div class="badgeRepeated">
+                            <img ng-src="{{badge.badgeImage}}" /> {{badge.mileStone}} {{badge.desc}}
+                        </div>
+                        <!-- TODO: control the location of the SVG's with the parent container, allowing a smoothe repeat -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                        width="60px" height="60px" viewBox="0 0 327.573 327.573" style="enable-background:new 0 0 327.573 327.573;"
+                        xml:space="preserve">
+                            <g>
+                                <path d="M327.573,59.513L268.055,0L5.709,262.343L0,327.573l27.492-2.413l0.14,0.144l0.163-0.166   l37.433-3.276L327.573,59.513z M311.014,59.513l-17.079,17.08L250.98,33.639l17.08-17.08L311.014,59.513z M36.718,247.898   L229.761,54.855l6.725,6.728l-193.04,193.04L36.718,247.898z M244.765,69.863l15.01,15.01L66.732,277.912l-15.007-15.01   L244.765,69.863z M268.055,93.155l4.654,4.657L79.672,290.853l-4.654-4.654L268.055,93.155z M238.041,46.579l4.66-4.657   l42.953,42.956L281,89.533L238.041,46.579z M12.883,314.691l0.334-3.803l3.465,3.465L12.883,314.691z M31.912,313.021l-17.36-17.36   l2.458-28.053l11.428-11.43l42.957,42.953l-11.43,11.431L31.912,313.021z"
+                                fill="#006DF0" />
+                            </g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                        </svg>
+
+                        <div class="updateCardBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="Capa_1" x="0px" y="0px"
+                            viewBox="0 0 392.619 392.619" style="enable-background:new 0 0 392.619 392.619;" xml:space="preserve"
+                            width="60px" height="60px">
+                                <g>
+                                    <path d="M310.724,0.929H81.896C36.738,0.929,0,37.667,0,82.825v226.969c0,45.158,36.738,81.896,81.896,81.896h228.828   c45.157,0,81.896-36.738,81.896-81.896V82.825C392.619,37.667,355.881,0.929,310.724,0.929z M362.619,309.794   c0,28.616-23.28,51.896-51.896,51.896H81.896C53.28,361.69,30,338.41,30,309.794V82.825c0-28.615,23.28-51.896,51.896-51.896   h228.828c28.615,0,51.896,23.28,51.896,51.896V309.794z"
+                                    fill="#006DF0" />
+                                    <path d="M286.559,107.182c-5.839-5.877-15.336-5.908-21.214-0.069l-66.539,66.106l-66.572-66.572   c-5.857-5.858-15.355-5.858-21.213,0c-5.858,5.858-5.858,15.355,0,21.213l66.502,66.503l-65.968,65.539   c-5.877,5.839-5.907,15.336-0.069,21.213c2.933,2.952,6.786,4.428,10.642,4.428c3.822,0,7.646-1.452,10.572-4.359l66.037-65.608   l66.073,66.073c2.929,2.929,6.768,4.394,10.606,4.394c3.838,0,7.678-1.465,10.606-4.394c5.858-5.858,5.858-15.355,0-21.213   l-66.004-66.004l66.47-66.038C292.366,122.556,292.396,113.059,286.559,107.182z"
+                                    fill="#006DF0" />
+                                </g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+                <!--</div>-->
+
+                <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+                <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+
+                <!-- <div class="" ng-repeat="blah">
 
 <badge-dir badge="b"> </badge-dir>
 </div>
  -->
-<!--
+                <!--
 I'm thinking that we can include the card they apply to within the list,
 and have some sorting options as well.
 For MVP, we'll just display all of them in the objects' order. -->
-<!-- <img src="./../media/css100.png" alt="" /> -->
+                <!-- <img src="./../media/css100.png" alt="" /> -->
+            </div>*/
+</script>
