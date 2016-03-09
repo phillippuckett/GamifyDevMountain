@@ -5,10 +5,10 @@
 <div class="view">
     <div class="student">
         <!--Student-->
-        <div class="stateSpace">
+        <div class="spacing">
             <!--Card-->
             <div class="card" ng-repeat="card in user.cohort.curriculum.card">
-                <div class="stateSpace">
+                <div class="spacing">
 
                     <!--Category-->
                     <div class="trophyTitle">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <!--Point Tally-->
-                <div class="stateSpace">
+                <div class="spacing">
                     <p class="trophyTitle">0/{{totalCardPoints(card)}}</p>
                 </div>
             </div>
@@ -46,7 +46,7 @@
 <!--Badge Request Modal-->
 <div class="bdgReqMod" ng-if="reqModal">
     <p>Badge Request</p>
-    <div class="stateSpace">
+    <div class="spacing">
         <button class="bdgReqButt" ng-click="modToggle(); wdrawReq()">Withdraw Request</button>
         <button class="bdgReqButt" ng-click="modToggle(); sbmtReq()">Submit Request</button>
     </div>
