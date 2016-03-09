@@ -1,9 +1,9 @@
-* {
+/** {
   outline: 1px solid red;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-}
+}*/
 
 body {
   box-sizing: border-box;
@@ -168,24 +168,16 @@ body {
   background-size: contain;
 }
 
-.crudButtonBar {
+/*.crudButtonBar {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   top: 345px;
   width: 150px;
   height: 300px;
-  /*background-color: #444444;*/
+  background-color: #444444;
   color: #bdbdbd;
-  /*border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  -webkit-box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-  box-shadow-top: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-  box-shadow-bottom: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);*/
-}
+}*/
 
 .crudButtons {
   padding: 10px;
@@ -1254,13 +1246,13 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   background-color: green;
 }
 
-.adminDirWrap {
+/*.adminDirWrap {
   position: absolute;
   top: 0px;
   margin: auto;
   width: 100%;
   height: 100%;
-}
+}*/
 
 .adminDirs {
   position: relative;
@@ -1288,7 +1280,7 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   left: calc(-407px + 50vw);
 }
 
-.clip-circleOne {
+/*.clip-circleOne {
   position: relative;
   top: 0;
   left: 0;
@@ -1299,7 +1291,7 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   background: linear-gradient(90deg, #57BDE8, #4174F7, #57BDE8);
   background-size: 600px 600px;
   animation: AnimationName 3s ease infinite;
-}
+}*/
 
 .circleDiv {
   position: absolute;
@@ -1427,14 +1419,14 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   font-family: helvetica, sans-serif;
 }
 
-.leftNavAreaDirWrap {
+/*.leftNavAreaDirWrap {
   position: absolute;
   width: 157px;
   padding: 1px;
   height: calc(100vh - 90px);
-}
+}*/
 
-.leftNavArea {
+/*.adminNav {
   position: relative;
   padding: 20px;
   top: 20px;
@@ -1447,15 +1439,18 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
   -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-}
+}*/
 
 
-/* TODO: mispelled leftNavArea, bookmarking because I'm not sure what this will break. I may add styling to make them look more like buttons, or at least clickable text.*/
+/* TODO: mispelled leftNavArea, 
+bookmarking because I'm not sure what this will break. 
+I may add styling to make them look more like buttons, 
+or at least clickable text.*/
 
-.leftNavArea p {
+/*.leftNavArea p {
   /*border: 1px solid #2AABE2;*/
   padding: 2px;
-}
+}*/
 
 .achievmentWrap {
   position: relative;
