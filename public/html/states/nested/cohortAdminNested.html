@@ -15,24 +15,19 @@
 
                 <!------------------------CRUD------------------------>
                 <p class="adminText">CRUD MENU</p>
-                <p class="adminButton" type="button" name="button" ng-click="showAModal()">CREATE</p>
-                <p class="adminButton" type="button" name="button">UPDATE</p>
-                <p class="adminButton" type="button" name="button">DELETE</p>
+                <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
                 <!------------------------CRUD------------------------>
             </div>
             <!------------------------COHORTS------------------------>
             <div class="adminCanvas">
-                <div class="adminCard">
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">TITLE/NAME PROP</div>
-                        <div class="adminCardCorner">PROP</div>
-                    </div>
+                <div class="adminCard" ng-repeat="cohort in cohorts">
+                        <div class="adminText">cohortName</div>
+                        <div class="adminText">location</div>
                     <div class="adminCardFace"></div>
                     <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">PROP</div>
-                        <div class="adminCardCorner">PROP</div>
+
+                        <div class="adminText">curriculum</div>
+
                     </div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>
