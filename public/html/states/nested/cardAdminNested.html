@@ -14,23 +14,23 @@
                 <!------------------------NAVIGATION------------------------>
 
                 <!------------------------CRUD------------------------>
-                <p class="adminText">CRUD MENU</p>
-                <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
+                <div class="adminSpacing">
+                    <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
+                </div>
                 <!------------------------CRUD------------------------>
             </div>
             <!------------------------CARDS------------------------>
             <div class="adminCanvas">
-                <div class="adminCard">
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">trophyTitle</div>
-                        <div class="adminCardCorner">PROP</div>
+                
+                <div class="adminCard" ng-repeat="card in cards">
+                    <div class="adminText">{{card.category.categoryTitle}}</div>
+                    <div class="adminText">{{card.trophyTitle}}</div>
+                    
+                    <div class="adminCardFace">
+                        <div class="badge" ng-repeat="badge in card.badges">{{card.badges}}</div>
                     </div>
-                    <div class="adminCardFace"></div>
                     <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
                         <div class="adminText">PROP</div>
-                        <div class="adminCardCorner">PROP</div>
                     </div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>

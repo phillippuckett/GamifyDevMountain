@@ -14,15 +14,16 @@
                 <!------------------------NAVIGATION------------------------>
 
                 <!------------------------CRUD------------------------>
-                <p class="adminText">CRUD MENU</p>
-                <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
+                <div class="adminSpacing">
+                    <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
+                </div>
                 <!------------------------CRUD------------------------>
             </div>
             <!------------------------COHORTS------------------------>
             <div class="adminCanvas">
                 <div class="adminCard" ng-repeat="cohort in cohorts">
-                        <div class="adminText">cohortName</div>
-                        <div class="adminText">location</div>
+                    <div class="adminText">{{cohort.cohortName}}</div>
+                    <div class="adminText">location</div>
                     <div class="adminCardFace"></div>
                     <div class="adminSpacing">
 

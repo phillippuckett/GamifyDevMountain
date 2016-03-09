@@ -4,10 +4,6 @@ angular.module('GamifyDevMountain')
         /** The User Object */
         $scope.user = {};
         // console.log($scope.user);
-        // $scope.user = {
-        //     username: 'phillippuckett88',
-        //     password: 'phillippuckett88'
-        // };
    
         /** Login */
         $scope.login = function (user) {
