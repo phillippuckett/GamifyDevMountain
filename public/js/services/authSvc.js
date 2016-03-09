@@ -19,7 +19,7 @@ angular.module('GamifyDevMountain')
         
         /** Get User Object */
         this.getUserObject = function () {
-            return $http.get('api/users').then(function (user) {
+            return $http.get('/api/users').then(function (user) {
                 return user;
             })
         };

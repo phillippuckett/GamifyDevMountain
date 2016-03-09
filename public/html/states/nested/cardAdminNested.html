@@ -21,16 +21,22 @@
             </div>
             <!------------------------CARDS------------------------>
             <div class="adminCanvas">
-                
+
                 <div class="adminCard" ng-repeat="card in cards">
-                    <div class="adminText">{{card.category.categoryTitle}}</div>
+                    <div class="adminText">catId : {{card.category}}</div>
                     <div class="adminText">{{card.trophyTitle}}</div>
-                    
+
                     <div class="adminCardFace">
-                        <div class="badge" ng-repeat="badge in card.badges">{{card.badges}}</div>
+                        <div class="cardFace">
+                            <div class="badge" ng-repeat="badge in card.badges">
+                                <div class="badgeImage" ng-src="{{badge.badgeImage}}">cat</div>
+                                <div class="milestone">{{badges.milestone}}</div>
+                                <div class="difficultyLevel">{{badges.pointValue.difficulty}}</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="adminSpacing">
-                        <div class="adminText">PROP</div>
+                        <div class="adminText">Total Point Value : {{totalCardPoints(card)}}</div>
                     </div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>
