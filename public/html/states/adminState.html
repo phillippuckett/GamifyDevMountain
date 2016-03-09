@@ -16,17 +16,13 @@
             <p class="adminButton" ng-click="toggleDirs('curriculumAdmin');" ui-sref="admin.curriculum">curriculum</p>
             <p class="adminButton" ng-click="toggleDirs('students');" ui-sref="admin.students">students</p>
 
-            <!--CRUD-->
             <p class="adminText">CRUD MENU</p>
-            <p class="adminButton"></p>
-            <p class="adminButton"></p>
-            <p class="adminButton"></p>
+            <p class="adminButton" type="button" name="button" ng-click="showAModal()">CREATE</p>
+            <p class="adminButton" type="button" name="button">UPDATE</p>
+            <p class="adminButton" type="button" name="button">DELETE</p>
         </div>
 
-
-        <div class="canvas">
-            <p class="adminText">VIEWS</p>
-            <!--Views-->
+        <div class="canvas" ng-click="showAModal()" type="button" name="button">
             <ui-view></ui-view>
         </div>
 

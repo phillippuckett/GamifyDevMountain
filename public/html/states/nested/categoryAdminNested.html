@@ -1,12 +1,12 @@
-<div class="gridDirWrap">
-  <!-- <grid-dir></grid-dir> -->
-  <input type="text" placeholder="New category name" ng-model="newCategory ">
-  <button ng-click="addCategory(newCategory)">add new category</button>
-  <br/>
+<div class="canvas">CATEGORIES
+    <!-- <grid-dir></grid-dir> -->
+    <input type="text" placeholder="New category name" ng-model="newCategory ">
+    <button ng-click="addCategory(newCategory)">add new category</button>
+    <br/>
 
-  <p ng-repeat="category in categories">
-    {{category.categoryTitle}}
-  </p>
+    <p ng-repeat="category in categories">
+        {{category.categoryTitle}}
+    </p>
 
 </div>
 

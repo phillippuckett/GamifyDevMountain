@@ -46,11 +46,16 @@
 }
 
 .adminButton {  color: White;
-            font-size: 2.5vh;
-            text-align: center;
+                font-size: 2.5vh;
+                text-align: center;
     border: 1px solid rgba(0,250,0,.75);
     background-color: rgba(0,250,0,.25);
     height: 5vh;
     width: 15vw;
     margin: 5% auto;
+}
+
+.adminButton:hover {  color: yellow;
+    border: 1px solid yellow;
+    
 }
