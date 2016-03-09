@@ -27,20 +27,23 @@ angular.module('GamifyDevMountain')
                 /** Toggle Badge-Request Modal */
                 $scope.modButton = false;
                 $scope.modToggle = function (badgeId) {
-                    $scope.badgeRequested = badgeId;
+                    if (badgeId) {
+                        $scope.badgeRequested = badgeId;
+                    }
                     $scope.reqModal = !$scope.reqModal;
                     console.log('TOGGLE');
                 }
                 
                 /** Withdraw Request */
-                $scope.wdrawReq = function () {
-                    studentSvc.reqBadge().then(function () {
+                // $scope.wdrawReq = function () {
+                //     studentSvc.reqBadge().then(function () {
 
-                    })
-                }
+                //     })
+                // }
                 
                 /** Submit Request */
                 $scope.sbmtReq = function () {
+                    console.log($scope.badgeRequested);
                     studentSvc.reqBadge($scope.badgeRequested).then(function (adminResponse) {
                         $scope.getCards();
                     })
@@ -48,7 +51,7 @@ angular.module('GamifyDevMountain')
               
                 /** Total Points */
                 authSvc.getUserObject().then(function (userData) {
-                    var curriculumCards = userData.data.cohort.curriculum.card;
+                    var curriculumCards = userData.data.cohort.curriculum.deck;
                     var currPoints = 0;
                     curriculumCards.forEach(function (card) {
                         card.badges.forEach(function (badge) {
@@ -80,16 +83,16 @@ angular.module('GamifyDevMountain')
                     }
                     var perc = (tpa / tpp) * 100;
                     if (perc > 100) {
-                        return "/media/img/trophyplatinum.png"
+                        return "/media/awardEmblems/trophyplatinum.png"
                     }
                     if (perc >= card.trophyLevels.gold) {
-                        return "/media/trophygold.png"
+                        return "/media/awardEmblems/trophygold.png"
                     }
                     if (perc >= card.trophyLevels.silver) {
-                        return "/media/trophysilver.png"
+                        return "/media/awardEmblems/trophysilver.png"
                     }
                     if (perc >= card.trophyLevels.bronze) {
-                        return "/media/trophybronze.png"
+                        return "/media/awardEmblems/trophybronze.png"
                     }
                     else {
                         return "/media/awardEmblems/trophyNone.png"

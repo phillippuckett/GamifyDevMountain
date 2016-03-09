@@ -23,7 +23,7 @@ module.exports = {
         users.findOne({ _id: req.user._id })
             .populate({ path: 'cohort', 
             populate: ({ path: 'curriculum', model: 'curriculums', 
-            populate: ({ path: 'card', model: 'cards',
+            populate: ({ path: 'deck', model: 'cards',
             populate: ([{ path: 'category', model: 'categories'},{path: 'badges', model: 'badges'}]            
             )})})})
             .exec(function (err, readUser) { 

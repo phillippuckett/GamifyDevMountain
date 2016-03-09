@@ -21,18 +21,12 @@
             </div>
             <!------------------------CURRS------------------------>
             <div class="adminCanvas">
-                <div class="adminCard">
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">TITLE/NAME PROP</div>
-                        <div class="adminCardCorner">PROP</div>
+                <div class="adminCard" ng-repeat="curriculum in curriculums">
+                    <div class="adminText">{{curriculum.curriculumTitle}}</div>
+                    <div class="adminCardFace">
+                        <div class="badge" ng-repeat="cards in curriculum.deck">{{cards.trophyTitle}}</div>
                     </div>
-                    <div class="adminCardFace"></div>
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">PROP</div>
-                        <div class="adminCardCorner">PROP</div>
-                    </div>
+                        <div class="adminText">Total Point Value : {{totalCardPoints(card)}}</div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>
                         <div class="adminCardButton">UPDATE</div>

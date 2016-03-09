@@ -21,18 +21,8 @@
             </div>
             <!------------------------CATS------------------------>
             <div class="adminCanvas">
-                <div class="adminCard">
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">TITLE/NAME PROP</div>
-                        <div class="adminCardCorner">PROP</div>
-                    </div>
-                    <div class="adminCardFace"></div>
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">PROP</div>
-                        <div class="adminCardCorner">PROP</div>
-                    </div>
+                <div class="adminCard" ng-repeat="category in categories">
+                    <div class="adminText">{{category.categoryTitle}}</div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>
                         <div class="adminCardButton">UPDATE</div>
