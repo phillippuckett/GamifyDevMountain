@@ -27,20 +27,23 @@ angular.module('GamifyDevMountain')
                 /** Toggle Badge-Request Modal */
                 $scope.modButton = false;
                 $scope.modToggle = function (badgeId) {
-                    $scope.badgeRequested = badgeId;
+                    if (badgeId) {
+                        $scope.badgeRequested = badgeId;
+                    }
                     $scope.reqModal = !$scope.reqModal;
                     console.log('TOGGLE');
                 }
                 
                 /** Withdraw Request */
-                $scope.wdrawReq = function () {
-                    studentSvc.reqBadge().then(function () {
+                // $scope.wdrawReq = function () {
+                //     studentSvc.reqBadge().then(function () {
 
-                    })
-                }
+                //     })
+                // }
                 
                 /** Submit Request */
                 $scope.sbmtReq = function () {
+                    console.log($scope.badgeRequested);
                     studentSvc.reqBadge($scope.badgeRequested).then(function (adminResponse) {
                         $scope.getCards();
                     })
