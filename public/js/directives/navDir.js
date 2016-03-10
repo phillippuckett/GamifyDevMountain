@@ -7,13 +7,12 @@ angular.module('GamifyDevMountain')
                 $scope.navDir = 'navDir';
                 // console.log('Nav Controller: Running');
                 
-                /** Total Points */
+                /** TOTAL USER XP */
                 authSvc.getUserObject().then(function (userData) {
                     $scope.User = userData.data;
                     var curriculumCards = userData.data.cohort.curriculum.deck;
                     var currPoints = 0;
                     curriculumCards.forEach(function (card) {
-                        // console.log(card);
                         card.badges.forEach(function (badge) {
                             currPoints += badge.pointValue.points;
                         });
@@ -21,7 +20,8 @@ angular.module('GamifyDevMountain')
                     $scope.currPoints = currPoints;
                     $scope.trophyTotals = $scope.trophyCount();
                 });
-
+                
+                /* TOTAL CARD POINTS */
                 $scope.totalCardPoints = function (card) {
                     var cardPoints = 0;
                     card.badges.forEach(function (badge) {
@@ -45,8 +45,6 @@ angular.module('GamifyDevMountain')
                                     }
                                 }
                             }
-
-
                             for (var l = 0; l < $scope.User.cohort.curriculum.deck[i].badges.length; l++) {
                                 tpp += $scope.User.cohort.curriculum.deck[i].badges[l].pointValue.points;
                             }
@@ -60,12 +58,10 @@ angular.module('GamifyDevMountain')
                             if (perc >= $scope.User.cohort.curriculum.deck[i].trophyLevels.bronze) {
                                 trophies.bronze += 1;
                             }
-
                         }
                         return trophies
                     }
                 };
-
             }
         }
     });

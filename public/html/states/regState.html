@@ -29,35 +29,20 @@
                 <a class="visText" href="/#/login">Log In Instead?</a>
             </div>
             <div class="headerSpace">
-                <div>
                     <form ng-submit="register()">
                         <input class="visInput" type="text" placeholder="Add Photo URL" ng-model="user.userImage">
-                        <input class="visInput" type="text" placeholder="fristName" ng-model="user.firstName">
-                        <input class="visInput" type="text" placeholder="lastName" ng-model="user.lastName">
+                        <input class="visInput" type="text" placeholder="firstName" ng-model="user.firstName">
+                        <input class="visInput" type="text" placeholder="lastName" ng-model="user.lastName">                      
                         <input class="visInput" type="text" placeholder="username" ng-model="user.username">
-                        <input class="visInput" type="text" placeholder="email@address" ng-model="user.email">
+                        <!--<input class="visInput" type="text" placeholder="email@address" ng-model="user.email">-->
                         <input class="visInput" type="password" placeholder="Create Password" ng-model="user.password" required>
                         <select class="visInput" ng-model="user.cohort">
-                            <option value="mentor">DEVMTN VIII {{cohort.cohortName}}</option>
-                            <option value="mentor">DEVMTN IX {{cohort.cohortName}}</option>
-                            <option value="mentor">DEVMTN X {{cohort.cohortName}}</option>
+                            <option value="mentor">DM VIII</option>
+                            <option value="mentor">DM IX</option>
+                            <option value="mentor">DM X</option>
                         </select>
-
-                        <select ng-model="user.role" class="visInput">
-                            <option value="student">Student</option>
-                            <option value="mentor">Mentor</option>
-                            <option value="admin">Administrator</option>
-                        </select>
-                        <select class="visInput" ng-model="user.watchlist">
-                            <option value="mentor">Brack C Obama</option>
-                            <option value="mentor">David Monica Giles</option>
-                            <option value="mentor">Yagov Talij</option>
-                            <option value="mentor">Tin-man Charlesworth</option>
-                            <option value="mentor">Steban Blinkworse</option>
-                        </select>
-                        <button class="visSubmit" type="submit">Create Account</button>
-                    </form>
-                </div>
+                <button class="visSubmit" type="submit">Create Account</button>
+                </form>
                 <!--<div class="visLinks">-->
                 <!--<button class="visSubmit" type="submit">O| Login with GitHub</button>-->
                 <!--<button class="visSubmit" type="submit">In| Login with LinkedIn</button>-->

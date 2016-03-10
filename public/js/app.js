@@ -1,4 +1,4 @@
-angular.module("GamifyDevMountain", ['angularModalService', 'ui.router'])
+angular.module("GamifyDevMountain", ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
 

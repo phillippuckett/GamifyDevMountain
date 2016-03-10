@@ -1,6 +1,6 @@
 /* Administrator */
 angular.module('GamifyDevMountain')
-    .controller('adminCtrl', function (ModalService, $scope, $state, $location, adminSvc) {
+    .controller('adminCtrl', function ($scope, $state, $location, adminSvc) {
 
 
         $scope.activeDir = {};
