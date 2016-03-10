@@ -27,7 +27,9 @@
 
                     <!--Badge-->
                     <div class="badge" ng-repeat="badge in card.badges">
-                        <button class="badgeImage" ng-click="modToggle(badge._id)"></button>
+                        <button class="badgeSpace" ng-click="modToggle(badge._id)">
+                            <img class="badgeImage"ng-show="user.badgesAwarded.indexOf(badge._id) !== -1" ng-src="{{badge.badgeImage}}">
+                        </button>
                         <div class="milestone">{{badge.mileStone}}</div>
                         <div class="difficultyLevel">
                             {{badge.pointValue.difficulty}}
@@ -36,7 +38,7 @@
                 </div>
                 <!--Point Tally-->
                 <div class="spacing">
-                    <p class="trophyTitle">{{user.earnedPoints}}/{{totalCardPoints(card)}}</p>
+                    <p class="trophyTitle">{{totalCardPoints(card)}}</p>
                 </div>
             </div>
         </div>

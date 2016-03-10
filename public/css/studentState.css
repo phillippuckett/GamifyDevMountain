@@ -121,7 +121,7 @@
     display: inline-flex;
 }
 
-.badgeImage {
+.badgeSpace {
     border: 1px solid rgba(0,0,0,.25);
     background-color: rgba(0,0,0,0);
     -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.75);
@@ -130,6 +130,14 @@
     border-radius: 50%;
     height: 5vh;
     min-width: 2.5vw;
+    margin: auto;   
+}    
+
+.badgeImage {
+    /*border: 1px solid rgba(0,0,0,1);*/
+    border-radius: 50%;
+    height: 4vh;
+    min-width: 1vw;
     padding: 2.5%;
     margin: auto;   
 }
