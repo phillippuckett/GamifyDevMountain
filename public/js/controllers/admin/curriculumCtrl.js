@@ -1,5 +1,5 @@
 angular.module( "GamifyDevMountain" )
-  .controller( "curriculumAdminCtrl", function ( $scope, curriculumAdminSvc ) {
+  .controller( "curriculumCtrl", function ( $scope, curriculumAdminSvc ) {
 
 
     var cas = curriculumAdminSvc;

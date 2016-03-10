@@ -5,26 +5,15 @@
     <meta charset="utf-8">
     <title>GamifyDevMountain</title>
 
-    <!--Styles-->
-    <link rel="stylesheet" href="css/cores.css">
-
-    <!--Card Font-->
+    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
-    <!--Score Card Font-->
     <link href='https://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'>
     <!--Styles-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.css">
     <link rel="stylesheet" href="css/index.css">
-
-    <!--States-->
-    <link rel="stylesheet" href="css/states/visState.css">
+    <link rel="stylesheet" href="css/states/adminState.css">
     <link rel="stylesheet" href="css/states/studentState.css">
+    <link rel="stylesheet" href="css/states/visState.css">
 
-    <!--Templates-->
-    <link rel="stylesheet" href="css/templates/headerTmpl.css">
-    <link rel="stylesheet" href="css/templates/navTmpl.css">
-    <link rel="stylesheet" href="css/templates/studentTmpl.css">
-    <link rel="stylesheet" href="css/templates/adminTmpl.css">
 </head>
 
 <body ng-controller="mainCtrl">
@@ -50,13 +39,15 @@
 
         <!-- Admin Controllers-->
         <script src="./js/controllers/admin/adminCtrl.js"></script>
-        <script src="./js/controllers/admin/adminBadgeCtrl.js"></script>
-        <script src="./js/controllers/admin/crudButtonCtrl.js"></script>
-        <script src="./js/controllers/admin/mainCtrl.js"></script>
-        <script src="./js/controllers/admin/categoryAdminCtrl.js"></script>
-        <script src="./js/controllers/admin/cardAdminCtrl.js"></script>
-        <script src="./js/controllers/admin/curriculumAdminCtrl.js"></script>
+        <script src="./js/controllers/admin/badgeCtrl.js"></script>
+        <script src="./js/controllers/admin/cardCtrl.js"></script>
+        <script src="./js/controllers/admin/categoryCtrl.js"></script>
         <script src="./js/controllers/admin/cohortCtrl.js"></script>
+        <script src="./js/controllers/admin/curriculumCtrl.js"></script>
+        
+        <script src="./js/controllers/admin/mainCtrl.js"></script>
+        <script src="./js/controllers/admin/crudButtonCtrl.js"></script>
+        
 
         <!-- Sitewide Controllers -->
         <script src="./js/controllers/headerCtrl.js"></script>

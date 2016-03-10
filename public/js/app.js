@@ -76,13 +76,13 @@ angular.module("GamifyDevMountain", ['angularModalService', 'ui.router', 'ui.gri
     .state( 'admin.cards', {
       url: '/card',
       templateUrl: './html/states/nested/cardAdminNested.html',
-      controller: 'cardAdminCtrl'
+      controller: 'cardCtrl'
     } )
 
     .state( 'admin.badges', {
       url: '/badge',
       templateUrl: './html/states/nested/badgeAdminNested.html',
-      controller: 'adminBadgeCtrl'
+      controller: 'badgeCtrl'
     } )
 
             .state('admin.cohorts', {
@@ -98,13 +98,13 @@ angular.module("GamifyDevMountain", ['angularModalService', 'ui.router', 'ui.gri
     .state( 'admin.category', {
       url: '/category',
       templateUrl: './html/states/nested/categoryAdminNested.html',
-      controller: 'categoryAdminCtrl'
+      controller: 'catCtrl'
     } )
 
     .state( 'admin.curriculum', {
       url: '/curriculum',
       templateUrl: './html/states/nested/curriculumAdminNested.html',
-      controller: 'curriculumAdminCtrl'
+      controller: 'curriculumCtrl'
     } )
 
         $urlRouterProvider.otherwise('/login');

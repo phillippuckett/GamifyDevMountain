@@ -1,5 +1,5 @@
 angular.module("GamifyDevMountain")
-    .controller("categoryAdminCtrl", function($scope, categorySvc) {
+    .controller("catCtrl", function($scope, categorySvc) {
 
         $scope.addCategory = function(newCategory) {
             var cat = {

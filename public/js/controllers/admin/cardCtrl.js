@@ -1,5 +1,5 @@
 angular.module( "GamifyDevMountain" )
-  .controller( "cardAdminCtrl", function ( $scope, cardAdminSvc, badgeAdminSvc ) {
+  .controller( "cardCtrl", function ( $scope, cardAdminSvc, badgeAdminSvc ) {
 
 // commented out notes, on the improved notation
     // angular.module( "GamifyDevMountain" )
@@ -12,7 +12,7 @@ angular.module( "GamifyDevMountain" )
     // $scope.newCard.badges.mileStone = null ;
 
 
-    console.log( 'cardAdminCtrl is logging' );
+    console.log( 'cardCtrl is logging' );
     $scope.badges = [];
     $scope.getCards = function () {
       cas.getCards()
@@ -34,7 +34,7 @@ angular.module( "GamifyDevMountain" )
 
     // ############### Badges ################ \\
     $scope.badges = [];
-    console.log( 'adminBadgeCtrl is logging' );
+    console.log( 'badgeCtrl is logging' );
     bas.getBadges()
       .then( function ( response ) {
         console.log( 'badges', response );

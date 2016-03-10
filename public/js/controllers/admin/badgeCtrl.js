@@ -1,11 +1,11 @@
 angular.module("GamifyDevMountain")
-    .controller("adminBadgeCtrl", function ($scope, adminStateSvc, ModalService) {
+    .controller("badgeCtrl", function ($scope, adminStateSvc, ModalService) {
 
         var ass = adminStateSvc;
 
         // ############### Badges ################ \\
         $scope.badges = [];
-        console.log('adminBadgeCtrl is logging');
+        console.log('badgeCtrl is logging');
         ass.getBadges()
             .then(function (response) {
                 console.log('badges', response);

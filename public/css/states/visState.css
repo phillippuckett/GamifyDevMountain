@@ -1,12 +1,4 @@
-.visState { text-align: center;
-    /*border: 1px solid rgb(100, 100, 100);*/
-    background-color: rgba(0, 0, 0, .05); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
-    width: 100.25%;
-}
-
+/*------------------------VIS STATE------------------------*/
 .loginMenu { text-align: center; 
     border: 1px solid rgba(0,0,0,.05);
     border-radius: 2.5px;
@@ -29,6 +21,15 @@
     min-height: 550px; height: 82.5vh;
     min-width: 400px; width: 60vw;
     margin: auto;
+}
+
+.visState { text-align: center;
+    /*border: 1px solid rgb(100, 100, 100);*/
+    background-color: rgba(0, 0, 0, .05); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 100.25%;
 }
 
 .visTitle { color: rgba(0,0,0,.75); font-size: 4.5vh;
@@ -105,3 +106,28 @@
     padding: 5vh 0;
     margin: auto;
 }
+
+/*------------------------VIS HEADER------------------------*/
+.visHeader {
+    background-color: rgba(0,0,0,.75);
+    /*-webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75); */
+    background-size: contain;
+    height: 10vh;
+    min-width: 98vw; width: 100%;
+    margin: auto;
+    display: inline-flex;
+}
+
+.visLogo {
+    /*border: 1px solid rgb(250, 150, 0);*/
+    text-align: center;
+    background-image: url('/media/miscellaneous/logoonly.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 7.5%; margin-left: 60%;
+}
+/*------------------------VIS HEADER------------------------*/
+/*------------------------VIS STATE------------------------*/

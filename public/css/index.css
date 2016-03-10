@@ -1,5 +1,9 @@
+/*------------------------HTML------------------------*/
 /*.html { border: 1px solid rgb(0,0,0); }*/
 /*.body { border: 1px solid rgb(100,100,100); }*/
+
+/*p { border: 1px solid rgb(250, 0, 0); }*/
+/*a { border: 1px solid rgb(0, 250, 0); }*/
 
 .spacing { text-align: center;
   /*border: 1px solid rgb(250, 0, 150);*/
@@ -8,7 +12,10 @@
   display: inline-flex;
 }
 
-/*p { border: 1px solid rgb(250, 0, 0); }*/
-/*a { border: 1px solid rgb(0, 250, 0); }*/
-
+.charcoalBackground {
+    background-image: url('/media/skins/charcoalstones.png');   
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*------------------------HTML------------------------*/
 

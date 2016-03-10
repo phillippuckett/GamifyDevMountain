@@ -1,5 +1,5 @@
 angular.module("GamifyDevMountain")
-    .controller("adminCohortCtrl", function ($scope, adminCohortSvc) {
+    .controller("cohCtrl", function ($scope, adminCohortSvc) {
       
         /** C */
         $scope.cohort = {};
