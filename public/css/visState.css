@@ -62,7 +62,7 @@
     -moz-box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 2.5px .5px 0px rgba(0,0,0,0.5);
     height: 6.5vh;
-    width: 3.25vw;
+    width: 3.75vw;
     padding: .5%;
     margin: 5vh auto;
     }
@@ -70,10 +70,10 @@
     /*border: 1px solid rgba(0,250,0,1);*/ border-radius: 50%;      
     background-image: url('/media/miscellaneous/logoonly.png');
     background-color: white;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 6vh;
-    width: 3vw;
+    width: 3.5vw;
     margin: .3vh auto auto auto;
     } 
     
