@@ -13,7 +13,7 @@ angular.module('GamifyDevMountain')
                     var curriculumCards = userData.data.cohort.curriculum.deck;
                     var currPoints = 0;
                     curriculumCards.forEach(function (card) {
-                        console.log(card);
+                        // console.log(card);
                         card.badges.forEach(function (badge) {
                             currPoints += badge.pointValue.points;
                         });
@@ -33,7 +33,7 @@ angular.module('GamifyDevMountain')
                 /*TROPHY COUNTER*/
                 $scope.trophyCount = function () {
                     if ($scope.User) {
-                        console.log('Trophy Counter', $scope.User)
+                        // console.log('Trophy Counter', $scope.User)
                         var trophies = { bronze: 0, silver: 0, gold: 0 };
                         for (var i = 0; i < $scope.User.cohort.curriculum.deck.length; i++) {
                             var tpa = 0;

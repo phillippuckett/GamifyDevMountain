@@ -1,4 +1,4 @@
-angular.module("GamifyDevMountain", ['angularModalService', 'ui.router', 'ui.grid'])
+angular.module("GamifyDevMountain", ['angularModalService', 'ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
 
@@ -58,7 +58,7 @@ angular.module("GamifyDevMountain", ['angularModalService', 'ui.router', 'ui.gri
         /*------------------------MENTEE------------------------*/
             .state('admin.students', {
                 url: '/students',
-                templateUrl: './html/states/adminViews/mentees.html',
+                templateUrl: './html/states/adminViews/students.html',
                 controller: 'adminCtrl'
             })
 
@@ -72,7 +72,7 @@ angular.module("GamifyDevMountain", ['angularModalService', 'ui.router', 'ui.gri
         /*------------------------CURRS------------------------*/
             .state('admin.curriculum', {
                 url: '/curriculum',
-                templateUrl: './html/states/curriculum.html',
+                templateUrl: './html/states/adminViews/curriculum.html',
                 controller: 'adminCtrl'
             })
         /*------------------------HOME------------------------*/

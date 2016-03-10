@@ -24,12 +24,3 @@ angular.module("GamifyDevMountain")
             restrict: 'E'
         }
     });
-
-angular.module("GamifyDevMountain")
-    .directive("gridDir", function () {
-        return {
-            templateUrl: './../html/templates/adminStuff/gridTmpl.html',
-            // controller: 'adminCtrl',
-            restrict: 'E'
-        }
-    });

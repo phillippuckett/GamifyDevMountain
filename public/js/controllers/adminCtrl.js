@@ -2,9 +2,12 @@
 angular.module('GamifyDevMountain')
     .controller('adminCtrl', function (ModalService, $scope, $state, $location, adminSvc) {
 
+
+        $scope.activeDir = {};
+        $scope.toggleDirs = $scope.toggleDirs;
+        
         /*------------------------BADGES------------------------*/
         $scope.badges = [];
-
         $scope.getBadges = function () {
             adminSvc.getBadges()
                 .then(function (response) {
@@ -22,7 +25,7 @@ angular.module('GamifyDevMountain')
         $scope.createBadge = function (badge) {
             adminSvc.createBadge(badge)
                 .then(function (response) {
-                    $scope.getBadges();
+                    $scope.createBadge();
                 })
         };
 
@@ -209,17 +212,6 @@ angular.module('GamifyDevMountain')
                 })
         };
         
-        /*------------------------MAIN CTRL------------------------*/
-        $scope.activeDir = {};
-        $scope.toggleDirs = $scope.toggleDirs;
-        
-        /*------------------------MODAL CTRL------------------------*/
-        $scope.createBadge = function (badge) {
-            adminSvc.createBadge(badge)
-                .then(function (result){ 
-                    $scope.createbadge();          
-                })
-        };
         /*------------------------CRUD MODAL------------------------*/
         $scope.confirmationAnswer = null;                
         $scope.showAModal = function () {
