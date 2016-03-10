@@ -98,6 +98,26 @@ angular.module('GamifyDevMountain')
                         return "/media/awardEmblems/trophyNone.png"
                     }
                 };
+
+                /*------------------------EXP METER------------------------*/
+                $scope.totalPointsPossible = function () {
+                    var total = 0;
+                    if ($scope.user.cohort) {
+                        $scope.user.cohort.curriculum.deck.forEach(function (card) {
+                            card.badges.forEach(function (badge) {
+                                total += badge.pointValue.points;
+                            })
+                        })
+                        return total;
+                    }
+                }
+
+                $scope.expPer = function () {
+                    if ($scope.User) {
+                        return $scope.User.earnedPoints / $scope.totalPointsPossible() * 100;
+                    }
+                }
+
             }
         }
     }); 

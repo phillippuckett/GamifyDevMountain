@@ -1,7 +1,7 @@
 <!--Student-->
 <div class="tableText">Score Card</div>
 <div class="studentNav" ng-hide="false">
-    <!--Badges-->
+    <!------------------------Badges------------------------>
     <div class="spacing">
         <div class="spacing">
             <p class="studentCats">Badges</p>
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <!--Bronze Medals-->
+    <!------------------------Bronze Medals------------------------>
     <div class="spacing">
         <div class="spacing">
             <p class="studentCats">Bronze</p>
@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <!--Silver Medals-->
+    <!------------------------Silver Medals------------------------>
     <div class="spacing">
         <div class="spacing">
             <p class="studentCats">Silver</p>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <!--Gold Medals-->
+    <!------------------------Gold Medals------------------------>
     <div class="spacing">
         <div class="spacing">
             <p class="studentCats">Gold</p>
@@ -41,14 +41,7 @@
         </div>
     </div>
 
-    <!--Student Level-->
-    <div class="studentLvl">
-        <p class="studentLvlText">#n00b{{lvlTitle}}</p>
-        <p class="studentLvlText"></p>
-        <p class="studentLvlText">0{{}}</p>
-    </div>
-
-    <!--Total Points-->
+    <!------------------------Total Points------------------------>
     <div class="spacing">
         <div class="spacing">
             <p class="studentCats">Points</p>
@@ -56,13 +49,8 @@
         <div class="studentStats">{{user.earnedPoints}} / {{currPoints}}</div>
     </div>
 
-    <!--Mentor-->
-    <div class="spacing">
-        <div class="spacing">
-            <p class="studentCats">Mentor</p>
-        </div>
-        <div class="spacing">
-            <p class="studentStats">{{user.watchlist}}</p>
-        </div>
+    <!------------------------Student Eperience Level------------------------>
+    <div class="studentXPLvl">
+            <div class="studentXP" ng-style="{width: expPer() + '%' }"></div>
     </div>
 </div>

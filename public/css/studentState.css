@@ -203,12 +203,20 @@
     margin: auto; margin-top: 12.5%;
 }
 
-.studentLvl {   text-align: center;
-  border: 1px solid rgb(50, 50, 150);
-  background-color: rgba(50, 50, 150, .5);
+.studentXPLvl {   text-align: center;
+  border: 1px solid rgba(150,0,0,.25);
+  border-radius: 10%;
   width: 75%;
   margin: auto;
   display: inline-flex;
+}
+
+.studentXP {
+    border-radius: 5%;
+    border: 1px solid rgba(150,0,0,.25);
+    background-color: rgba(200,0,0,.75);
+    height: 2.25vh;
+    width: 100%;
 }
 
 .studentLvlText {   color: white;
@@ -229,6 +237,7 @@
     width: 100%;
     margin: 10% 15% 10% 0;
 }
+
 /*------------------------STUDENT NAV------------------------*/
 
 /*------------------------USER HEADER------------------------*/ 
