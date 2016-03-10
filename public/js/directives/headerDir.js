@@ -19,7 +19,7 @@ angular.module('GamifyDevMountain')
                 /** Users Cohort */
                 authSvc.getUserObject().then(function (userData) {
                     $scope.user = userData.data;
-                    console.log('HEADERDIR : AUTHSVC : getUserObject', userData.data);
+                    // console.log('HEADERDIR : AUTHSVC : getUserObject', userData.data);
                 });
             }
         }

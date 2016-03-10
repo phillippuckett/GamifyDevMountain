@@ -1,111 +1,80 @@
-angular.module("GamifyDevMountain", ['angularModalService', 'ui.router', 'ui.grid'])
+angular.module("GamifyDevMountain", ['angularModalService', 'ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
 
-        /** Login State */
+        /*------------------------LOGIN------------------------*/
             .state('login', {
                 url: '/login',
                 templateUrl: 'html/states/loginState.html',
                 controller: 'authCtrl',
             })
 
-        /** Registration State */
+        /*------------------------REG------------------------*/
+        /* Registration State */
             .state('registration', {
                 url: '/registration',
                 templateUrl: 'html/states/regState.html',
                 controller: 'authCtrl'
             })
 
-        /** Student State */
+        /*------------------------STUDENT------------------------*/
+        /* Student State */
             .state('student', {
                 url: '/student',
                 templateUrl: 'html/states/studentState.html',
                 controller: 'studentCtrl'
-                // ,
-                // resolve: {
-                //     user: function (authService, $state) {
-                //         return authService.getCurrentUserObject().then(function (response) {
-                //             if (response.status != 200) {
-                //                 $state.go('login')
-                //             }
-                //             console.log(response);
-                //             return response.data;
-                //         })
-                //         console.log('Resolve in "order"');
-                //     }
-                // }
             })
 
-        /** Admin State */
+        /*------------------------ADMIN------------------------*/
+        /* Admin State */
             .state('admin', {
                 name: 'admin',
                 url: '/admin',
                 templateUrl: './html/states/adminState.html',
                 controller: 'adminCtrl',
-                // resolve: {
-                //   badges: function ( adminStateSvc ) {
-                //     return adminStateSvc.getBadges()
-                //       .then( function ( response ) {
-                //         return response.data;
-                //       } )
-                //   },
-                //{
-                //   user: function ( authSvc, $state ) {
-                //     return authSvc.getCurrentUserObject()
-                //       .then( function ( response ) {
-                //         if ( response.status != 200 ) {
-                //           $state.go( 'login' )
-                //           return;
-                //         }
-                //         if ( response.data.role.indexOf( 'mentor' ) > -1 ) {
-                //           console.log( response );
-                //           return response.data;
-                //         }
-                //         $state.go( 'login' )
-                //         return;
-                //       } )
-                //     console.log( 'Resolve in login' );
-                //   }
-                // }
-
-                // }
             })
 
-        //##########  Admin Nested States ########\\
+        /*------------------------CARDS------------------------*/
+            .state('admin.cards', {
+                url: '/card',
+                templateUrl: './html/states/adminViews/card.html',
+                controller: 'adminCtrl'
+            })
 
-    .state( 'admin.cards', {
-      url: '/card',
-      templateUrl: './html/states/nested/cardAdminNested.html',
-      controller: 'cardAdminCtrl'
-    } )
+        /*------------------------BADGES------------------------*/
+            .state('admin.badges', {
+                url: '/badge',
+                templateUrl: './html/states/adminViews/badge.html',
+                controller: 'adminCtrl'
+            })
 
-    .state( 'admin.badges', {
-      url: '/badge',
-      templateUrl: './html/states/nested/badgeAdminNested.html',
-      controller: 'adminBadgeCtrl'
-    } )
-
+        /*------------------------COHS------------------------*/
             .state('admin.cohorts', {
                 url: '/cohorts',
-                templateUrl: './html/states/nested/cohortAdminNested.html'
+                templateUrl: './html/states/adminViews/cohort.html',
+                controller: 'adminCtrl'
             })
 
+        /*------------------------MENTEE------------------------*/
             .state('admin.students', {
                 url: '/students',
-                templateUrl: './html/states/nested/studentsAdminNested.html'
+                templateUrl: './html/states/adminViews/students.html',
+                controller: 'adminCtrl'
             })
 
-    .state( 'admin.category', {
-      url: '/category',
-      templateUrl: './html/states/nested/categoryAdminNested.html',
-      controller: 'categoryAdminCtrl'
-    } )
+        /*------------------------CATS------------------------*/
+            .state('admin.category', {
+                url: '/category',
+                templateUrl: './html/states/adminViews/category.html',
+                controller: 'adminCtrl'
+            })
 
-    .state( 'admin.curriculum', {
-      url: '/curriculum',
-      templateUrl: './html/states/nested/curriculumAdminNested.html',
-      controller: 'curriculumAdminCtrl'
-    } )
-
+        /*------------------------CURRS------------------------*/
+            .state('admin.curriculum', {
+                url: '/curriculum',
+                templateUrl: './html/states/adminViews/curriculum.html',
+                controller: 'adminCtrl'
+            })
+        /*------------------------HOME------------------------*/
         $urlRouterProvider.otherwise('/login');
     });

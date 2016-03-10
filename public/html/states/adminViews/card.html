@@ -15,31 +15,36 @@
 
                 <!------------------------CRUD------------------------>
                 <div class="adminSpacing">
-                    <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
+                    <p class="adminButton" type="button" name="button">CREATE</p>
                 </div>
                 <!------------------------CRUD------------------------>
             </div>
-            <!------------------------MENTEES------------------------>
-            <!--<div class="adminCanvas">
-                <div class="adminCard" ng-repeat="user in users">
-                    <div class="adminSpacing">
-                        <div class="adminCardCorner" ng-src="{{user.userImage}}"></div>
-                        <div class="adminText">{{user.firstName}} {{user.lastName}}</div>
-                        <div class="adminCardCorner">PROP</div>
+            <!------------------------CARDS------------------------>
+            <div class="adminCanvas">
+
+                <div class="adminCard" ng-repeat="card in cards">
+                    <div class="adminText">catId : {{card.category}}</div>
+                    <div class="adminText">{{card.trophyTitle}}</div>
+
+                    <div class="adminCardFace">
+                        <div class="cardFace">
+                            <div class="badge" ng-repeat="badge in card.badges">
+                                <div class="badgeImage">cat</div>
+                                <div class="milestone">{{badges.milestone}}</div>
+                                <div class="difficultyLevel">{{badges.pointValue.difficulty}}</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="adminCardFace"></div>
                     <div class="adminSpacing">
-                        <div class="adminCardCorner">PROP</div>
-                        <div class="adminText">PROP</div>
-                        <div class="adminCardCorner">PROP</div>
+                        <div class="adminText">Total Point Value : {{totalCardPoints(card)}}</div>
                     </div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>
                         <div class="adminCardButton">UPDATE</div>
                     </div>
                 </div>
-            </div>-->
-            <!------------------------MENTEES------------------------>
+            </div>
+            <!------------------------CARDS------------------------>
         </div>
     </div>
 </ui-view>

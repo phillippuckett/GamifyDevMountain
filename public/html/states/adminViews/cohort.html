@@ -1,0 +1,41 @@
+<!------------------------VIEW------------------------>
+<ui-view>
+    <div class="adminState">
+        <div class="adminSpacing">
+            <div class="adminNav">
+                <!------------------------NAVIGATION------------------------>
+                <p class="adminText">NAVIGATION</p>
+                <p class="adminButton" Students ui-sref="admin.badges">badges</p>
+                <p class="adminButton" ui-sref="admin.cards">cards</p>
+                <p class="adminButton" ng-click="toggleDirs('categoryAdmin');" ui-sref="admin.category">category</p>
+                <p class="adminButton" ng-click="toggleDirs('cohorts');" ui-sref="admin.cohorts">cohorts</p>
+                <p class="adminButton" ng-click="toggleDirs('curriculumAdmin');" ui-sref="admin.curriculum">curriculum</p>
+                <p class="adminButton" ng-click="toggleDirs('students');" ui-sref="admin.students">students</p>
+                <!------------------------NAVIGATION------------------------>
+
+                <!------------------------CRUD------------------------>
+                <div class="adminSpacing">
+                    <p class="adminButton" type="button" name="button">CREATE</p>
+                </div>
+                <!------------------------CRUD------------------------>
+            </div>
+            <!------------------------COHORTS------------------------>
+            <div class="adminCanvas">
+                <div class="adminCard" ng-repeat="cohort in cohorts">
+                    <div class="adminText">{{cohort.cohortName}}</div>
+                    <div class="adminText">Location : {{cohort.location}}</div>
+                    <div class="adminCardFace">Cohort description goes here(?).</div>
+                    <div class="adminSpacing">
+                        <div class="adminText">curriculum</div>
+                    </div>
+                    <div class="adminSpacing">
+                        <div class="adminCardButton">DELETE</div>
+                        <div class="adminCardButton">UPDATE</div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------COHORTS------------------------>
+        </div>
+    </div>
+</ui-view>
+<!------------------------VIEW------------------------>

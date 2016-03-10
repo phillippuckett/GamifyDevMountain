@@ -1,6 +1,6 @@
 /*------------------------STUDENT STATE CONTROLLER------------------------*/
 angular.module("GamifyDevMountain")
-    .controller("studentCtrl", function ($scope, authSvc, $http) {
+    .controller("studentCtrl", function ($scope, studentSvc, authSvc, $http) {
         $scope.studentCtrl = "studentCtrl";
         // console.log('Student Controller: Running');
     });

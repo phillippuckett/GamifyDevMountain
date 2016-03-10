@@ -1,83 +1,59 @@
-
 angular.module('GamifyDevMountain')
     .service('studentSvc', function ($state, $http) {
-       
-        /** Badges */
+
         this.getBadges = function () {
-            return $http({
-                method: 'GET',
-                url: '/api/badges'
-            }).then(function (badgeData) {
-                return badgeData.data;
-            })
+            return $http.get('/api/badges')
+                .then(function (badgeData) {
+                    return badgeData.data;
+                })
         };
-       
-        /** Request Badge */
+
         this.reqBadge = function (badgeId) {
-            return $http({
-                method: 'PUT',
-                url: '/api/users/badgerequest/' + badgeId
-            }).then(function (badgeData) {
-                return badgeData.data;
-            })
+            return $http.put('/api/users/badgerequest/' + badgeId)
+                .then(function (badgeData) {
+                    return badgeData.data;
+                })
         };
-       
-        /** Cards */
+
         this.getUsersCards = function () {
-            return $http({
-                method: "GET",
-                url: '/api/cards'
-            }).then(function (cardData) {
-                return cardData.data;
-            })
+            return $http.get('/api/cards')
+                .then(function (cardData) {
+                    return cardData.data;
+                })
         };
-        
-        /** Categories */
+
         this.getCategories = function () {
-            return $http({
-                method: "GET",
-                url: '/api/categories'
-            }).then(function (categoryData) {
-                return categoryData.data;
-            })
+            return $http.get('/api/categories')
+                .then(function (categoryData) {
+                    return categoryData.data;
+                })
         };
-        
-        /** Cohorts */
+
         this.getCohort = function () {
-            return $http({
-                method: "GET",
-                url: '/api/cohorts'
-            }).then(function (cohortData) {
-                return cohortData.data;
-            })
+            return $http.get('/api/cohorts')
+                .then(function (cohortData) {
+                    return cohortData.data;
+                })
         };
 
-        /** Curriculums */
-        this.getCurriculums = function () {
-            return $http({
-                method: "GET",
-                url: '/api/curriculums'
-            }).then(function (curriculumData) {
-                return curriculumData.data;
-            })
+        this.getCurrs = function () {
+            return $http.get('/api/curriculums')
+                .then(function (curriculumData) {
+                    return curriculumData.data;
+                })
         };
 
-        this.getCurriculum = function (currId) {
-            return $http({
-                method: "GET",
-                url: '/api/curriculum/' + currId
-            }).then(function (curriculumData) {
-                return curriculumData.data;
-            })
+        this.getCurr = function (currId) {
+            return $http.get('/api/curriculum/' + currId)
+                .then(function (curriculumData) {
+                    return curriculumData.data;
+                })
         };
-        
-        /** Student */
+
         this.getStudent = function () {
-            return $http({
-                method: "GET",
-                url: '/api/users'
-            }).then(function (studentData) {
-                return studentData.data;
-            })
+            return $http.get('/api/users')
+                .then(function (studentData) {
+                    return studentData.data;
+                })
         };
     });

@@ -1,8 +1,4 @@
 var users = require('./../models/users.js');
-// var Cohort = require('./../models/cohorts.js');
-// var Curriculum = require('./models/cohorts.js');
-// var Category = require('./../models/categories.js');
-// var Card = require('./../models/cards.js');
 
 module.exports = {
 

@@ -5,29 +5,18 @@
     <meta charset="utf-8">
     <title>GamifyDevMountain</title>
 
-    <!--Styles-->
-    <link rel="stylesheet" href="css/cores.css">
-
-    <!--Card Font-->
+    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
-    <!--Score Card Font-->
     <link href='https://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'>
     <!--Styles-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/adminState.css">
+    <link rel="stylesheet" href="css/studentState.css">
+    <link rel="stylesheet" href="css/visState.css">
 
-    <!--States-->
-    <link rel="stylesheet" href="css/states/visState.css">
-    <link rel="stylesheet" href="css/states/studentState.css">
-
-    <!--Templates-->
-    <link rel="stylesheet" href="css/templates/headerTmpl.css">
-    <link rel="stylesheet" href="css/templates/navTmpl.css">
-    <link rel="stylesheet" href="css/templates/studentTmpl.css">
-    <link rel="stylesheet" href="css/templates/adminTmpl.css">
 </head>
 
-<body ng-controller="mainCtrl">
+<body>
 
     <!--Ui-Router-->
     <ui-view></ui-view>
@@ -36,31 +25,14 @@
         <!--Content Delivery Network's-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.min.js"></script>
 
         <!--Scripts-->
-        <script src="./js/services/admin/angular-modal-service.js"></script>
         <script src="js/app.js"></script>
 
-        <!-- Modal Controllers -->
-        <script src="./js/controllers/admin/adminModals/cardCreateAdMoCtrl.js"></script>
-        <script src="./js/controllers/admin/adminModals/createBadgeModalCtrl.js"></script>
-        <script src="./js/controllers/admin/adminModals/angularModalCtrl.js"></script>
-        <script src="./js/controllers/admin/adminModals/confirmDelAdMoCtrl.js"></script>
-
         <!-- Admin Controllers-->
-        <script src="./js/controllers/admin/adminCtrl.js"></script>
-        <script src="./js/controllers/admin/adminBadgeCtrl.js"></script>
-        <script src="./js/controllers/admin/crudButtonCtrl.js"></script>
-        <script src="./js/controllers/admin/mainCtrl.js"></script>
-        <script src="./js/controllers/admin/categoryAdminCtrl.js"></script>
-        <script src="./js/controllers/admin/cardAdminCtrl.js"></script>
-        <script src="./js/controllers/admin/curriculumAdminCtrl.js"></script>
-        <script src="./js/controllers/admin/cohortCtrl.js"></script>
-
-        <!-- Sitewide Controllers -->
-        <script src="./js/controllers/headerCtrl.js"></script>
+        <script src="./js/controllers/adminCtrl.js"></script>
         <script src="./js/controllers/authCtrl.js"></script>
+        <script src="./js/controllers/headerCtrl.js"></script>
         <script src="./js/controllers/studentCtrl.js"></script>
 
         <!--Custom Directives-->
@@ -68,18 +40,11 @@
         <script src="./js/directives/headerDir.js"></script>
         <script src="./js/directives/navDir.js"></script>
 
-        <!--Sitewide Services-->
+        <!--Services-->
+        <script src="./js/services/angular-modal-service.js"></script>
         <script src="./js/services/authSvc.js"></script>
-        <script src="./js/services/mainSvc.js"></script>
         <script src="./js/services/studentSvc.js"></script>
-
-        <!-- Admin Services -->
-        <script src="./js/services/admin/adminStateSvc.js"></script>
-        <script src="./js/services/admin/cardAdminSvc.js"></script>
-        <script src="./js/services/admin/badgeAdminSvc.js"></script>
-        <script src="./js/services/admin/curriculumAdminSvc.js"></script>
-        <script src="./js/services/admin/categorySvc.js"></script>
-        <script src="./js/services/admin/cohortSvc.js"></script>
+        <script src="./js/services/adminSvc.js"></script>
 
 
     </footer>
