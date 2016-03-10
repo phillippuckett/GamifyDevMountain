@@ -47,20 +47,6 @@ angular.module('GamifyDevMountain')
         $scope.selectBadge = function (selectedBadge) {
             $scope.newCard.badges.push(selectedBadge);
         };
-         
-        /*------------------------BADGE MODAL------------------------*/
-        $scope.confirmationAnswer = null;
-        $scope.showAModal = function () {
-            ModalService.showModal({
-                templateUrl: "/html/modals/createBadgeModal.html",
-                controller: "modalCtrl"})
-                .then(function (modal) {
-                    modal.close.then(function (then) {
-                        $scope.confirmationAnswer = then;
-                    });
-                });
-        };
-        /*------------------------BADGE MODAL------------------------*/
         
         /*------------------------CARDS------------------------*/
         $scope.badges = [];
@@ -210,18 +196,5 @@ angular.module('GamifyDevMountain')
                 .then(function (response) {
                     $scope.getStudents();
                 })
-        };
-        
-        /*------------------------CRUD MODAL------------------------*/
-        $scope.confirmationAnswer = null;                
-        $scope.showAModal = function () {
-            ModalService.showModal({
-                templateUrl: "/html/modals/createBadgeModal.html",
-                controller: "modalCtrl"})
-                .then(function (modal) {
-                    modal.close.then(function (then) {
-                        $scope.confirmationAnswer = then;
-                    })
-                });
         };
     }); 
