@@ -44,13 +44,15 @@
     <!------------------------Total Points------------------------>
     <div class="spacing">
         <div class="spacing">
-            <p class="studentCats">Points</p>
+            <p class="studentCats">XPoints</p>
         </div>
-        <div class="studentStats">{{user.earnedPoints}} / {{currPoints}}</div>
+        <div class="spacing">
+            <div class="studentStats">{{user.earnedPoints}} / {{currPoints}}</div>
+        </div>
     </div>
 
     <!------------------------Student Eperience Level------------------------>
-    <div class="studentXPLvl">
-            <div class="studentXP" ng-style="{width: expPer() + '%' }"></div>
+    <div class="sdtXPLvl">
+        <div class="sdtXP" ng-style="{width: expPer() + '%' }"></div>
     </div>
 </div>
