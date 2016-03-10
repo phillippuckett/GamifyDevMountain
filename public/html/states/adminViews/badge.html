@@ -1,0 +1,54 @@
+<!------------------------VIEW------------------------>
+<ui-view>
+    <div class="adminState">
+        <div class="adminSpacing">
+            <div class="adminNav">
+                <!------------------------NAVIGATION------------------------>
+                <p class="adminText">NAVIGATION</p>
+                <p class="adminButton" Students ui-sref="admin.badges">badges</p>
+                <p class="adminButton" ui-sref="admin.cards">cards</p>
+                <p class="adminButton" ng-click="toggleDirs('categoryAdmin');" ui-sref="admin.category">category</p>
+                <p class="adminButton" ng-click="toggleDirs('cohorts');" ui-sref="admin.cohorts">cohorts</p>
+                <p class="adminButton" ng-click="toggleDirs('curriculumAdmin');" ui-sref="admin.curriculum">curriculum</p>
+                <p class="adminButton" ng-click="toggleDirs('students');" ui-sref="admin.students">students</p>
+                <!------------------------NAVIGATION------------------------>
+
+                <!------------------------CRUD------------------------>
+                <div class="adminSpacing">
+                    <p class="adminButton" type="button" name="button" ng-click="showAModal()">CREATE</p>
+                </div>
+                <!------------------------CRUD------------------------>
+            </div>
+            <!------------------------BADGES------------------------>
+            <div class="adminCanvas">
+                <div class="adminCard" ng-repeat="badge in badges">
+
+                    <div class="adminSpacing">
+                        <!--BADGEIMAGE-->
+                        <div class="adminCardCorner">IMG</div>
+                        <!--<MILESTONE-->
+                        <div class="adminText">{{badge.mileStone}}</div>
+                    </div>
+
+                    <!--DESCRIPTION-->
+                    <div class="adminCardFace">{{badge.desc}}</div>
+
+                    <div class="adminSpacing">
+                        <!--DIFFICULTY-->
+                        <div class="adminText">{{badge.pointValue.difficulty}}</div>
+                        <div class="adminCardCorner">PointVal : {{badge.pointValue.points}}</div>
+                    </div>
+
+                    <div class="adminSpacing">
+                        <!--UPDATE/DELETE-->
+                        <div class="adminCardButton">DELETE</div>
+                        <div class="adminCardButton">UPDATE</div>
+                    </div>
+
+                </div>
+            </div>
+            <!------------------------BADGES------------------------>
+        </div>
+    </div>
+</ui-view>
+<!------------------------VIEW------------------------>

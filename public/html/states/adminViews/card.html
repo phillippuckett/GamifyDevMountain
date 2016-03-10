@@ -19,58 +19,33 @@
                 </div>
                 <!------------------------CRUD------------------------>
             </div>
-            <!------------------------CATS------------------------>
+            <!------------------------CARDS------------------------>
             <div class="adminCanvas">
-                <div class="adminCard" ng-repeat="category in categories">
-                    <div class="adminText">{{category.categoryTitle}}</div>
+
+                <div class="adminCard" ng-repeat="card in cards">
+                    <div class="adminText">catId : {{card.category}}</div>
+                    <div class="adminText">{{card.trophyTitle}}</div>
+
+                    <div class="adminCardFace">
+                        <div class="cardFace">
+                            <div class="badge" ng-repeat="badge in card.badges">
+                                <div class="badgeImage" ng-src="{{badge.badgeImage}}">cat</div>
+                                <div class="milestone">{{badges.milestone}}</div>
+                                <div class="difficultyLevel">{{badges.pointValue.difficulty}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adminSpacing">
+                        <div class="adminText">Total Point Value : {{totalCardPoints(card)}}</div>
+                    </div>
                     <div class="adminSpacing">
                         <div class="adminCardButton">DELETE</div>
                         <div class="adminCardButton">UPDATE</div>
                     </div>
                 </div>
             </div>
-            <!------------------------CATS------------------------>
+            <!------------------------CARDS------------------------>
         </div>
     </div>
 </ui-view>
 <!------------------------VIEW------------------------>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    /*<!-- <grid-dir></grid-dir> -->
-<input type="text" placeholder="New category name" ng-model="newCategory ">
-<button ng-click="addCategory(newCategory)">add new category</button>
-<br/>
-
-<p ng-repeat="category in categories">
-    {{category.categoryTitle}}
-</p>
-
-
-<!-- TODO: these directives aren't necessary. They the function that populates grid-div could also call it into being on the adminState.html. There could be a ng-if that is linked to a function, which returns true if any of the four grids are toggled on through leftNavAdmin -->
-*/
-
-</script>

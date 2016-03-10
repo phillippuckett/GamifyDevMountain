@@ -1,0 +1,36 @@
+<!------------------------VIEW------------------------>
+<ui-view>
+    <div class="adminState">
+        <div class="adminSpacing">
+            <div class="adminNav">
+                <!------------------------NAVIGATION------------------------>
+                <p class="adminText">NAVIGATION</p>
+                <p class="adminButton" Students ui-sref="admin.badges">badges</p>
+                <p class="adminButton" ui-sref="admin.cards">cards</p>
+                <p class="adminButton" ng-click="toggleDirs('categoryAdmin');" ui-sref="admin.category">category</p>
+                <p class="adminButton" ng-click="toggleDirs('cohorts');" ui-sref="admin.cohorts">cohorts</p>
+                <p class="adminButton" ng-click="toggleDirs('curriculumAdmin');" ui-sref="admin.curriculum">curriculum</p>
+                <p class="adminButton" ng-click="toggleDirs('students');" ui-sref="admin.students">students</p>
+                <!------------------------NAVIGATION------------------------>
+
+                <!------------------------CRUD------------------------>
+                <div class="adminSpacing">
+                    <p class="adminButton" type="button" name="button" ng-click="showAModal()">create</p>
+                </div>
+                <!------------------------CRUD------------------------>
+            </div>
+            <!------------------------CATS------------------------>
+            <div class="adminCanvas">
+                <div class="adminCard" ng-repeat="category in categories">
+                    <div class="adminText">{{category.categoryTitle}}</div>
+                    <div class="adminSpacing">
+                        <div class="adminCardButton">DELETE</div>
+                        <div class="adminCardButton">UPDATE</div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------CATS------------------------>
+        </div>
+    </div>
+</ui-view>
+<!------------------------VIEW------------------------>

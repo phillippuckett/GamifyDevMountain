@@ -16,7 +16,7 @@
 
 </head>
 
-<body ng-controller="mainCtrl">
+<body ng-controller="adminCtrl">
 
     <!--Ui-Router-->
     <ui-view></ui-view>
@@ -28,30 +28,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.min.js"></script>
 
         <!--Scripts-->
-        <script src="./js/services/admin/angular-modal-service.js"></script>
         <script src="js/app.js"></script>
 
-        <!-- Modal Controllers -->
-        <script src="./js/controllers/admin/adminModals/cardCreateAdMoCtrl.js"></script>
-        <script src="./js/controllers/admin/adminModals/createBadgeModalCtrl.js"></script>
-        <script src="./js/controllers/admin/adminModals/angularModalCtrl.js"></script>
-        <script src="./js/controllers/admin/adminModals/confirmDelAdMoCtrl.js"></script>
-
         <!-- Admin Controllers-->
-        <script src="./js/controllers/admin/adminCtrl.js"></script>
-        <script src="./js/controllers/admin/badgeCtrl.js"></script>
-        <script src="./js/controllers/admin/cardCtrl.js"></script>
-        <script src="./js/controllers/admin/categoryCtrl.js"></script>
-        <script src="./js/controllers/admin/cohortCtrl.js"></script>
-        <script src="./js/controllers/admin/curriculumCtrl.js"></script>
-        
-        <script src="./js/controllers/admin/mainCtrl.js"></script>
-        <script src="./js/controllers/admin/crudButtonCtrl.js"></script>
-        
-
-        <!-- Sitewide Controllers -->
-        <script src="./js/controllers/headerCtrl.js"></script>
+        <script src="./js/controllers/adminCtrl.js"></script>
         <script src="./js/controllers/authCtrl.js"></script>
+        <script src="./js/controllers/headerCtrl.js"></script>
         <script src="./js/controllers/studentCtrl.js"></script>
 
         <!--Custom Directives-->
@@ -59,18 +41,11 @@
         <script src="./js/directives/headerDir.js"></script>
         <script src="./js/directives/navDir.js"></script>
 
-        <!--Sitewide Services-->
+        <!--Services-->
+        <script src="./js/services/angular-modal-service.js"></script>
         <script src="./js/services/authSvc.js"></script>
-        <script src="./js/services/mainSvc.js"></script>
         <script src="./js/services/studentSvc.js"></script>
-
-        <!-- Admin Services -->
-        <script src="./js/services/admin/adminStateSvc.js"></script>
-        <script src="./js/services/admin/cardAdminSvc.js"></script>
-        <script src="./js/services/admin/badgeAdminSvc.js"></script>
-        <script src="./js/services/admin/curriculumAdminSvc.js"></script>
-        <script src="./js/services/admin/categorySvc.js"></script>
-        <script src="./js/services/admin/cohortSvc.js"></script>
+        <script src="./js/services/adminSvc.js"></script>
 
 
     </footer>

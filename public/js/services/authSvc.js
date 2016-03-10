@@ -27,7 +27,6 @@ angular.module('GamifyDevMountain')
         /** Register User */
         this.register = function (user) {
             return $http.post('/api/register', user).then(function (registeredUser) {
-                console.log(registeredUser);
                 if (registeredUser) {
                     loggedIn = true;
                 }
